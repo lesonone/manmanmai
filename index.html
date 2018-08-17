@@ -1,1 +1,62 @@
-hello word!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a class="logo"></a>
+            <a class="download"></a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <div class="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <span class="searchbtn">搜索</span>
+                </div>
+            </div>
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="inner">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo officia similique vel iusto quos pariatur necessitatibus velit tempora quibusdam sit aliquam mollitia quis placeat ut laborum maiores, harum voluptatem labore qui nihil! Laborum vel ea ratione rem delectus odit nisi vero, alias atque placeat nihil aut itaque quis eaque blanditiis harum maiores sapiente nulla facere nobis, sit corporis? Sequi perspiciatis explicabo eligendi atque tenetur, ipsum id non unde soluta numquam facilis vero cumque qui totam eius incidunt a maxime similique minima? Temporibus, nostrum dignissimos dicta laboriosam accusantium maiores? Aliquam tempore, suscipit repellendus vel quod voluptas optio sint nesciunt vitae. Delectus illo consectetur tempore praesentium alias quam cupiditate quasi repudiandae eligendi dignissimos autem impedit obcaecati at nostrum expedita, quos molestiae ipsa, nam laborum? Praesentium fugiat velit aspernatur voluptatibus. Quam a laborum commodi asperiores esse, tenetur eos repellendus impedit est molestias vel laboriosam eligendi cumque, facere, officiis iusto recusandae reprehenderit ducimus? Minima itaque deleniti sequi doloribus fuga officia quaerat vitae libero voluptate temporibus totam esse rerum, recusandae accusamus similique? Nulla molestias, suscipit earum quis, eum at iure soluta molestiae quisquam, saepe error provident. Sint commodi voluptatem non, debitis blanditiis tempora repellendus suscipit! Vel molestiae labore vero, ducimus officia inventore rerum doloremque ad numquam, incidunt repellat, ratione totam repellendus hic praesentium blanditiis corporis quaerat nostrum mollitia non nemo. Mollitia quae, adipisci perferendis fugiat explicabo molestiae debitis iste corrupti tempora doloremque, exercitationem distinctio cumque impedit inventore quisquam, provident quis numquam. Eveniet adipisci animi mollitia at ipsam eos dolores, a ut placeat aliquam consequuntur laboriosam!
+                        </div>
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top"><span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p><span class="warning">手机APP下载</span> <span>慢慢买手机版--掌上比价平台</span></p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

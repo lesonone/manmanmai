@@ -1,5 +1,30 @@
-/* ��ʼ������ */
+//从新设置rem大小   基于375px尺寸下,设置新的rem
+@function pr($p){
+	@return ($p/37.5) + rem;
+}
 
+//全局变量
+	//颜色
+		//红色
+		$deepRed: #f4483e; //深红  顶部背景色
+		$paleRed: #ff5e5d; //浅红  按钮颜色
+		$lightRed:#fc175c; //亮红  字体颜色
+		$darkRed: #e04627; //暗红  国内折扣二维码处
+		//橙色
+		$deepOrange: #ff841d; //深橙色  顶部背景 
+		$paleOrange: #ef8215; //浅红色  有效期
+		$darkOrange: #fe9b19; //暗橙色  品牌排行 前往购买
+		$orangeRed:  #ff7f23; //橙红色  包邮 商品列表价格 凑单品价格
+		//黄色
+		$deepYellow: #fe9913; //深黄色  去凑单 “比价购买”按钮 星星
+		$paleYellow: #fec627; //浅黄色  "比价购买”按钮旁两个按钮 
+	//字体大小
+		$font-lg: pr(18); //最大号字体
+		$font-md: pr(16); //大号字体
+		$font-sm: pr(14); //正常字体
+		$font-xs: pr(12); //小号字体
+
+//样式初始化代码
 body,
 div,
 span,
@@ -23,31 +48,26 @@ i,
 del {
 	margin: 0;
 	padding: 0;
-	/* �����ǩ������߾� */
+	box-sizing: border-box;
 }
 
 a {
 	text-decoration: none;
 	color: #000;
-	/* ���a��ǩ��Ĭ����ʽ */
 }
 
 input {
 	border: 0 none;
 	outline: 0 none;
-	/* ���input�ı߿��Լ��������� */
 }
 
 img {
 	border: 0 none;
-	/* �ڵͰ汾���������,img���Դ��߿�� */
 	vertical-align: middle;
-	/* ͼƬ���������߶��� */
 }
 
 li {
 	list-style: none;
-	/* ���li��ǩ�Դ���С��� */
 }
 
 h1,
@@ -63,15 +83,6 @@ i {
 	font-style: normal;
 }
 
-.w {
-	//width: 1200px;
-	margin: 0 auto;
-}
-
-body {
-	background-color: #f6f6f6;
-	font: 12px/100% "΢���ź�";
-}
 
 .clearfix:after {
 	content: "";
@@ -80,17 +91,145 @@ body {
 	height: 0;
 	visibility: hidden;
 }
-
 .clearfix {
 	*zoom: 1;
 }
+html,body {
+	height: 100%;
+}
+body{
+	font-size: pr(14);
+}
+//公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢
 
-.ta {
-	text-align: center;
-}
-.fl {
-	float: left;
-}
-.fr {
-	float: right;
+	//主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)
+	//最外层大盒子样式
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	//头部样式
+	.header{
+		height: pr(41);
+		background-color: $deepOrange;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: pr(14);
+		padding-right: pr(8);
+		.logo {
+			height: pr(20);
+			width: pr(152);
+			background: url('../images/logo.png') top left /100% ;
+		}
+		.download {
+			height: pr(30);
+			width: pr(28);
+			background: url('../images/download.png') no-repeat top left / 100%;
+		}
+	}
+	//主体样式 (包含了搜索栏样式跟底部栏样式)
+	.main{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		//搜索栏
+		.searchbar {
+			width: 100%;
+			height: pr(43);
+			padding: pr(9);
+			border-bottom: 1px solid #ccc;
+			background-color: #fff;
+			.search {
+				display: flex;
+				width: 100%;
+				height: pr(24);
+				background-color: #f1f1f1;
+				border-radius: pr(24);
+				input {
+					height: 100%;
+					flex: 1;
+					border: none;
+					outline: none;
+					border-radius: pr(24);
+					padding-left: pr(15);
+					background-color: #f1f1f1;
+					&::placeholder{
+						font-size: $font-xs;
+					}
+				}
+				.searchbtn {
+					flex-basis: pr(52);
+					height: 100%;
+					border-radius: pr(24);
+					background-color: $deepOrange;
+					color: white;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+		//滚动区外部盒子
+		.scroll {
+			flex: 1;
+			position: relative;
+			//滚动区内部盒子,内容写在里面
+			.mui-scroll-wrapper{
+				background-color: #fff;
+				//具体内容的样式
+				.inner {
+					margin-bottom: pr(10);
+				}
+				//底部样式
+				.footer {
+					width: 100%;
+					height: pr(77);
+					.footer-top {
+						height: pr(30);
+						display: flex;
+						border-top: 1px solid #ccc;
+						border-bottom: 1px solid #ccc;
+						a {
+							height: 100%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							color: #5a5a5a;
+							font-size: $font-xs;
+						}
+						.login {	
+							flex: 1;
+						}
+						.register {
+							flex: 1;
+							border-left: 1px solid #ccc;
+							border-right: 1px solid #ccc;
+						}
+						.back-top {
+							height: 100%;
+							flex-basis: pr(123);
+						}
+
+					}
+					.footer-bottom {
+						height: pr(47);
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						p{
+							text-align: center;
+							font-size: $font-xs;
+							color: #5a5a5a;
+							.warning {
+								color: $deepRed;
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+
 }
