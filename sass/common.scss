@@ -98,7 +98,7 @@ html,body {
 	height: 100%;
 }
 body{
-	font-size: pr(14);
+	font-size: $font-sm;
 }
 //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢
 
@@ -110,21 +110,21 @@ body{
 	flex-direction: column;
 	//头部样式
 	.header{
-		height: pr(41);
+		height: pr(50);
 		background-color: $deepOrange;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-left: pr(14);
-		padding-right: pr(8);
+		padding-left: pr(17);
+		padding-right: pr(10);
 		.logo {
-			height: pr(20);
-			width: pr(152);
-			background: url('../images/logo.png') top left /100% ;
+			height: pr(24);
+			width: pr(185);
+			background: url('../images/logo.png') no-repeat top left /100% ;
 		}
 		.download {
-			height: pr(30);
-			width: pr(28);
+			height: pr(36);
+			width: pr(35);
 			background: url('../images/download.png') no-repeat top left / 100%;
 		}
 	}
@@ -136,32 +136,29 @@ body{
 		//搜索栏
 		.searchbar {
 			width: 100%;
-			height: pr(43);
-			padding: pr(9);
+			height: pr(52);
+			padding: pr(10);
 			border-bottom: 1px solid #ccc;
 			background-color: #fff;
 			.search {
 				display: flex;
 				width: 100%;
-				height: pr(24);
+				height: pr(30);
 				background-color: #f1f1f1;
-				border-radius: pr(24);
+				border-radius: pr(30);
 				input {
 					height: 100%;
 					flex: 1;
 					border: none;
 					outline: none;
-					border-radius: pr(24);
-					padding-left: pr(15);
+					border-radius: pr(30);
+					padding-left: pr(20);
 					background-color: #f1f1f1;
-					&::placeholder{
-						font-size: $font-xs;
-					}
 				}
 				.searchbtn {
-					flex-basis: pr(52);
+					flex-basis: pr(63);
 					height: 100%;
-					border-radius: pr(24);
+					border-radius: pr(30);
 					background-color: $deepOrange;
 					color: white;
 					display: flex;
@@ -179,14 +176,14 @@ body{
 				background-color: #fff;
 				//具体内容的样式
 				.inner {
-					margin-bottom: pr(10);
+					margin-bottom: pr(12);
 				}
 				//底部样式
 				.footer {
 					width: 100%;
-					height: pr(77);
+					height: pr(96);
 					.footer-top {
-						height: pr(30);
+						height: pr(36);
 						display: flex;
 						border-top: 1px solid #ccc;
 						border-bottom: 1px solid #ccc;
@@ -196,7 +193,6 @@ body{
 							justify-content: center;
 							align-items: center;
 							color: #5a5a5a;
-							font-size: $font-xs;
 						}
 						.login {	
 							flex: 1;
@@ -208,18 +204,17 @@ body{
 						}
 						.back-top {
 							height: 100%;
-							flex-basis: pr(123);
+							flex-basis: pr(150);
 						}
 
 					}
 					.footer-bottom {
-						height: pr(47);
+						height: pr(60);
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
 						p{
 							text-align: center;
-							font-size: $font-xs;
 							color: #5a5a5a;
 							.warning {
 								color: $deepRed;
