@@ -192,11 +192,17 @@ body {
   color: #f4483e;
 }
 
+.container {
+  background-color: #ccc;
+}
 .container .headerTop {
   height: 1.1733333333rem;
   background-color: #fe4a65;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
 }
 .container .headerTop h3 {
   font-size: 0.4266666667rem;
@@ -217,6 +223,59 @@ body {
   color: #fff;
   width: 1.0666666667rem;
   text-align: center;
+}
+.container .main .scroll .mui-scroll-wrapper {
+  background-color: #f2f2f2;
+}
+.container .main .scroll .mui-scroll-wrapper #slider {
+  margin-top: 1.1733333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .nav {
+  background-color: #fff;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul {
+  display: flex;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li {
+  flex: 1;
+  padding: 0.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a span {
+  font-size: 0.32rem;
+  margin-top: 0.1333333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a i {
+  width: 1.36rem;
+  height: 1.36rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.48rem;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a i.all {
+  background-color: #fec627;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a i.hot {
+  background-color: #fe4a65;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a i.nine {
+  background-color: #ff7692;
+}
+.container .main .scroll .mui-scroll-wrapper .nav ul li a i.nineteen {
+  background-color: #a992ff;
+}
+.container .main .scroll .mui-scroll-wrapper .superHot {
+  margin-top: 10px;
+}
+.container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=cabbage.css.map */

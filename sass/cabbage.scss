@@ -1,30 +1,93 @@
 @import "./common.scss";
-
-.container{
-    .headerTop{
+.container {
+    background-color: #ccc; // 顶部
+    .headerTop {
         height: pr(44);
-        background-color: #fe4a65;
+        background-color: $deeppink;
         display: flex;
         align-items: center;
-        h3{
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        h3 {
             font-size: $font-md;
             color: #fff;
             width: pr(70);
             font-weight: bold;
             text-align: center;
         }
-        input{
+        input {
             flex: 1;
             height: pr(30);
             border-radius: pr(5);
             margin: pr(0);
             font-size: $font-xs;
         }
-        .category{
+        .category {
             font-size: $font-lg;
             color: #fff;
             width: pr(40);
             text-align: center;
+        }
+    }
+    .main {
+        .scroll {
+            .mui-scroll-wrapper {
+                background-color: #f2f2f2;
+                //轮播图
+                #slider{
+                    margin-top: pr(44);
+                }
+                //导航栏
+                .nav {
+                    background-color: #fff;
+                    ul {
+                        display: flex;
+                        li {
+                            flex: 1;
+                            padding: pr(10);
+                            a {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                span {
+                                    font-size: $font-xs;
+                                    margin-top: pr(5);
+                                }
+                                i {
+                                    width: pr(51);
+                                    height: pr(51);
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #fff;
+                                    font-size: $font-lg;
+                                    &.all {
+                                        background-color: $paleYellow;
+                                    }
+                                    &.hot {
+                                        background-color: $deeppink;
+                                    }
+                                    &.nine {
+                                        background-color: #ff7692;
+                                    }
+                                    &.nineteen {
+                                        background-color: #a992ff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //超级人气榜
+                .superHot {
+                    margin-top: 10px;
+                    .mui-scroll{
+                        background-color: #fff;
+                    }  
+                }
+            }
         }
     }
 }
