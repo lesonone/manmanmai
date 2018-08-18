@@ -8,6 +8,8 @@
     <title>Document</title>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
 
@@ -30,8 +32,16 @@
             <input type="text" placeholder="好宝贝  等你搜">
             <i class="iconfont category icon-sousuo"></i>
         </div>
+            
         <!-- 主体部分 -->
         <div class="main">
+            <!-- 下拉框 -->
+            <div class="menu">                
+                <div class="menu-content">
+                    <!-- 模板生成 -->
+                </div>
+                <div class="mask"></div>
+            </div>
             <!-- 内部滚动区 -->
             <div class="scroll">
                 <div class="mui-scroll-wrapper">
@@ -152,6 +162,28 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 商家优惠信息 -->
+                        <div class="discount">
+                            <div class="topBar">
+                                <span class="super">商家优惠信息  实时直播</span>
+                            </div>
+                            <ul class="goodList">
+                                <!-- 模板生成 -->
+                                <li>
+                                    <img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+                                    <p class="proName">
+                                        <span class="b">[包邮]</span>双十一红包 今日开启
+                                    </p>
+                                    <div class="info">
+                                        <p>
+                                            <em>¥</em>0.0
+                                            <del>¥0</del>
+                                        </p>
+                                        <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" target="_blank">点此领15元优惠券</a>
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,3 +192,48 @@
 </body>
 
 </html>
+<!-- 模板生成分类菜单 -->
+<script type="text/html" id="menuList">
+
+    <ul class="menuList">
+        {{each result value key}}
+        <li data-id={{value.titleId}}><a href="">{{value.title}}</a></li>
+        {{/each}}
+    </ul>
+    <button class="mui-btn close">收起分类</button>
+
+</script>
+
+<!-- 模板生成主页商家优惠信息列表 -->
+<script type="text/html" id="goodlist">
+    {{each result value key}}
+    <li>
+        {{#value.productImg}}
+        <p class="proName">
+            {{#value.productName}}
+        </p>
+        <div class="info">
+            <p>
+                {{#value.productPrice}}
+            </p>
+            
+        </div> 
+        {{#value.productCoupon}}
+    </li>
+    {{/each}}
+</script>
+
+<!-- 模板生成超级人气版部分 -->
+<script type="text/html" id="superList">
+    {{each result value key}}
+    <a class="mui-control-item">
+        {{#value.productImg}}
+        <p class="proName">
+            {{#value.productName}}
+        </p>
+        <p class="price">
+            {{#value.productPrice}}
+        </p>
+    </a>
+    {{/each}}
+</script>

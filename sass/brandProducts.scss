@@ -1,0 +1,47 @@
+@import "./common.scss";
+
+.mui-scroll-wrapper{
+    
+    //具体内容的样式
+    .inner {
+        margin-bottom: pr(12);
+        background-color: #f2f2f2;
+        //品牌简介的样式
+        .brandintroduct {
+            padding: pr(10);
+            .bitittle {
+                padding: pr(10);
+                font-size: $font-lg;
+                font-weight: bold;
+            }
+            .bicontent {
+                padding: pr(10);
+                background-color: #fff;
+                font-size: $font-xs;
+                color: #666;
+            }
+            .explain {
+                padding: pr(10);
+                background-color: #f7f7f7;
+                font-size: $font-xs;
+                color: #999;
+                margin-top: pr(10);
+            }
+        }
+        //产品展示列表
+        .productslist {
+            background-color: #fff;
+            //导航条
+            .listbar {
+
+            }
+            //产品信息
+            .productsinfo {
+                
+            }
+        }
+    }
+    .footer {
+        background-color: #f2f2f2;
+    }
+}
