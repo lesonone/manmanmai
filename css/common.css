@@ -128,6 +128,9 @@ body {
   padding-left: 0.5333333333rem;
   background-color: #f1f1f1;
 }
+.container .main .searchbar .search input::placeholder {
+  font-size: 0.3733333333rem;
+}
 .container .main .searchbar .search .searchbtn {
   flex-basis: 1.68rem;
   height: 100%;

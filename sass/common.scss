@@ -14,7 +14,7 @@
 		$deepOrange: #ff841d; //深橙色  顶部背景 
 		$paleOrange: #ef8215; //浅红色  有效期
 		$darkOrange: #fe9b19; //暗橙色  品牌排行 前往购买
-		$orangeRed:  #ff7f23; //橙红色  包邮 商品列表价格 凑单品价格
+		$orangeRed:  #ea3900; //橙红色  包邮 商品列表价格 凑单品价格
 		//黄色
 		$deepYellow: #fe9913; //深黄色  去凑单 “比价购买”按钮 星星
 		$paleYellow: #fec627; //浅黄色  "比价购买”按钮旁两个按钮 
@@ -120,7 +120,7 @@ body{
 		.logo {
 			height: pr(24);
 			width: pr(185);
-			background: url('../images/logo.png') no-repeat top left /100% ;
+			background: url('../images/logo.png') no-repeat top left / 100% ;
 		}
 		.download {
 			height: pr(36);
@@ -154,6 +154,9 @@ body{
 					border-radius: pr(30);
 					padding-left: pr(20);
 					background-color: #f1f1f1;
+					&::placeholder {
+						font-size: $font-sm;
+					}
 				}
 				.searchbtn {
 					flex-basis: pr(63);
