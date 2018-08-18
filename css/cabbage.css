@@ -1,7 +1,7 @@
 /*
 Error: Invalid CSS after "	height: 100%": expected "{", was ";"
         on line 112 of sass/common.scss
-        from line 1 of sass/index.scss
+        from line 1 of sass/cabbage.scss
 
 107: //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢
 108: //主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)
@@ -17,7 +17,7 @@ Error: Invalid CSS after "	height: 100%": expected "{", was ";"
 
 Backtrace:
 sass/common.scss:112
-sass/index.scss:1
+sass/cabbage.scss:1
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1278:in `expected'
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1208:in `expected'
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -77,4 +77,4 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"	height: 100%\": expected \"{\", was \";\"\A         on line 112 of sass/common.scss\A         from line 1 of sass/index.scss\A \A 107: //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢\A 108: //主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)\A 109: //最外层大盒子样式\A 110: .container {\A 111: <<<<<<< HEAD\A 112: 	height: 100%;\A 113: 	display: flex;\A 114: 	flex-direction: column;\A 115: 	//头部样式\A 116: 	.header{\A 117: 		height: pr(50);"; }
+  content: "Error: Invalid CSS after \"	height: 100%\": expected \"{\", was \";\"\A         on line 112 of sass/common.scss\A         from line 1 of sass/cabbage.scss\A \A 107: //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢\A 108: //主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)\A 109: //最外层大盒子样式\A 110: .container {\A 111: <<<<<<< HEAD\A 112: 	height: 100%;\A 113: 	display: flex;\A 114: 	flex-direction: column;\A 115: 	//头部样式\A 116: 	.header{\A 117: 		height: pr(50);"; }

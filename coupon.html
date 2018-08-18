@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入mui  -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <script src="js/coupon.js"></script>
+    <link rel="stylesheet" href="css/coupon.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">优惠券</h1>
+            <a class="download"></a>
+        </div>
+        <!-- 进度条 -->
+        <div id="demo1" class="mui-progressbar">
+            <span></span>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <!-- <div class="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <span class="searchbtn">搜索</span>
+                </div>
+            </div> -->
+
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+
+                        <!-- 优惠券标题 -->
+                        <div class="mui-content">
+                            <div class="mui-card">
+                                <div class="mui-card-content" id="srtitle">
+                                    <!-- 模板生成 -->
+                                </div>
+
+
+                            </div>
+                            <!-- 面包屑导航 -->
+                            <div class="navbar">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href=" ">首页</a>
+                                    </li>
+                                    <span class="arrows">></span>
+                                    <!-- <li>
+                                        <a href="./brandList.html">品牌大全</a>
+                                    </li> -->
+                                    <!-- <span class="arrows">></span> -->
+                                    <li>优惠券</li>
+                                </ol>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top"><span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p><span class="warning">手机APP下载</span> <span>慢慢买手机版--掌上比价平台</span></p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 优惠券标题模板 -->
+    <script type="text/html" id="coupontitle">
+        <div class="mui-card-content-inner coupontitle">
+            {{each result v i}}
+            <div>
+                <a data-id="{{v._id}}">
+                    <img src="{{v.couponImg}}" alt="">
+                    <p>{{v.couponTitle}}</p>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+</body>
+
+</html>

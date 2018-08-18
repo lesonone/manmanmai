@@ -1,314 +1,80 @@
-body,
-div,
-span,
-p,
-a,
-img,
-input,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-h1,
-h2,
-h3,
-h4,
-strong,
-em,
-i,
-del {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*
+Error: Invalid CSS after "	height: 100%": expected "{", was ";"
+        on line 112 of sass/common.scss
+        from line 1 of sass/brandSublist.scss
 
-a {
-  text-decoration: none;
-  color: #000;
-}
+107: //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢
+108: //主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)
+109: //最外层大盒子样式
+110: .container {
+111: <<<<<<< HEAD
+112: 	height: 100%;
+113: 	display: flex;
+114: 	flex-direction: column;
+115: 	//头部样式
+116: 	.header{
+117: 		height: pr(50);
 
-input {
-  border: 0 none;
-  outline: 0 none;
-}
-
-img {
-  border: 0 none;
-  vertical-align: middle;
-}
-
-li {
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-strong {
-  font-weight: normal;
-}
-
-em,
-i {
-  font-style: normal;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-  visibility: hidden;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-size: 0.3733333333rem;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.container .header {
-  height: 1.3333333333rem;
-  background-color: #ff841d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 0.4533333333rem;
-  padding-right: 0.2666666667rem;
-}
-.container .header .logo {
-  height: 0.64rem;
-  width: 4.9333333333rem;
-  background: url("../images/logo.png") no-repeat top left/100%;
-}
-.container .header .download {
-  height: 0.96rem;
-  width: 0.9333333333rem;
-  background: url("../images/download.png") no-repeat top left/100%;
-}
-.container .main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.container .main .searchbar {
-  width: 100%;
-  height: 1.3866666667rem;
-  padding: 0.2666666667rem;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
-}
-.container .main .searchbar .search {
-  display: flex;
-  width: 100%;
-  height: 0.8rem;
-  background-color: #f1f1f1;
-  border-radius: 0.8rem;
-}
-.container .main .searchbar .search input {
-  height: 100%;
-  flex: 1;
-  border: none;
-  outline: none;
-  border-radius: 0.8rem;
-  padding-left: 0.5333333333rem;
-  background-color: #f1f1f1;
-}
-.container .main .searchbar .search input::placeholder {
-  font-size: 0.3733333333rem;
-}
-.container .main .searchbar .search .searchbtn {
-  flex-basis: 1.68rem;
-  height: 100%;
-  border-radius: 0.8rem;
-  background-color: #ff841d;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container .main .scroll {
-  flex: 1;
-  position: relative;
-}
-.container .main .scroll .mui-scroll-wrapper {
-  background-color: #fff;
-}
-.container .main .scroll .mui-scroll-wrapper .inner {
-  margin-bottom: 0.32rem;
-}
-.container .main .scroll .mui-scroll-wrapper .footer {
-  width: 100%;
-  height: 2.56rem;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-top {
-  height: 0.96rem;
-  display: flex;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-top a {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #5a5a5a;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-top .login {
-  flex: 1;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-top .register {
-  flex: 1;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-top .back-top {
-  height: 100%;
-  flex-basis: 4rem;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom {
-  height: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p {
-  text-align: center;
-  color: #5a5a5a;
-}
-.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p .warning {
-  color: #f4483e;
-}
-
-.scroll .inner .navbar {
-  width: 100%;
-  height: 1.0133333333rem;
-  border-bottom: 0.0533333333rem solid #ccc;
-  display: flex;
-  align-items: center;
-  padding-left: 0.2666666667rem;
-  background: linear-gradient(to bottom, #fff, #ececec);
-}
-.scroll .inner .navbar .breadcrumb {
-  display: flex;
-}
-.scroll .inner .navbar .breadcrumb .arrows {
-  padding: 0rem 0.1333333333rem;
-}
-.scroll .inner .navbar .breadcrumb li {
-  font-size: 0.3733333333rem;
-}
-.scroll .inner .navbar .breadcrumb li a {
-  color: #5a5a5a;
-  font-size: 0.3733333333rem;
-}
-.scroll .inner .tittle {
-  width: 100%;
-  height: 0.9866666667rem;
-  background-color: #f3f3f3;
-  border-bottom: 0.0266666667rem solid #ccc;
-  color: #fe9913;
-  padding: 0.32rem;
-  font-size: 0.3733333333rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell {
-  padding: 0.2666666667rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell::after {
-  left: 0;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right {
-  height: 1.6rem;
-  display: flex;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right::after {
-  font-size: 0.64rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist {
-  width: 0.5333333333rem;
-  height: 0.5333333333rem;
-  background-color: #c9c9c9;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand {
-  margin-left: 0.2666666667rem;
-  padding-top: 0.0533333333rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname {
-  color: #000;
-  font-size: 0.4266666667rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales {
-  font-size: 0.32rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell {
-  display: flex;
-  align-items: center;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell img {
-  width: 2.6666666667rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright {
-  flex: 1;
-  height: 100%;
-  margin-left: 0.2666666667rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bpltittle {
-  color: #000;
-  font-size: 0.3733333333rem;
-  line-height: 0.5333333333rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.4266666667rem;
-  margin: 0.08rem 0rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .price {
-  padding-top: 0.0533333333rem;
-  color: #ea3900;
-  font-weight: bold;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star {
-  color: #fe9913;
-  display: flex;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star .icon-start {
-  font-size: 0.5333333333rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplcomments {
-  font-size: 0.32rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplcomments .offer {
-  margin-right: 0.2666666667rem;
-}
-
-/*# sourceMappingURL=brandSublist.css.map */
+Backtrace:
+sass/common.scss:112
+sass/brandSublist.scss:1
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:677:in `block'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:678:in `block'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:321:in `to_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	height: 100%\": expected \"{\", was \";\"\A         on line 112 of sass/common.scss\A         from line 1 of sass/brandSublist.scss\A \A 107: //公共样式部分   每一个公共样式在哪个页面使用,请写好备注 谢谢\A 108: //主体框架样式,包括(顶部栏样式,底部栏样式,搜索栏样式)\A 109: //最外层大盒子样式\A 110: .container {\A 111: <<<<<<< HEAD\A 112: 	height: 100%;\A 113: 	display: flex;\A 114: 	flex-direction: column;\A 115: 	//头部样式\A 116: 	.header{\A 117: 		height: pr(50);"; }
