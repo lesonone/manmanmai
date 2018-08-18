@@ -1,6 +1,7 @@
 @import "./common.scss";
 
 .scroll {
+   
   .inner {
     //导航条样式
     .navbar {
@@ -29,15 +30,18 @@
     .tittle {
       width: 100%;
       height: pr(37);
+      display: flex;
+      align-items: center;
       background-color: #f3f3f3;
       border-bottom: pr(1) solid #ccc;
       color: $deepYellow;
-      padding: pr(12);
+      padding: pr(0) pr(10);
       font-size: $font-sm;
     }
     //十大品牌排行的样式
     .brandlist,
-    .brandProductslist {
+    .brandProductslist,
+    .brandCommentlist {
       .mui-table-view {
         .mui-table-view-cell {
           &::after {
@@ -47,6 +51,7 @@
           .mui-navigate-right {
             height: pr(60);
             display: flex;
+            padding-left: pr(15);
             &::after {
               font-size: pr(24);
             }
@@ -74,6 +79,7 @@
         }
       }
     }
+    //产品销量排行版样式
     .brandProductslist {
       .mui-table-view {
         .mui-table-view-cell {
@@ -123,5 +129,81 @@
         }
       }
     }
+    //用户评论版样式
+    .brandCommentlist {
+        .mui-table-view {
+            background-color: #efefef;
+            .mui-table-view-cell {
+                //产品简介
+                .theproduct {
+                    white-space: pre-wrap;
+                    width: 100%;
+                    height: pr(80);
+                    display: flex;
+                    margin: pr(0);
+                    padding: 0;
+                    margin-bottom: pr(10);
+                    img {
+                        width: pr(80);
+                    }
+                    .desc {
+                        margin-left: pr(10);
+                        flex: 1;
+                    }  
+                }
+                //详细评论内容
+                .comments { 
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    padding: pr(10);
+                    margin: 0;
+                    position: relative;
+                    overflow: visible;
+                    .stars {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .mark {
+                            display: flex;
+                            align-items: center;
+                            
+                            .username {
+                                padding-top: pr(7);
+                                color: #4f6900;
+                            }
+                            .cut {
+                                padding: pr(0) pr(3);
+                                padding-top: pr(7);
+                            }
+                            .icon-start {
+                                color: $deepYellow;
+                                font-size: pr(20);
+                            }
+                        }
+                    }
+                    .comment {
+                        margin-top: pr(10);
+                        white-space: normal;
+                        color: #000;
+                    }
+                    .box {
+                        z-index: 100;
+                        position: absolute;
+                        width: pr(15);
+                        height: pr(15);
+                        background-color: #fff;
+                        top: pr(-8);
+                        left: pr(30);
+                        border-left: 1px solid #ccc;
+                        border-top: 1px solid #ccc;
+                        transform: rotateZ(45deg);
+                    }
+                }
+            }
+        }
+    }
+  }
+  .footer {
+    background-color: #efefef;
   }
 }
