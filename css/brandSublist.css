@@ -224,7 +224,7 @@ body {
   align-items: center;
   background-color: #f3f3f3;
   border-bottom: 0.0266666667rem solid #ccc;
-  color: #fe9913;
+  color: 1;
   padding: 0rem 0.2666666667rem;
   font-size: 0.3733333333rem;
 }
@@ -310,7 +310,7 @@ body {
   font-weight: bold;
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star {
-  color: #fe9913;
+  color: 1;
   display: flex;
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star .icon-start {
@@ -367,7 +367,7 @@ body {
   padding-top: 0.1866666667rem;
 }
 .scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .icon-start {
-  color: #fe9913;
+  color: 1;
   font-size: 0.5333333333rem;
 }
 .scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .comment {
