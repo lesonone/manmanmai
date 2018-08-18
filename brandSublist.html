@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/brandSublist.css">
+    <script src="./js/brandSublist.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a class="logo"></a>
+            <a class="download"></a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <div class="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <span class="searchbtn">搜索</span>
+                </div>
+            </div>
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="inner">
+                            <!-- 面包屑导航 -->
+                            <div class="navbar">
+                                <ol class="breadcrumb">
+                                    <li><a href="./index.html">首页</a></li>
+                                    <span class="arrows">></span>
+                                    <li><a href="./brandList.html">品牌大全</a></li>
+                                    <span class="arrows">></span>
+                                    <li>等离子电视哪个好</li>
+                                </ol>
+                            </div>
+                            <!-- 十大品牌排行 -->
+                            <div class="brandlist">
+                                <div class="tittle">平板电视哪个牌子好</div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <a class="mui-navigate-right">
+                                            <span class="numlist">1</span>
+                                            <div class="onebrand">
+                                                <p class="brandname">海信平板电视</p>
+                                                <p class="sales">30天全网销量 : 10000000件</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <a class="mui-navigate-right">
+                                            <span class="numlist">1</span>
+                                            <div class="onebrand">
+                                                <p class="brandname">海信平板电视</p>
+                                                <p class="sales">30天全网销量 : 10000000件</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <!-- 产品销量排行 -->
+                            <div class="brandProductslist">
+                                <div class="tittle">平板电视哪个牌子好</div>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell">
+                                        <img src="./images/2016040016521576785.jpg" alt="">
+                                        <!-- bclright是产品销量排行右边内容的盒子类名 -->
+                                        <div class="bplright">
+                                            <!-- bpltittle是这个盒子内标题类名 -->
+                                           <p class="bpltittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
+                                           <!-- bplprice是价格跟五星好评类名 -->
+                                           <p class="bplprice">
+                                               <span class="price">¥2199.00</span>
+                                                <span class="star">
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                </span>
+                                            </p>
+                                           <!-- bplcomments是报价跟全网评论类名 -->
+                                           <p class="bplcomments">
+                                               <span class="offer">报价(3)</span>
+                                               <span class="allcomments">全网评价(10000000)</span>
+                                           </p>  
+                                        </div>
+                                    </li>
+                                    <li class="mui-table-view-cell">
+                                        <img src="./images/2016040016521576785.jpg" alt="">
+                                        <!-- bclright是产品销量排行右边内容的盒子类名 -->
+                                        <div class="bplright">
+                                            <!-- bpltittle是这个盒子内标题类名 -->
+                                           <p class="bpltittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
+                                           <!-- bplprice是价格跟五星好评类名 -->
+                                           <p class="bplprice">
+                                               <span class="price">¥2199.00</span>
+                                                <span class="star">
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                    <span class="iconfont icon-start"></span>
+                                                </span>
+                                            </p>
+                                           <!-- bplcomments是报价跟全网评论类名 -->
+                                           <p class="bplcomments">
+                                               <span class="offer">报价(3)</span>
+                                               <span class="allcomments">全网评价(10000000)</span>
+                                           </p>  
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 用户评论 -->
+                            <div class="brandCommentlist">
+                                <div class="tittle">平板电视哪个牌子好</div>
+                               
+                            </div>
+
+                        </div>
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top"><span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p><span class="warning">手机APP下载</span> <span>慢慢买手机版--掌上比价平台</span></p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

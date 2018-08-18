@@ -1,9 +1,10 @@
 @import "./common.scss";
 .container {
-    background-color: #ccc; // 顶部
+    background-color: #ccc; 
+    // 顶部
     .headerTop {
         height: pr(44);
-        background-color: $deeppink;
+        background-color:$deeppink;
         display: flex;
         align-items: center;
         position: fixed;
@@ -61,19 +62,23 @@
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                    color: #fff;
-                                    font-size: $font-lg;
+                                    
                                     &.all {
-                                        background-color: $paleYellow;
+                                        color:  $paleYellow;
+                                        font-size: pr(51);
                                     }
                                     &.hot {
-                                        background-color: $deeppink;
+                                       color: #fff;
+                                       background-color:$deeppink;
+                                       font-size: pr(32);
                                     }
                                     &.nine {
-                                        background-color: #ff7692;
+                                        color: #ff7692;
+                                        font-size: pr(53);
                                     }
                                     &.nineteen {
-                                        background-color: #a992ff;
+                                        color: #a992ff;
+                                        font-size: pr(56);
                                     }
                                 }
                             }
@@ -83,9 +88,65 @@
                 //超级人气榜
                 .superHot {
                     margin-top: 10px;
-                    .mui-scroll{
+                    .topBar{
                         background-color: #fff;
-                    }  
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: pr(30);
+                        padding: pr(10);
+                        .super{
+                            font-size: $font-sm;
+                            font-weight: bold;
+                            color: #666;
+                            border-left: 3px solid $deeppink;
+                            padding-left: pr(10);
+                        }
+                        .more{
+                            font-size: $font-xs;
+                            color: #5a5a5a;
+                        }
+                    }
+                    //横向滚动区域
+                    .mui-scroll-wrapper{
+                        background-color: #fff;
+                        height: pr(170);
+                        .mui-scroll{
+                            width: 200%;
+                            height: 100%;
+                            display: flex;
+                            .mui-control-item{
+                                padding: pr(15) pr(10) pr(0);
+                                width: 33.333%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                img{
+                                    display: block;
+                                    width: pr(90);
+                                }
+                                .proName{
+                                    width: 100%;
+                                    word-break: break-all;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    font-size: $font-xs;
+                                    color: #666;
+                                }
+                                .price{
+                                    font-size: $font-xs;
+                                    color: #ccc;
+                                    span{
+                                        color: $darkRed;
+                                        font-size: $font-sm;
+                                        margin-right: pr(5);
+                                       
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
