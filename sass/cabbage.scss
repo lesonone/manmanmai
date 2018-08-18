@@ -8,7 +8,7 @@
         display: flex;
         align-items: center;
         position: fixed;
-        z-index: 99;
+        z-index: 999;
         width: 100%;
         h3 {
             font-size: $font-md;
@@ -31,7 +31,59 @@
             text-align: center;
         }
     }
+    
     .main {
+        .menu{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: pr(44);
+            display: none;
+            .mask{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.3);
+                position: absolute;             
+                z-index: 5;
+            }
+            .menu-content{
+                background-color: #fff;
+                width: 100%;
+                position: fixed;
+                z-index: 100;
+                height: pr(300);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: 25%;
+                        height: pr(52);
+                        border-right: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #333;
+                        }
+                    }
+                }
+                button{
+                    width: pr(100);
+                    height: pr(30);
+                    color: $deeppink;
+                    border: 1px solid $deeppink;
+                    margin-top: pr(30);
+                    font-size: $font-sm;
+                }
+                
+            }
+        }
         .scroll {
             .mui-scroll-wrapper {
                 background-color: #f2f2f2;
@@ -87,6 +139,7 @@
                 }
                 //超级人气榜
                 .superHot {
+                    background-color: #fff;
                     margin-top: 10px;
                     .topBar{
                         background-color: #fff;
@@ -112,11 +165,11 @@
                         background-color: #fff;
                         height: pr(170);
                         .mui-scroll{
-                            width: 200%;
+                            width: 330%;
                             height: 100%;
                             display: flex;
                             .mui-control-item{
-                                padding: pr(15) pr(10) pr(0);
+                                padding: pr(8);
                                 width: 33.333%;
                                 display: flex;
                                 flex-direction: column;
@@ -127,26 +180,87 @@
                                 }
                                 .proName{
                                     width: 100%;
-                                    word-break: break-all;
+                                    white-space: nowrap;
                                     text-overflow: ellipsis;
                                     overflow: hidden;
                                     font-size: $font-xs;
-                                    color: #666;
+                                    color: #777;
                                 }
                                 .price{
                                     font-size: $font-xs;
-                                    color: #ccc;
-                                    span{
-                                        color: $darkRed;
-                                        font-size: $font-sm;
-                                        margin-right: pr(5);
-                                       
+                                    color: $deeppink;
+                                    del{
+                                        color: #ccc;
+                                        margin-left: pr(10);                                       
                                     }
                                 }
                             }
                         }
                     }
-                    
+                }
+                //商家优惠信息
+                .discount{
+                    background-color: #fff;
+                    margin-top: 10px;
+                    .topBar{
+                        background-color: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: pr(30);
+                        padding: pr(10);
+                        .super{
+                            font-size: $font-sm;
+                            font-weight: bold;
+                            color: #777;
+                            border-left: 3px solid $deeppink;
+                            padding-left: pr(10);
+                        }
+                    }
+                    .goodList{
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: pr(8);
+                        li{
+                            width: 50%;                     
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: pr(5);
+                            img{
+                                width: pr(165);
+                                height: pr(165);
+                            }
+                            .proName{
+                                width: 100%;
+                               white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                font-size: $font-xs;
+                                color: #777;
+                                margin: pr(3);
+                            }
+                            .info{
+                                display: flex; 
+                                p{
+                                    font-size: $font-sm;
+                                    color: $deeppink;
+                                    font-size: $font-xs;
+                                    del{
+                                        color: #999;
+                                        margin-left: pr(25);
+                                    }                         
+                                }                                                     
+                            }  
+                            a {
+                                font-size: pr(10);
+                                color: #333;
+                                border: pr(1) dashed $deeppink;
+                                padding: pr(0) pr(3);
+                                margin-top: pr(4);
+                            }                                                        
+                        }
+                    }
                 }
             }
         }
