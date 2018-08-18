@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <script src="js/cabbage.js"></script>
+    <link rel="stylesheet" href="css/cabbage.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="headerTop">
+            <a href="./cabbage.html">
+                <h3>白菜价</h3>
+            </a>
+            <input type="text" placeholder="好宝贝  等你搜">
+            <i class="iconfont category icon-sousuo"></i>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 轮播图部分 -->
+                        <div id="slider" class="mui-slider">
+                            <div class="mui-slider-group mui-slider-loop">
+                                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#">
+                                        <img src="./images/swiper4.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第一张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper1.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第二张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper2.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第三张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper3.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第四张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper4.jpg">
+                                    </a>
+                                </div>
+                                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#">
+                                        <img src="./images/swiper1.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

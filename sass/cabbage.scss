@@ -1,0 +1,30 @@
+@import "./common.scss";
+
+.container{
+    .headerTop{
+        height: pr(44);
+        background-color: #fe4a65;
+        display: flex;
+        align-items: center;
+        h3{
+            font-size: $font-md;
+            color: #fff;
+            width: pr(70);
+            font-weight: bold;
+            text-align: center;
+        }
+        input{
+            flex: 1;
+            height: pr(30);
+            border-radius: pr(5);
+            margin: pr(0);
+            font-size: $font-xs;
+        }
+        .category{
+            font-size: $font-lg;
+            color: #fff;
+            width: pr(40);
+            text-align: center;
+        }
+    }
+}
