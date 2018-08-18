@@ -247,5 +247,66 @@ body {
   color: #5a5a5a;
   font-size: 0.32rem;
 }
+.container .main .commodity ul {
+  border: none;
+}
+.container .main .commodity .hint {
+  color: #b3b3b3;
+  text-align: center;
+  padding: 0.08rem 0rem;
+  font-size: 0.32rem;
+}
+.container .main .commodity .discount {
+  width: 100%;
+  border-bottom: 1px solid #f6f6f6;
+}
+.container .main .commodity .discount .demonstrating {
+  padding: 0.1333333333rem;
+  display: flex;
+}
+.container .main .commodity .discount .demonstrating .left {
+  flex-basis: 1.8666666667rem;
+}
+.container .main .commodity .discount .demonstrating .left img {
+  width: 1.8666666667rem;
+}
+.container .main .commodity .discount .demonstrating .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  margin-left: 0.2666666667rem;
+}
+.container .main .commodity .discount .demonstrating .right p {
+  color: #000;
+}
+.container .main .commodity .discount .demonstrating .right .intro {
+  white-space: normal;
+  padding-right: 0.6666666667rem;
+}
+.container .main .commodity .discount .demonstrating .right .dates {
+  color: #ff841d;
+}
+
+.mui-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mui-backdrop #lunbo {
+  width: 50%;
+}
+.mui-backdrop .mui-icon {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0rem 0.1333333333rem;
+}
 
 /*# sourceMappingURL=coupon.css.map */

@@ -54,6 +54,7 @@
                         <!--这里放置真实显示的DOM内容-->
 
                         <!-- 优惠券标题 -->
+                        <!-- style="display: none;" -->
                         <div class="mui-content">
                             <div class="mui-card">
                                 <div class="mui-card-content" id="srtitle">
@@ -81,6 +82,15 @@
 
 
 
+                        <!-- 商品展示 -->
+                        <div class="commodity">
+                            <ul class="mui-table-view" id="commoditys">
+                                <!-- 模板生成 -->
+                            </ul>
+                        </div>
+
+
+
 
 
                         <div class="footer">
@@ -100,18 +110,75 @@
         </div>
     </div>
 
+    <!-- 遮罩层 -->
+    <div class="mui-backdrop" style="display: none;">
+        <!-- 轮播图 -->
+        <span class="mui-icon mui-icon-back"></span>
+        <div class="mui-slider" id="lunbo">
+
+            <div class="mui-slider-group" id="lunbo1">
+                <!-- 模板生成 -->
+                <!-- <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="./images/banner01.jpg" />
+                    </a>
+                </div> -->
+
+            </div>
+
+        </div>
+        <span class="mui-icon mui-icon-forward"></span>
+
+
+
+    </div>
+
     <!-- 优惠券标题模板 -->
     <script type="text/html" id="coupontitle">
         <div class="mui-card-content-inner coupontitle">
             {{each result v i}}
             <div>
-                <a data-id="{{v._id}}">
+                <a data-id="{{v.couponId}}" data-tit="{{v.couponTitle}}">
                     <img src="{{v.couponImg}}" alt="">
                     <p>{{v.couponTitle}}</p>
                 </a>
             </div>
             {{/each}}
         </div>
+    </script>
+
+    <!-- 商品展示模板 -->
+    <script type="text/html" id="commodity">
+        <li class="mui-table-view-cell hint">--点餐前出示手机中的优惠券,即可享受优惠--</li>
+        {{each result v i}}
+        <li class="mui-table-view-cell discount">
+            <a class="mui-navigate-right demonstrating">
+                <div class="left">
+                    {{#v.couponProductImg}}
+                    <!-- <img src="./images/sqkb_sources_static_img_news_2016_01bbdeaab8c24230957c3ce7015f51f57ada7c33.jpg" alt=""> -->
+                </div>
+                <div class="right">
+                    <div class="intro">{{v.couponProductName}}</div>
+                    <p class="rmb">{{v.couponProductPrice}}</p>
+                    <p class="dates">{{v.couponProductTime}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 轮播图模板 -->
+    <script type="text/html" id="couponlunbo">
+
+        {{each result v i}}
+        <div class="mui-slider-item">
+            <a href="#" data-num="{{i}}">
+                    {{#v.couponProductImg}}
+                    <!-- <img src="./images/banner01.jpg" /> -->
+                </a>
+        </div>
+        {{/each}}
+
     </script>
 </body>
 
