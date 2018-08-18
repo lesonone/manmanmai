@@ -4,26 +4,26 @@
 }
 
 //全局变量
-	//颜色
-		//红色
-		$deepRed: #f4483e; //深红  顶部背景色
-		$paleRed: #ff5e5d; //浅红  按钮颜色
-		$lightRed:#fc175c; //亮红  字体颜色
-		$darkRed: #e04627; //暗红  国内折扣二维码处
-		//橙色
-		$deepOrange: #ff841d; //深橙色  顶部背景 
-		$paleOrange: #ef8215; //浅红色  有效期
-		$darkOrange: #fe9b19; //暗橙色  品牌排行 前往购买
-		$orangeRed:  #ea3900; //橙红色  包邮 商品列表价格 凑单品价格
-		//黄色
-		$deepYellow: #fe9913; //深黄色  去凑单 “比价购买”按钮 星星
-		$paleYellow: #fec627; //浅黄色  "比价购买”按钮旁两个按钮 
-	//字体大小
-		$font-lg: pr(18); //最大号字体
-		$font-md: pr(16); //大号字体
-		$font-sm: pr(14); //正常字体
-		$font-xs: pr(12); //小号字体
-
+//颜色
+//红色
+$deepRed: #f4483e; //深红  顶部背景色
+$paleRed: #ff5e5d; //浅红  按钮颜色
+$lightRed: #fc175c; //亮红  字体颜色
+$darkRed: #e04627; //暗红  国内折扣二维码处
+$deeppink: #fe4a65; //深粉  白菜价处
+//橙色
+$deepOrange: #ff841d; //深橙色  顶部背景 
+$paleOrange: #ef8215; //浅红色  有效期
+$darkOrange: #fe9b19; //暗橙色  品牌排行 前往购买
+$orangeRed: #ff7f23; //橙红色  包邮 商品列表价格 凑单品价格
+//黄色
+$deepYellow: 1; //深黄色  去凑单 “比价购买”按钮 星星
+$paleYellow: #fec627; //浅黄色  "比价购买”按钮旁两个按钮 
+//字体大小
+$font-lg: pr(18); //最大号字体
+$font-md: pr(16); //大号字体
+$font-sm: pr(14); //正常字体
+$font-xs: pr(12); //小号字体
 //样式初始化代码
 body,
 div,
