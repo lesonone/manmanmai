@@ -197,12 +197,20 @@ body {
 
 .container .header {
   background-color: #f4483e;
+  display: flex;
 }
 .container .header .mui-pull-left {
   color: #fff;
 }
 .container .header h1 {
   color: #fff;
+  font-size: 0.4533333333rem;
+  font-weight: 500;
+  line-height: 1.1733333333rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
 }
 .container .main .mui-content {
   background-color: #fff;

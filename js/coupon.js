@@ -1,5 +1,9 @@
 $(function() {
 
+    // $('.back').click(function() {
+    //     back();
+    // })
+
     function back() {
         window.history.back();
     }
@@ -44,7 +48,6 @@ $(function() {
             data: { couponid: cid },
             dataType: 'json',
             success: function(obj) {
-                //console.log(obj);
                 var html = template(muban, obj);
                 //console.log(html);
                 addres.html(html);
@@ -75,6 +78,10 @@ $(function() {
         discount($(this).data('id'), 'commodity', $('#commoditys'));
 
         $('.mui-title').html($(this).data('tit') + '优惠券');
+
+
+
+
 
     });
 
@@ -127,6 +134,10 @@ $(function() {
         var slider = mui('#slider').slider();
         slider.nextItem();
     })
+
+
+
+
 
 
 
