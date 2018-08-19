@@ -3,12 +3,21 @@
     // 头部
     .header {
         background-color: $deepRed;
+        display: flex;
         .mui-pull-left {
             color: #fff;
         }
         h1 {
             color: #fff;
+            font-size: pr(17);
+            font-weight: 500;
+            line-height: pr(44);
+            display: block;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
         }
+        .download {}
     }
     .main {
         .mui-content {

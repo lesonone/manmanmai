@@ -36,7 +36,7 @@
 
     //主体部分
     .main{
-        
+        position: relative;
         //分类菜单
         .menu{
             position: absolute;
@@ -101,8 +101,7 @@
                     width: 100%;
                     display: flex;
                     padding: pr(10) pr(2);
-                    margin: pr(0) pr(3);
-                    margin-bottom: pr(8);
+                    margin: pr(0) pr(3) pr(8);
                     img{
                         width: pr(130);
                         height: pr(130);
@@ -114,7 +113,6 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-around;
-                        // padding: pr(5) pr(0);
                         .proName{                            
                             color: #000;
                             font-size: $font-sm;
@@ -139,7 +137,6 @@
                                 border-radius: pr(10);
                                 position: relative;
                                 overflow: hidden;
-                                text-align: center;
                                 line-height: pr(18);
                                 em {
                                     display: inline-block;
@@ -153,7 +150,10 @@
                                 span{
                                     color: #fff;
                                     font-size: $font-xs;
-
+                                    position: absolute;
+                                    z-index: 1;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                 }
                             }
                             b{
@@ -184,6 +184,35 @@
                     }
                 }
             }
+        }
+    }
+
+    .anchor{
+        position: fixed;
+        right: pr(15);
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: pr(40);
+            height: pr(40);
+            animation: circle 60s alternate infinite;
+            transition: all 60s;
+        }
+        i{
+            width: pr(5);
+            height: pr(24);
+            background-color: #ccc;
+            margin-top: pr(-5);
+        }
+    }
+
+    //小风车的动画
+    @keyframes circle {
+        to {
+            transform: rotateZ(-3000deg);
         }
     }
 }

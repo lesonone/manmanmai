@@ -196,138 +196,90 @@ body {
 }
 
 .container .header {
-  background-color: #f4483e;
+  font-size: 0.5333333333rem;
+  color: #fff;
+}
+.container .header .back {
+  font-size: 0.5333333333rem;
+}
+.container .header .title {
+  margin: 0 auto;
+}
+.container .sortBar {
+  height: 1rem;
   display: flex;
-}
-.container .header .mui-pull-left {
-  color: #fff;
-}
-.container .header h1 {
-  color: #fff;
-  font-size: 0.4533333333rem;
-  font-weight: 500;
-  line-height: 1.1733333333rem;
-  display: block;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-}
-.container .main .mui-content {
   background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.4266666667rem;
+  position: relative;
+  border-bottom: 0.0266666667rem solid #ccc;
 }
-.container .main .mui-content .coupontitle {
+.container .sortBar .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.container .sortBar .left a {
+  flex: 1;
+  text-align: center;
+  color: #5a5a5a;
+}
+.container .sortBar .right {
+  flex-basis: 1.2266666667rem;
+}
+.container .sortBar .hideSort ul {
+  z-index: 99;
+  display: none;
+  position: absolute;
+  left: 0rem;
+  top: 1rem;
+  font-size: 0.4266666667rem;
+  color: #5a5a5a;
+  background-color: #fff;
+  width: 100%;
+}
+.container .sortBar .hideSort ul li {
+  line-height: 1.0666666667rem;
+  padding: 0rem 0.2666666667rem;
+  border-bottom: 0.0266666667rem solid #ccc;
+}
+.container .sortBar .hideSort ul li span {
+  color: red;
+}
+.container .main .mui-scroll ul {
+  background-color: #f1f1f1;
+  padding: 0.2133333333rem;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.1333333333rem;
 }
-.container .main .mui-content .coupontitle div {
-  width: 33.33333%;
-  padding: 0.08rem;
+.container .main .mui-scroll ul li {
+  width: 4.6666666667rem;
+  border: 1px solid #ddd;
+  margin-right: 0.24rem;
+  background-color: #fff;
+  margin-bottom: 0.2133333333rem;
 }
-.container .main .mui-content .coupontitle div a {
-  padding: 0.2666666667rem 0rem;
-  border: 1px solid #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.container .main .mui-scroll ul li:nth-child(2n) {
+  margin-right: 0rem;
 }
-.container .main .mui-content .coupontitle div a img {
-  width: 0.6666666667rem;
-}
-.container .main .mui-content .navbar {
+.container .main .mui-scroll ul li img {
   width: 100%;
-  height: 1.0133333333rem;
-  border-bottom: 0.0533333333rem solid #ccc;
-  display: flex;
-  align-items: center;
-  padding-left: 0.2666666667rem;
-  background: linear-gradient(to bottom, #fff, #ececec);
-  margin-bottom: 0.5333333333rem;
 }
-.container .main .mui-content .navbar .breadcrumb {
-  display: flex;
+.container .main .mui-scroll ul li p {
+  padding-left: 0.1866666667rem;
 }
-.container .main .mui-content .navbar .breadcrumb .arrows {
-  padding: 0rem 0.08rem;
-}
-.container .main .mui-content .navbar .breadcrumb li {
-  font-size: 0.32rem;
-}
-.container .main .mui-content .navbar .breadcrumb li a {
-  color: #5a5a5a;
-  font-size: 0.32rem;
-}
-.container .main .commodity ul {
-  border: none;
-}
-.container .main .commodity .hint {
-  color: #b3b3b3;
-  text-align: center;
-  padding: 0.08rem 0rem;
-  font-size: 0.32rem;
-}
-.container .main .commodity .discount {
-  width: 100%;
-  border-bottom: 1px solid #f6f6f6;
-}
-.container .main .commodity .discount .demonstrating {
-  padding: 0.1333333333rem;
-  display: flex;
-}
-.container .main .commodity .discount .demonstrating .left {
-  flex-basis: 1.8666666667rem;
-}
-.container .main .commodity .discount .demonstrating .left img {
-  width: 1.8666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 1;
-  margin-left: 0.2666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right p {
+.container .main .mui-scroll ul li .title {
   color: #000;
+  font-size: 0.3466666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.1333333333rem;
 }
-.container .main .commodity .discount .demonstrating .right .intro {
-  white-space: normal;
-  padding-right: 0.6666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right .dates {
-  color: #ff841d;
-}
-
-.mui-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mui-backdrop .mui-slider {
-  width: 50%;
-  position: relative;
-  z-index: 101;
-}
-.mui-backdrop .mui-icon {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  margin: 0rem 0.1333333333rem;
-}
-.mui-backdrop .mui-icon-refreshempty {
-  position: absolute;
-  right: 1.6533333333rem;
-  top: 6.2133333333rem;
-}
-.mui-backdrop .mui-icon-refreshempty:hover {
-  background-color: #fe4a65;
+.container .main .mui-scroll ul li .price {
+  color: #f8601d;
+  font-size: 0.4533333333rem;
 }
 
-/*# sourceMappingURL=coupon.css.map */
+/*# sourceMappingURL=makeUp.css.map */
