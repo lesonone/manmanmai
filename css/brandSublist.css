@@ -222,7 +222,7 @@ body {
   height: 0.9866666667rem;
   background-color: #f3f3f3;
   border-bottom: 0.0266666667rem solid #ccc;
-  color: #fe9913;
+  color: 1;
   padding: 0.32rem;
   font-size: 0.3733333333rem;
 }
@@ -299,7 +299,7 @@ body {
   font-weight: bold;
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star {
-  color: #fe9913;
+  color: 1;
   display: flex;
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star .icon-start {

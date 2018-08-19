@@ -113,25 +113,21 @@
     <!-- 遮罩层 -->
     <div class="mui-backdrop" style="display: none;">
         <!-- 轮播图 -->
-        <span class="mui-icon mui-icon-back"></span>
-        <div class="mui-slider" id="lunbo">
+        <!-- <span class="mui-icon mui-icon-back"></span> -->
+        <!-- <div class="mui-slider" id="lunbo"> -->
 
-            <div class="mui-slider-group" id="lunbo1">
-                <!-- 模板生成 -->
-                <!-- <div class="mui-slider-item">
+        <!-- 模板生成 -->
+        <!-- <div class="mui-slider-item">
                     <a href="#">
                         <img src="./images/banner01.jpg" />
                     </a>
                 </div> -->
 
-            </div>
-
-        </div>
-        <span class="mui-icon mui-icon-forward"></span>
-
-
+        <!-- </div> -->
+        <!-- <span class="mui-icon mui-icon-forward"></span> -->
 
     </div>
+
 
     <!-- 优惠券标题模板 -->
     <script type="text/html" id="coupontitle">
@@ -153,7 +149,7 @@
         {{each result v i}}
         <li class="mui-table-view-cell discount">
             <a class="mui-navigate-right demonstrating">
-                <div class="left">
+                <div class="left" data-zsid="{{v.couponProductId}}">
                     {{#v.couponProductImg}}
                     <!-- <img src="./images/sqkb_sources_static_img_news_2016_01bbdeaab8c24230957c3ce7015f51f57ada7c33.jpg" alt=""> -->
                 </div>
@@ -167,19 +163,44 @@
         {{/each}}
     </script>
 
+
     <!-- 轮播图模板 -->
     <script type="text/html" id="couponlunbo">
+        <span class="mui-icon mui-icon-closeempty"></span>
 
-        {{each result v i}}
-        <div class="mui-slider-item">
-            <a href="#" data-num="{{i}}">
-                    {{#v.couponProductImg}}
-                    <!-- <img src="./images/banner01.jpg" /> -->
-                </a>
+        <span class="mui-icon mui-icon-back"></span>
+        <div class="mui-slider" id='slider'>
+            <!-- 每一屏的内容 -->
+            <div class="mui-slider-group mui-slider-loop" id="lunbo1">
+                <!-- 图数数组的最后一张 -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a>
+                        <img src="{{result[result.length-1].couponProductImg}}" />
+                    </a>
+                </div>
+
+                {{each result v i}}
+                <div class="mui-slider-item">
+                    <a>
+                            {{#v.couponProductImg}}
+                        <!-- <img src="{{v.picAddr}}" alt=""> -->
+                    </a>
+                </div>
+                {{/each}}
+
+                <!-- 图片数组的第一张 -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a>
+                        <img src="{{result[0].couponProductImg}}" />
+                    </a>
+                </div>
+            </div>
+
         </div>
-        {{/each}}
-
+        <span class="mui-icon mui-icon-forward"></span>
     </script>
+
+
 </body>
 
 </html>

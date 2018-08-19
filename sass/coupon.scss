@@ -109,23 +109,34 @@
     }
 }
 
+// 遮罩层
 .mui-backdrop {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 998;
+    z-index: 100;
     background-color: rgba(0, 0, 0, .3);
     display: flex;
     justify-content: center;
     align-items: center;
-    #lunbo {
+    .mui-slider {
         width: 50%;
+        position: relative;
+        z-index: 101;
     }
     .mui-icon {
         color: #fff;
         background-color: rgba(0, 0, 0, .3);
         margin: pr(0) pr(5);
+    }
+    .mui-icon-closeempty {
+        position: absolute;
+        right: pr(62);
+        top: pr(233);
+        &:hover {
+            background-color: $deeppink;
+        }
     }
 }
