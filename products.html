@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/products.css">
+    <script src="./js/products.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a href="" class="back">
+                <span class="mui-icon mui-icon-arrowleft"></span>
+            </a>
+            <h4>国内折扣</h4>
+            <a class="download"></a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="inner">
+                            
+                            
+
+                        </div>
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top">
+                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>
+                                    <span class="warning">手机APP下载</span>
+                                    <span>慢慢买手机版--掌上比价平台</span>
+                                </p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <a href="" class="discuss">
+            <span class="mui-icon mui-icon-compose"></span>评论</a>
+        <a href="" class="GoBuy">
+            <span class="mui-icon mui-icon-redo"></span>前往购买</a>
+    </div>
+
+</body>
+<script type="text/html" id="discussData">
+    {{#result[0].productComment}}
+</script>
+
+<script id="gooddetail" type="text/html">
+    <div class="product">
+        <span class="title">
+            <p>{{result[0].productName}}
+            </p>
+        </span>
+        <div class="subtitle">
+            <p class="JD">{{result[0].productFrom}}</p>&nbsp;&nbsp;
+            <p class="time">{{result[0].productTime}}</p>&nbsp;&nbsp;
+            <p class="chenjin">{{result[0].productTips}}</p>
+        </div>
+        <div class="banner">
+            <div class="topBanner">
+                <div class="left">
+                    <div class="explain">
+                        <p>{{result[0].productInfo}}</p>
+                    </div>
+                </div>
+                <div class="right">
+                    {{#result[0].productImg}}
+                </div>
+            </div>
+            <div class="bottomBanner">
+                <p class="price">价格：{{result[0].productPrice}}</p>
+                {{#result[0].productImg}}
+            </div>
+            <!-- 前往购买按钮 -->
+            <button type="button" class="mui-btn mui-btn-warning  goBuy">前往购买</button>
+            <!-- 二维码窗口 -->
+            <img src="./images/mmbweixin2.png" alt="" class="QRcode">
+            <!-- 评论窗口 -->
+            <div class="userDiscuss">
+                {{#result[0].productComment}}
+            </div>
+        </div>
+
+    </div>
+</script>
+
+
+</html>
