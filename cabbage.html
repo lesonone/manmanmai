@@ -22,7 +22,7 @@
 <body>
     <div class="container">
         <!-- 顶部 -->
-        <div class="headerTop">
+        <div class="headerTop" id="mubiao">
             <a href="./cabbage.html">
                 <h3>白菜价</h3>
             </a>
@@ -31,7 +31,7 @@
         </div>
             
         <!-- 主体部分 -->
-        <div class="main">
+        <div class="main" >
             <!-- 下拉框 -->
             <div class="menu">                
                 <div class="menu-content">
@@ -40,7 +40,7 @@
                 <div class="mask"></div>
             </div>
             <!-- 内部滚动区 -->
-            <div class="scroll">
+            <div class="scroll" >
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
                         <!-- 轮播图部分 -->
@@ -91,19 +91,19 @@
                             </div>
                         </div>
                         <!-- 导航栏部分 -->
-                        <div class="nav">
+                        <div class="nav" id="mubiao">
                             <ul>
-                                <li><a href=""><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
-                                <li><a href=""><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
-                                <li><a href=""><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
-                                <li><a href=""><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
+                                <li><a href="./cabbageList.html?titleid=0&title=全部"><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
+                                <li><a href="./cabbageList.html?titleid=1&title=热销"><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
+                                <li><a href="./cabbageList.html?titleid=2&title=9块邮"><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
+                                <li><a href="./cabbageList.html?titleid=3&title=19块邮"><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
                             </ul>
                         </div>
                         <!-- 超级人气榜 -->
                         <div class="superHot">
                             <div class="topBar">
                                 <span class="super">超级人气榜</span>
-                                <a href="" class="more">更多</a>
+                                <a href="./cabbageList.html?titleid=12&title=美妆" class="more">更多</a>
                             </div>
                             <!-- 横向滚动 -->
                             <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
@@ -157,6 +157,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- 回到顶部 -->
+        <a  href="#mubiao" class="anchor" target="_self">           
+            <img src="./images/anchor.png" alt="">
+            <i></i>
+        </a>
     </div>
 </body>
 
@@ -166,7 +172,7 @@
 
     <ul class="menuList">
         {{each result value key}}
-        <li data-id={{value.titleId}}><a href="./cabbageList.html?titleid={{value.titleId}}">{{value.title}}</a></li>
+        <li><a href="./cabbageList.html?titleid={{value.titleId}}&title={{value.title}}">{{value.title}}</a></li>
         {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>
