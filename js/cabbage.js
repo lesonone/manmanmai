@@ -30,34 +30,21 @@ $(function(){
         }
     });
 
-    //4.封装一个显示各分类列表的函数
-    function render(id) {  
-        $.ajax({
-            url : 'http://mmb.ittun.com/api/getbaicaijiaproduct',
-            type : 'get',
-            data : {titleid : id},
-            dataType : 'json',
-            success : function (obj) {  
-                console.log(obj);
-                var html = template('goodlist',obj);
-                $('.goodList').html(html);
-            }
-        })
-    };
+
 
     //5.主页商家优惠信息处,显示全部的列表信息
-    render(10);
+    renderData({
+        url : 'http://mmb.ittun.com/api/getbaicaijiaproduct',
+        data : {titleid : 10},
+        id : 'goodlist',
+        cl : '.goodList'
+    });
 
     //6.超级人气榜
-    $.ajax({
+    renderData({
         url : 'http://mmb.ittun.com/api/getbaicaijiaproduct',
-        type : 'get',
         data : {titleid : 12},
-        dataType : 'json',
-        success : function (obj) {  
-            console.log(obj);
-            var html = template('superList',obj);
-            $('.superHot .mui-scroll').html(html);
-        }
-    })
+        id : 'superList',
+        cl : '.superHot .mui-scroll'
+    });  
 });

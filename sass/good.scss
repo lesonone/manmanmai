@@ -2,7 +2,8 @@
 .main {
     .scroll {
         background-color: #f2f2f2;
-        .inner {
+        div.inner#content {
+            margin-bottom: 0;
             //导航条样式
             .navbar {
                 width: 100%;
@@ -26,40 +27,37 @@
                     }
                 }
             }
-            //商品展示
+             //商品展示
             .products {
-                padding:pr(0) pr(10);
+                padding: pr(20);
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                border-bottom: pr(1) solid #ccc;
-                margin-bottom: pr(16);
-                .collect {
-                    position: absolute;
-                    right:pr(20);
-                    top:pr(20);
-                    width:pr(34);
-                }
-                .product {
-                    margin: pr(40) pr(0);
+                img {
                     align-self: center;
                 }
+                .collect {
+                    position: absolute;
+                    right: pr(20);
+                    bottom: pr(20);
+                    width: pr(34);
+                }
                 .title {
-                    color:#000;
+                    color: #000;
+                    text-align: center;
                     font-size: $font-md;
-                    margin-bottom: pr(5);
-                }
-                .info {
-                    font-size: $font-xs;
-                    .price {
-                        color:#666;
-                        margin-right: pr(50);
-                    }
-                    .num {
-                        color:#666;
-                    }
-                }
-            }
+                    margin-bottom: pr(10);
+                } // .info {
+                //     font-size: $font-xs;
+                //     .price {
+                //         color:#666;
+                //         margin-right: pr(50);
+                //     }
+                //     .num {
+                //         color:#666;
+                //     }
+                // }
+            } 
             //比价购买部分
             .more {
                 .tags {
@@ -70,128 +68,146 @@
                         border-bottom: pr(1) solid #000;
                         li {
                             position: relative;
-                            width:33.3333333333%;
-                            background: linear-gradient(to bottom,#ffcf4c,#ffbc05);
+                            width: 33.3333333333%;
+                            background: linear-gradient(to bottom, #ffcf4c, #ffbc05);
                             a {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                width:100%;
-                                height:pr(30);
-                                color:#fff;
+                                width: 100%;
+                                height: pr(30);
+                                color: #fff;
                             }
                             &.active {
-                                background: linear-gradient(to bottom,#ffa52f,#ff9001);
+                                background: linear-gradient(to bottom, #ffa52f, #ff9001);
                             }
                             .triAngle {
-                                width:0;
-                                height:0;
-                                border:pr(5) solid #ff9001;
+                                width: 0;
+                                height: 0;
+                                border: pr(5) solid #ff9001;
                                 border-color: #ff9001 transparent transparent transparent;
                                 position: absolute;
-                                bottom:pr(-10);
-                                left:50%;
+                                bottom: pr(-10);
+                                left: 50%;
                                 display: none;
                             }
-                           
                         }
-                        li:nth-child(2){
+                        li:nth-child(2) {
                             border-left: pr(1) solid #000;
                             border-right: pr(1) solid #000;
                         }
-                        
                     }
                 }
                 .record {
-                    ul {
-                        li {
-                           border-bottom: pr(1) solid #ccc;
-                           a {
-                               padding:pr(15) 0;
-                               .left {
-                                   padding-left: pr(6);
-                                   p {
-                                       font-size: $font-xs;
-                                       color:#666;
-                                       margin-left: pr(-5);
-                                   }
-                               }
-                              .right {
-                                  padding-right: pr(24);
-                                  p {
-                                    font-size: $font-md;
-                                    color:$deepRed;
-                                  }
-                              } 
-                           }
+                    padding: pr(10) pr(5);
+                    border-bottom: pr(1) solid #ccc;
+                    tbody {
+                        tr {
+                            td:nth-child(2) {
+                                a {
+                                    padding-left: pr(-15);
+                                }
+                            }
+                            .red {
+                                color: $lightRed;
+                                padding-left: pr(150);
+                            }
                         }
-                    }
-                }
-                .lowPrice {
-                    padding:pr(10) pr(5);
-                    color:#000;
-                }
+                    } // ul {
+                    //     li {
+                    //        border-bottom: pr(1) solid #ccc;
+                    //        a {
+                    //            padding:pr(15) 0;
+                    //            .left {
+                    //                padding-left: pr(6);
+                    //                p {
+                    //                    font-size: $font-xs;
+                    //                    color:#666;
+                    //                    margin-left: pr(-5);
+                    //                }
+                    //            }
+                    //           .right {
+                    //               padding-right: pr(24);
+                    //               p {
+                    //                 font-size: $font-md;
+                    //                 color:$deepRed;
+                    //               }
+                    //           } 
+                    //        }
+                    //     }
+                    // }
+                } // .lowPrice {
+                //     padding:pr(10) pr(5);
+                //     color:#000;
+                // }
                 .tip {
-                    padding:pr(10) pr(20) pr(10) pr(7);
-                    color:#666;
+                    padding: pr(10) pr(20) pr(10) pr(7);
+                    color: #666;
                     font-size: $font-xs;
                     border-bottom: pr(3) solid #eee;
                 }
             }
+            // 商品评论部分
             .comments {
                 border-top: pr(3) solid #7a7a7a;
                 .title {
                     background-color: #dbdbdb;
-                    color:#000;
+                    color: #000;
                     text-align: center;
                     line-height: pr(38);
                 }
-                .comment {
-                    padding:pr(10) pr(10) 0 pr(10);
-                    border-bottom: pr(1) solid #ccc;
-                    .info,.subInfo {
-                        display: flex;
-                        justify-content: space-between;
-                        font-size: $font-xs;
-                    }
-                    .subInfo {
-                        .star {
-                            .icon-start {
-                                color:$darkOrange;
+                .commentList {
+                    .comment {
+                        padding: pr(10) pr(10) 0 pr(10);
+                        border-bottom: pr(1) solid #ccc;
+                        .info,
+                        .subInfo {
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: $font-xs;
+                        }
+                        .subInfo {
+                            .star {
+                                .icon-start {
+                                    color: $darkOrange;
+                                }
+                            }
+                            .store {
+                                color: #333;
+                            }
+                            margin-bottom: pr(5);
+                        }
+                        .info {
+                            .date {
+                                color: #666;
                             }
                         }
-                        .store {
-                            color:#333;
+                        .content {
+                            color: #000;
+                            margin-bottom: pr(5);
                         }
-                        margin-bottom: pr(5);
-                    }
-                    .info {
-                        .date {
-                            color:#666;
+                        .reply {
+                            font-size: $font-xs;
                         }
-                    }
-                    .content {
-                        color:#000;
-                        margin-bottom: pr(5);
-                    }
-                    .reply {
-                        font-size: $font-xs;
                     }
                 }
             }
+            // 查看更多按钮
             .moreComment {
-                padding:pr(20) pr(5);
+                padding: pr(20) pr(5);
                 background-color: #f2f2f2;
                 button {
                     width: 100%;
                     border-radius: pr(10);
-                    background: linear-gradient(to bottom,#eeeeee,#d5d5d5);
+                    background: linear-gradient(to bottom, #eeeeee, #d5d5d5);
                 }
             }
         }
     }
 }
-.mui-navigate-right:after, .mui-push-right:after {
+
+.mui-navigate-right:after,
+.mui-push-right:after {
     right: pr(4);
     font-size: $font-lg;
 }

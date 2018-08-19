@@ -25,7 +25,7 @@
             font-size: $font-xs;
         }
         .category {
-            font-size: $font-lg;
+            font-size: pr(26);
             color: #fff;
             width: pr(40);
             text-align: center;
@@ -220,35 +220,34 @@
                     .goodList{
                         display: flex;
                         flex-wrap: wrap;
-                        padding: pr(8);
+                        padding: pr(6);
                         li{
                             width: 50%;                     
                             display: flex;
                             flex-direction: column;
-                            align-items: center;
                             padding: pr(5);
                             img{
-                                width: pr(165);
-                                height: pr(165);
+                                width: pr(176);
+                                height: pr(160);
                             }
                             .proName{
                                 width: 100%;
-                               white-space: nowrap;
+                                white-space: nowrap;
                                 text-overflow: ellipsis;
                                 overflow: hidden;
                                 font-size: $font-xs;
                                 color: #777;
-                                margin: pr(3);
+                                padding: pr(5);
                             }
                             .info{
                                 display: flex; 
+                                padding: pr(0) pr(5);
                                 p{
-                                    font-size: $font-sm;
-                                    color: $deeppink;
                                     font-size: $font-xs;
+                                    color: $deeppink;
                                     del{
                                         color: #999;
-                                        margin-left: pr(25);
+                                        margin-left: pr(20);
                                     }                         
                                 }                                                     
                             }  

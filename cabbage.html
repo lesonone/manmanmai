@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +12,10 @@
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
 
-
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
     <script src="js/cabbage.js"></script>
     <link rel="stylesheet" href="css/cabbage.css">
-
 
 </head>
 
@@ -30,7 +27,7 @@
                 <h3>白菜价</h3>
             </a>
             <input type="text" placeholder="好宝贝  等你搜">
-            <i class="iconfont category icon-sousuo"></i>
+            <i class="mui-icon mui-icon-settings category"></i>
         </div>
             
         <!-- 主体部分 -->
@@ -111,54 +108,15 @@
                             <!-- 横向滚动 -->
                             <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
                                 <div class="mui-scroll">
-                                    <a class="mui-control-item">
+                                    <!-- 模板生成 -->
+                                    <!-- <a class="mui-control-item">
                                         <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
                                         <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
                                             ipsa amet nobis rem.</p>
                                         <p class="price">
                                             <span>¥9.9</span>券后
                                         </p>
-                                    </a>
-                                    <a class="mui-control-item">
-                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
-                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
-                                            ipsa amet nobis rem.</p>
-                                        <p class="price">
-                                            <span>¥9.9</span>券后
-                                        </p>
-                                    </a>
-                                    <a class="mui-control-item">
-                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
-                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
-                                            ipsa amet nobis rem.</p>
-                                        <p class="price">
-                                            <span>¥9.9</span>券后
-                                        </p>
-                                    </a>
-                                    <a class="mui-control-item">
-                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
-                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
-                                            ipsa amet nobis rem.</p>
-                                        <p class="price">
-                                            <span>¥9.9</span>券后
-                                        </p>
-                                    </a>
-                                    <a class="mui-control-item">
-                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
-                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
-                                            ipsa amet nobis rem.</p>
-                                        <p class="price">
-                                            <span>¥9.9</span>券后
-                                        </p>
-                                    </a>
-                                    <a class="mui-control-item">
-                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
-                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
-                                            ipsa amet nobis rem.</p>
-                                        <p class="price">
-                                            <span>¥9.9</span>券后
-                                        </p>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -176,11 +134,22 @@
                                     </p>
                                     <div class="info">
                                         <p>
-                                            <em>¥</em>0.0
+                                            券后: <em>¥</em>0.0
                                             <del>¥0</del>
-                                        </p>
-                                        <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" target="_blank">点此领15元优惠券</a>
-                                    </div> 
+                                        </p>                                       
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+                                    <p class="proName">
+                                        <span class="b">[包邮]</span>双十一红包 今日开启
+                                    </p>
+                                    <div class="info">
+                                        <p>
+                                            券后: <em>¥</em>0.0
+                                            <del>¥0</del>
+                                        </p>                                        
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -197,7 +166,7 @@
 
     <ul class="menuList">
         {{each result value key}}
-        <li data-id={{value.titleId}}><a href="">{{value.title}}</a></li>
+        <li data-id={{value.titleId}}><a href="./cabbageList.html?titleid={{value.titleId}}">{{value.title}}</a></li>
         {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>
@@ -215,10 +184,8 @@
         <div class="info">
             <p>
                 {{#value.productPrice}}
-            </p>
-            
+            </p>         
         </div> 
-        {{#value.productCoupon}}
     </li>
     {{/each}}
 </script>

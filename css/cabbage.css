@@ -222,7 +222,7 @@ body {
   font-size: 0.32rem;
 }
 .container .headerTop .category {
-  font-size: 0.48rem;
+  font-size: 0.6933333333rem;
   color: #fff;
   width: 1.0666666667rem;
   text-align: center;
@@ -408,18 +408,17 @@ body {
 .container .main .scroll .mui-scroll-wrapper .discount .goodList {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.2133333333rem;
+  padding: 0.16rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li {
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0.1333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li img {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4.6933333333rem;
+  height: 4.2666666667rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li .proName {
   width: 100%;
@@ -428,19 +427,19 @@ body {
   overflow: hidden;
   font-size: 0.32rem;
   color: #777;
-  margin: 0.08rem;
+  padding: 0.1333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li .info {
   display: flex;
+  padding: 0rem 0.1333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li .info p {
-  font-size: 0.3733333333rem;
-  color: #fe4a65;
   font-size: 0.32rem;
+  color: #fe4a65;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li .info p del {
   color: #999;
-  margin-left: 0.6666666667rem;
+  margin-left: 0.5333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li a {
   font-size: 0.2666666667rem;
