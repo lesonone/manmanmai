@@ -20,166 +20,160 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- 顶部 -->
-        <div class="header">
-            <a class="logo"></a>
-            <a class="download"></a>
-        </div>
-        <!-- 主体部分 -->
-        <div class="main">
-            <!-- 搜索栏 -->
-            <div class="searchbar">
-                <div class="search">
-                    <input type="text" placeholder="请输入你想比价的商品">
-                    <span class="searchbtn">搜索</span>
-                </div>
-            </div>
-            <!-- 内部滚动区 -->
-            <div class="scroll">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <!--这里放置真实显示的DOM内容-->
-                        <div class="inner" id="content">
-                            <!-- 面包屑导航 -->
-                            <div class="navbar">
-                                <ol class="breadcrumb">
-                                    <li>
-                                        <a href="./index.html">首页</a>
-                                    </li>
-                                    <span class="arrows">></span>
-                                    <li>
-                                        <a href="./brandList.html">平板电视</a>
-                                    </li>
-                                    <span class="arrows">></span>
-                                    <li>海信5555500</li>
-                                </ol>
-                            </div>
-                            <!-- 商品展示 -->
-                            <div class="products">
-
-                            </div>
-                            <!-- 比价购买部分 -->
-                            <div class="more">
-                                <div class="tags">
-                                    <ul class="tagList">
-                                        <li class="active">
-                                            <a href="#">比价购买</a>
-                                            <div class="triAngle"></div>
-                                        </li>
-                                        <li>
-                                            <a href="#">产品参数</a>
-                                            <div class="triAngle"></div>
-                                        </li>
-                                        <li>
-                                            <a href="#">优选评价</a>
-                                            <div class="triAngle"></div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="record">
-                                    <!-- <ul>
-                                        <li class="mui-table-view-cell">
-                                            <a class="mui-navigate-right">
-                                                <div class="left mui-pull-left">
-                                                    <div class="store">
-                                                        <img src="./images/1.png" alt="">
-                                                        <span>京东商城</span>
-                                                    </div>
-                                                    <p>自营</p>
-                                                </div>
-                                                <div class="right mui-pull-right">
-                                                    <p class="price">￥299.00</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li class="mui-table-view-cell">
-                                            <a class="mui-navigate-right">
-                                                <div class="left mui-pull-left">
-                                                    <div class="store">
-                                                        <img src="./images/taobao.png" alt="">
-                                                        <span>天猫商城</span>
-                                                    </div>
-                                                </div>
-                                                <div class="right mui-pull-right">
-                                                    <p class="price">￥399.00</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul> -->
-                                </div>
-                                <!-- <p class="lowPrice">该商品的历史最低价：298.00 ></p> -->
-                                <p class="tip">*实际价格以个网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
-                            </div>
-                            <!-- 评价部分 -->
-                            <div class="comments">
-                                <p class="title">优选网友评价</p>
-                                <div class="commentList">
-
-                                </div>
-                            </div>
-                            <div class="moreComment">
-                                <button>查看更多评价</button>
-                            </div>
-                        </div>
-                        <!-- 底部内容 -->
-                        <div class="footer">
-                            <div class="footer-top">
-                                <a class="login">登录</a>
-                                <a class="register">注册</a>
-                                <a class="back-top">
-                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
-                            </div>
-                            <div class="footer-bottom">
-                                <p>
-                                    <span class="warning">手机APP下载</span>
-                                    <span>慢慢买手机版--掌上比价平台</span>
+        <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+                <!--侧滑菜单部分-->
+                <aside id="offCanvasSide" class="mui-off-canvas-left">
+                    <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <div class="title">侧滑导航</div>
+                            <div class="content">
+                                这是可拖动式侧滑菜单示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式： 1.在手机屏幕任意位置向左拖动(drag)；2.点击本侧滑菜单页之外的任意位置; 3.点击如下红色按钮
+                                <span class="android-only">；4.Android手机按back键；5.Android手机按menu键
+                                </span>。
+                                <p style="margin: 10px 15px;">
+                                    <button id="offCanvasHide" type="button" class="mui-btn mui-btn-danger mui-btn-block" style="padding: 5px 20px;">关闭侧滑菜单</button>
                                 </p>
-                                <p>m.manmanbuy.com</p>
+    
+                            </div>
+                            <div class="title" style="margin-bottom: 25px;">侧滑列表示例</div>
+                            <ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 1
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 2
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 3
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 4
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 5
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell">
+                                    <a class="mui-navigate-right">
+                                        Item 6
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <!--主界面部分-->
+                <div class="container">
+                        <!-- 顶部 -->
+                        <div class="header">
+                            <a class="logo"></a>
+                            <a class="download"></a>
+                        </div>
+                        <!-- 主体部分 -->
+                        <div class="main">
+                            <!-- 搜索栏 -->
+                            <div class="searchbar">
+                                <div class="search">
+                                    <input type="text" placeholder="请输入你想比价的商品">
+                                    <span class="searchbtn">搜索</span>
+                                </div>
+                            </div>
+                            <!-- 内部滚动区 -->
+                            <div class="scroll">
+                                <div class="mui-scroll-wrapper">
+                                    <div class="mui-scroll">
+                                        <!--这里放置真实显示的DOM内容-->
+                                        <div class="inner" id="content">
+                                            <div class="navbar">
+                                                <ol class="breadcrumb">
+                                                    <li>
+                                                        <a href="./index.html">首页</a>
+                                                    </li>
+                                                    <span class="arrows">></span>
+                                                    <li>
+                                                        <a href="./brandList.html">全部分类</a>
+                                                    </li>
+                                                    <span class="arrows">></span>
+                                                    <li class="categoryName"></li>
+                                                </ol>
+                                                <button class="mui-btn-default">筛选</button>
+                                            </div>
+                                            <div class="products">
+                
+                                            </div>
+                                            <div class="paging">
+                                                <div class="mui-content-padded">
+                                                    <ul class="mui-pager">
+                                                        <li class="mui-previous">
+                                                            <a href="#">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                        <li class="mui-next">
+                                                            <a href="#">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="link">
+                                                    <p class="title">相关链接：</p>
+                                                    <p>电视机十大品牌</p>
+                                                    <p>电视机口碑大全</p>
+                                                </div>
+                                            </div>
+                
+                                            <!-- 底部内容 -->
+                                            <div class="footer">
+                                                <div class="footer-top">
+                                                    <a class="login">登录</a>
+                                                    <a class="register">注册</a>
+                                                    <a class="back-top">
+                                                        <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                                                </div>
+                                                <div class="footer-bottom">
+                                                    <p>
+                                                        <span class="warning">手机APP下载</span>
+                                                        <span>慢慢买手机版--掌上比价平台</span>
+                                                    </p>
+                                                    <p>m.manmanbuy.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-        </div>
-    </div>
-
-</body>
-<script type="text/html" id="productData">
-    <p class="title">{{#result[0].productName}}</p>
-    <img class="collect" src="./images/sc.jpg" alt=""> {{#result[0].productImg}}
-    <!-- <p class="info">
-        <span class="price">当前最低：lalalallal</span>
-        <span class="comment">优选评论：</span>
-        <span class="num">3600条</span>
-    </p> -->
-</script>
-<script type="text/html" id="recordData">
-    {{#result[0].bjShop}}
-</script>
-<script type="text/html" id="commentData">
-    {{each result v i}}
     
-    <div class="comment">
-        <p class="info">
-            <span class="name">{{v.comName}}</span>
-            <span class="date">{{v.comTime}}</span>
-        </p>
-        <p class="subInfo">
-            <span class="star">
-                <i class="iconfont icon-start"></i>
-                <i class="iconfont icon-start"></i>
-                <i class="iconfont icon-start"></i>
-                <i class="iconfont icon-start"></i>
-                <i class="iconfont icon-start"></i>
-            </span>
-            <span class="store">{{v.comFrom}}</span>
-        </p>
-        <p class="content">{{v.comContent}}</p>
-        <p class="reply">回复</p>
+</body>
+<script type="text/html" id="categoryId">
+    {{result[0].category}}
+</script>
+<script type="text/html" id="productData">
+    {{each result v i}}
+    <div class="product">
+        <div class="img">
+            {{#v.productImg}}
+        </div>
+        <div class="right">
+            <p class="name">{{#v.productName}}</p>
+            <p class="price">{{#v.productPrice}}</p>
+            <p class="info">
+                <span class="offer">{{#v.productQuote}}</span>
+                <span class="comments">{{#v.productCom}}</span>
+            </p>
+        </div>
     </div>
     {{/each}}
 </script>

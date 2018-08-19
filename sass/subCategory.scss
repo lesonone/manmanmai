@@ -1,1 +1,90 @@
 @import "./common.scss";
+
+.inner {
+    background-color: #f2f2f2;
+    .navbar {
+        width: 100%;
+        height: pr(38);
+        border-bottom: pr(1) solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 pr(10);
+        background: linear-gradient(to bottom, #fff, #ececec);
+        .breadcrumb {
+            display: flex;
+            .arrows {
+                padding: pr(0) pr(3);
+            }
+            li {
+                font-size: $font-sm;
+                a {
+                    color: #5a5a5a;
+                    font-size: $font-sm;
+                }
+            }
+        }
+        button {
+            height:pr(30);
+            background: linear-gradient(to bottom,#dbdbdb,#fff);
+            border-radius: pr(10);
+        }
+    }
+    .products {
+        background-color: #fff;
+        .product {
+            border-bottom: pr(1) solid #ccc;
+            display: flex;
+            padding:pr(15) pr(10);
+            .img {
+                margin-right: pr(10);
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .name {
+                    color:#000;
+                    font-size: $font-md;
+                }
+                .price {
+                    font-size: $font-md;
+                    color:$lightRed;
+                }
+                .info {
+                    font-size: $font-xs;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .paging {
+        
+        .mui-content-padded {
+            padding:pr(10);
+            .mui-pager {
+                li {
+                    a {
+                        background: linear-gradient(to bottom,#eeeeee,#d8d8d8);
+                        color:#666;
+                    }
+                }
+            }
+        }
+        .link {
+            padding:pr(0) pr(10);
+            margin-bottom: pr(30);
+            .title {
+                font-size: $font-sm;
+                color:#000;
+            }
+            p {
+                margin-top: pr(5);
+                font-size: $font-xs;
+                color:#666;
+            }
+
+        }
+    }
+}
