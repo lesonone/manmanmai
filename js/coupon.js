@@ -81,46 +81,38 @@ $(function() {
 
 
     // 点击图片弹出轮播图
+    $('#commoditys').on("click", 'img', function() {
+        clearInterval(timeid);
 
-    function lunbotu() {
-        console.log(1);
-        $('#commoditys').on("click", 'img', function() {
-
-            //var mask = mui.createMask(callback); //callback为用户点击蒙版时自动执行的回调；
-            //mask.show(); //显示遮罩
-            $('.mui-backdrop').show();
-
-            // 渲染轮播图
-            discount(lunbosum, 'couponlunbo', $('.mui-backdrop'));
-
-            // 取得当前点击图片对应的自定义属性zsid
-            var now = $(this).parent().data('zsid');
-            //var old = $(this).attr("src");
-            //console.log($(this).attr("src"));
-            var timeid = setInterval(function() {
-                //console.log($('#lunbo1').find('div').eq(1).find('img').attr('src'));
-                //$('#lunbo1').find('div').eq(1).find('img').attr('src', old);
-
-                // 切换到当前点击的图片
-                var slider = mui('#slider').slider();
-                slider.gotoItem(now); //切换至第几个轮播
-                clearInterval(timeid);
+        //var mask = mui.createMask(callback); //callback为用户点击蒙版时自动执行的回调；
+        //mask.show(); //显示遮罩
+        $('.mui-backdrop').show();
 
 
-                $('.mui-icon-closeempty').click(function() {
-                    //alert(1);
-                    $('.mui-backdrop').hide();
-                    //location.reload();
-                    //lunbotu();
-                })
+        // 渲染轮播图
+        discount(lunbosum, 'couponlunbo', $('.mui-backdrop'));
 
-            }, 100);
-            //console.log($(this).parent().data('zsid'));
+        // 取得当前点击图片对应的自定义属性zsid
+        var now = $(this).parent().data('zsid');
+        //var old = $(this).attr("src");
+        //console.log($(this).attr("src"));
+        var timeid = setInterval(function() {
 
-        });
-    }
-    lunbotu();
+            // 切换到当前点击的图片
+            var slider = mui('#slider').slider();
+            slider.gotoItem(now); //切换至第几个轮播
+            clearInterval(timeid);
 
+            // 点击关闭遮罩层
+            $('.mui-icon-refreshempty').click(function() {
+                //$('.mui-backdrop').hide();
+                location.reload();
+            })
+
+        }, 100);
+        //console.log($(this).parent().data('zsid'));
+
+    });
 
 
 

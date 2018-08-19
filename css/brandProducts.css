@@ -195,131 +195,36 @@ body {
   color: #f4483e;
 }
 
-.container .header {
-  background-color: #f4483e;
+.mui-scroll-wrapper .inner {
+  margin-bottom: 0.32rem;
+  background-color: #f2f2f2;
 }
-.container .header .mui-pull-left {
-  color: #fff;
+.mui-scroll-wrapper .inner .brandintroduct {
+  padding: 0.2666666667rem;
 }
-.container .header h1 {
-  color: #fff;
+.mui-scroll-wrapper .inner .brandintroduct .bitittle {
+  padding: 0.2666666667rem;
+  font-size: 0.48rem;
+  font-weight: bold;
 }
-.container .main .mui-content {
+.mui-scroll-wrapper .inner .brandintroduct .bicontent {
+  padding: 0.2666666667rem;
+  background-color: #fff;
+  font-size: 0.32rem;
+  color: #666;
+}
+.mui-scroll-wrapper .inner .brandintroduct .explain {
+  padding: 0.2666666667rem;
+  background-color: #f7f7f7;
+  font-size: 0.32rem;
+  color: #999;
+  margin-top: 0.2666666667rem;
+}
+.mui-scroll-wrapper .inner .productslist {
   background-color: #fff;
 }
-.container .main .mui-content .coupontitle {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.1333333333rem;
-}
-.container .main .mui-content .coupontitle div {
-  width: 33.33333%;
-  padding: 0.08rem;
-}
-.container .main .mui-content .coupontitle div a {
-  padding: 0.2666666667rem 0rem;
-  border: 1px solid #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-.container .main .mui-content .coupontitle div a img {
-  width: 0.6666666667rem;
-}
-.container .main .mui-content .navbar {
-  width: 100%;
-  height: 1.0133333333rem;
-  border-bottom: 0.0533333333rem solid #ccc;
-  display: flex;
-  align-items: center;
-  padding-left: 0.2666666667rem;
-  background: linear-gradient(to bottom, #fff, #ececec);
-  margin-bottom: 0.5333333333rem;
-}
-.container .main .mui-content .navbar .breadcrumb {
-  display: flex;
-}
-.container .main .mui-content .navbar .breadcrumb .arrows {
-  padding: 0rem 0.08rem;
-}
-.container .main .mui-content .navbar .breadcrumb li {
-  font-size: 0.32rem;
-}
-.container .main .mui-content .navbar .breadcrumb li a {
-  color: #5a5a5a;
-  font-size: 0.32rem;
-}
-.container .main .commodity ul {
-  border: none;
-}
-.container .main .commodity .hint {
-  color: #b3b3b3;
-  text-align: center;
-  padding: 0.08rem 0rem;
-  font-size: 0.32rem;
-}
-.container .main .commodity .discount {
-  width: 100%;
-  border-bottom: 1px solid #f6f6f6;
-}
-.container .main .commodity .discount .demonstrating {
-  padding: 0.1333333333rem;
-  display: flex;
-}
-.container .main .commodity .discount .demonstrating .left {
-  flex-basis: 1.8666666667rem;
-}
-.container .main .commodity .discount .demonstrating .left img {
-  width: 1.8666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 1;
-  margin-left: 0.2666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right p {
-  color: #000;
-}
-.container .main .commodity .discount .demonstrating .right .intro {
-  white-space: normal;
-  padding-right: 0.6666666667rem;
-}
-.container .main .commodity .discount .demonstrating .right .dates {
-  color: #ff841d;
+.mui-scroll-wrapper .footer {
+  background-color: #f2f2f2;
 }
 
-.mui-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mui-backdrop .mui-slider {
-  width: 50%;
-  position: relative;
-  z-index: 101;
-}
-.mui-backdrop .mui-icon {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-  margin: 0rem 0.1333333333rem;
-}
-.mui-backdrop .mui-icon-refreshempty {
-  position: absolute;
-  right: 1.6533333333rem;
-  top: 6.2133333333rem;
-}
-.mui-backdrop .mui-icon-refreshempty:hover {
-  background-color: #fe4a65;
-}
-
-/*# sourceMappingURL=coupon.css.map */
+/*# sourceMappingURL=brandProducts.css.map */

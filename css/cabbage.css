@@ -204,7 +204,7 @@ body {
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   width: 100%;
 }
 .container .headerTop h3 {
@@ -222,10 +222,60 @@ body {
   font-size: 0.32rem;
 }
 .container .headerTop .category {
-  font-size: 0.48rem;
+  font-size: 0.6933333333rem;
   color: #fff;
   width: 1.0666666667rem;
   text-align: center;
+}
+.container .main .menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1.1733333333rem;
+  display: none;
+}
+.container .main .menu .mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 5;
+}
+.container .main .menu .menu-content {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .menu .menu-content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .menu .menu-content ul li {
+  width: 25%;
+  height: 1.3866666667rem;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.container .main .menu .menu-content ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.container .main .menu .menu-content button {
+  width: 2.6666666667rem;
+  height: 0.8rem;
+  color: #fe4a65;
+  border: 1px solid #fe4a65;
+  margin-top: 0.8rem;
+  font-size: 0.3733333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper {
   background-color: #f2f2f2;
@@ -278,6 +328,7 @@ body {
   font-size: 1.4933333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .superHot {
+  background-color: #fff;
   margin-top: 10px;
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .topBar {
@@ -304,12 +355,12 @@ body {
   height: 4.5333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll {
-  width: 200%;
+  width: 330%;
   height: 100%;
   display: flex;
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item {
-  padding: 0.4rem 0.2666666667rem 0rem;
+  padding: 0.2133333333rem;
   width: 33.333%;
   display: flex;
   flex-direction: column;
@@ -321,20 +372,81 @@ body {
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .proName {
   width: 100%;
-  word-break: break-all;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 0.32rem;
-  color: #666;
+  color: #777;
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .price {
   font-size: 0.32rem;
-  color: #ccc;
+  color: #fe4a65;
 }
-.container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .price span {
-  color: #e04627;
+.container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .price del {
+  color: #ccc;
+  margin-left: 0.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount {
+  background-color: #fff;
+  margin-top: 10px;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .topBar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 0.8rem;
+  padding: 0.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .topBar .super {
   font-size: 0.3733333333rem;
-  margin-right: 0.1333333333rem;
+  font-weight: bold;
+  color: #777;
+  border-left: 3px solid #fe4a65;
+  padding-left: 0.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.16rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.1333333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li img {
+  width: 4.6933333333rem;
+  height: 4.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li .proName {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.32rem;
+  color: #777;
+  padding: 0.1333333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li .info {
+  display: flex;
+  padding: 0rem 0.1333333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li .info p {
+  font-size: 0.32rem;
+  color: #fe4a65;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li .info p del {
+  color: #999;
+  margin-left: 0.5333333333rem;
+}
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li a {
+  font-size: 0.2666666667rem;
+  color: #333;
+  border: 0.0266666667rem dashed #fe4a65;
+  padding: 0rem 0.08rem;
+  margin-top: 0.1066666667rem;
 }
 
 /*# sourceMappingURL=cabbage.css.map */

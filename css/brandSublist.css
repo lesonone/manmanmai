@@ -220,31 +220,43 @@ body {
 .scroll .inner .tittle {
   width: 100%;
   height: 0.9866666667rem;
+  display: flex;
+  align-items: center;
   background-color: #f3f3f3;
   border-bottom: 0.0266666667rem solid #ccc;
   color: 1;
+<<<<<<< HEAD
   padding: 0.32rem;
+=======
+  padding: 0rem 0.2666666667rem;
+>>>>>>> 5a0379032acf933dbd38f605e1b576ebfedf1800
   font-size: 0.3733333333rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell {
   padding: 0.2666666667rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell::after {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell::after,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell::after {
   left: 0;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right {
   height: 1.6rem;
   display: flex;
+  padding-left: 0.4rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right::after {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right::after,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right::after {
   font-size: 0.64rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist {
   width: 0.5333333333rem;
   height: 0.5333333333rem;
   background-color: #c9c9c9;
@@ -254,17 +266,20 @@ body {
   align-items: center;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand {
   margin-left: 0.2666666667rem;
   padding-top: 0.0533333333rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname {
   color: #000;
   font-size: 0.4266666667rem;
 }
 .scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales {
+.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales,
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales {
   font-size: 0.32rem;
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell {
@@ -310,6 +325,74 @@ body {
 }
 .scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplcomments .offer {
   margin-right: 0.2666666667rem;
+}
+.scroll .inner .brandCommentlist .mui-table-view {
+  background-color: #efefef;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct {
+  white-space: pre-wrap;
+  width: 100%;
+  height: 2.1333333333rem;
+  display: flex;
+  margin: 0rem;
+  padding: 0;
+  margin-bottom: 0.2666666667rem;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct img {
+  width: 2.1333333333rem;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct .desc {
+  margin-left: 0.2666666667rem;
+  flex: 1;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.2666666667rem;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark {
+  display: flex;
+  align-items: center;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .username {
+  padding-top: 0.1866666667rem;
+  color: #4f6900;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .cut {
+  padding: 0rem 0.08rem;
+  padding-top: 0.1866666667rem;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .icon-start {
+  color: 1;
+  font-size: 0.5333333333rem;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .comment {
+  margin-top: 0.2666666667rem;
+  white-space: normal;
+  color: #000;
+}
+.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .box {
+  z-index: 100;
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #fff;
+  top: -0.2133333333rem;
+  left: 0.8rem;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  transform: rotateZ(45deg);
+}
+.scroll .footer {
+  background-color: #efefef;
 }
 
 /*# sourceMappingURL=brandSublist.css.map */
