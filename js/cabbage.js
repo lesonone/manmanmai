@@ -47,4 +47,13 @@ $(function(){
         id : 'superList',
         cl : '.superHot .mui-scroll'
     });  
+
+    // //7.回到顶部
+    // $('.anchor').click(function () { 
+    //     // mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);
+    //     mui('.mui-scroll-wrapper').scroll().reLayout().scrollTo(0,0,100);
+    // });
+
+  
+    
 });
