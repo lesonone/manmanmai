@@ -1,0 +1,192 @@
+@import "./common.scss";
+
+//主页面筛选栏,修改绝对定位为标准流
+.mui-off-canvas-wrap .mui-inner-wrap .mui-bar {
+    position: static !important;
+ }
+
+//主页面样式
+.mui-scroll-wrapper{
+    
+    //具体内容的样式
+    .inner {
+        margin-bottom: pr(12);
+        background-color: #f2f2f2;
+        //品牌简介的样式
+        .brandintroduct {
+            padding: pr(10);
+            .bitittle {
+                padding: pr(10);
+                font-size: $font-lg;
+                font-weight: bold;
+            }
+            .bicontent {
+                padding: pr(10);
+                background-color: #fff;
+                font-size: $font-xs;
+                color: #666;
+            }
+            .explain {
+                padding: pr(10);
+                background-color: #f7f7f7;
+                font-size: $font-xs;
+                color: #999;
+                margin-top: pr(10);
+            }
+        }
+        //产品展示列表
+        .productslist {
+            background-color: #fff;
+            //导航条
+            .listbar {
+                .mui-bar-nav {
+                    background-color: #fff;
+                    height: pr(52) !important;
+                    display: flex !important;
+                    justify-content: space-around !important;
+                    align-items: center !important;
+                    color: #666;
+                    span.active {
+                        color: $lightRed;
+                    }
+                    a {
+                        color: #666;
+                    }
+                }
+            }
+            //产品信息
+            .productsinfo {
+                .product {
+                    padding: pr(10) pr(8);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        width: pr(120);
+                    }
+                    .info {
+                        padding-left: pr(10);
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        .protittle {
+                            line-height: pr(26);
+                            color: #000;
+                        }
+                        .proprice {
+                            color: $deepRed;
+                            font-weight: bold;
+                            line-height: pr(28);
+                        }
+                        .procomments {
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: $font-xs;
+                            line-height: pr(26);
+                        }
+                    }
+                } 
+            }
+            //分页控制器
+            .page {
+                height: pr(50);
+                background-color: pink;
+            }
+        }
+        //相关链接
+        .link {
+            margin-top: pr(20);
+            padding: pr(10);
+            display: flex;
+            flex-direction: column;
+            .ltittle {
+                font-size: $font-md;
+                color: #000;
+                line-height: pr(26);
+            }
+            a {
+                color: #666;
+                font-size: $font-xs;
+                line-height: pr(26);
+            }
+        }
+    }
+    .footer {
+        background-color: #f2f2f2;
+    }
+}
+
+//侧滑栏样式
+.mui-off-canvas-left {
+    .mui-scroll-wrapper {
+        background-color: #fff;
+        //筛选标题
+        .slidetittle {
+            background-color: #fff;
+            .closebtn {
+                font-size: pr(36);
+                padding: 0;
+            }
+        }
+        //筛选条样式
+        .mui-table-view {
+            width: 100%;
+            position: absolute;
+            top: pr(40);
+            //去掉上下边框
+            &::before {
+                height: 0;
+            }
+            &::after {
+                height: 0;
+            }
+            .mui-table-view-cell {
+                //去掉内部边框
+                &::after {
+                    height: 0;
+                }
+                .mui-navigate-right {
+                    &::after{
+                        font-size: pr(24);
+                    }
+                    .brandname {
+                        color: $paleRed;
+                        font-size: $font-xs;
+                        padding-left: pr(3);
+                    }
+                }
+                //默认显示的六个选项的样式
+                .showlist {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .showbox {
+                        flex-basis: 33.333333333%;
+                        padding: pr(3);
+                        .showone {
+                            padding: pr(3) pr(5);
+                            background-color: #f2f2f2;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: pr(6);
+                            color: #666;
+                            font-size: $font-xs;
+                            margin: pr(3);
+                            &.active {
+                                background-color: $orangeRed;
+                                color: #fff;
+                            }
+                        }
+                    }
+                   
+                }
+                //隐藏的其他选项的样式,跟默认显示的选项的样式是一样的
+                .mui-collapse-content {
+                    margin-top: 0;
+                    padding: pr(0) pr(15);
+                }
+            }
+        }
+    }
+}
+

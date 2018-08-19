@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <script src="js/cabbage.js"></script>
+    <link rel="stylesheet" href="css/cabbage.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="headerTop">
+            <a href="./cabbage.html">
+                <h3>白菜价</h3>
+            </a>
+            <input type="text" placeholder="好宝贝  等你搜">
+            <i class="mui-icon mui-icon-settings category"></i>
+        </div>
+            
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 下拉框 -->
+            <div class="menu">                
+                <div class="menu-content">
+                    <!-- 模板生成 -->
+                </div>
+                <div class="mask"></div>
+            </div>
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 轮播图部分 -->
+                        <div id="slider" class="mui-slider">
+                            <div class="mui-slider-group mui-slider-loop">
+                                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#">
+                                        <img src="./images/swiper4.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第一张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper1.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第二张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper2.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第三张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper3.jpg">
+                                    </a>
+                                </div>
+                                <!-- 第四张 -->
+                                <div class="mui-slider-item">
+                                    <a href="#">
+                                        <img src="./images/swiper4.jpg">
+                                    </a>
+                                </div>
+                                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <a href="#">
+                                        <img src="./images/swiper1.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                            </div>
+                        </div>
+                        <!-- 导航栏部分 -->
+                        <div class="nav">
+                            <ul>
+                                <li><a href=""><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
+                                <li><a href=""><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
+                                <li><a href=""><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
+                                <li><a href=""><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- 超级人气榜 -->
+                        <div class="superHot">
+                            <div class="topBar">
+                                <span class="super">超级人气榜</span>
+                                <a href="" class="more">更多</a>
+                            </div>
+                            <!-- 横向滚动 -->
+                            <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                                <div class="mui-scroll">
+                                    <!-- 模板生成 -->
+                                    <!-- <a class="mui-control-item">
+                                        <img src="./images/0000000000-000000000123129054_1_200x200.jpg" alt="">
+                                        <p class="proName">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id corporis excepturi, distinctio reiciendis totam quasi facere
+                                            ipsa amet nobis rem.</p>
+                                        <p class="price">
+                                            <span>¥9.9</span>券后
+                                        </p>
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 商家优惠信息 -->
+                        <div class="discount">
+                            <div class="topBar">
+                                <span class="super">商家优惠信息  实时直播</span>
+                            </div>
+                            <ul class="goodList">
+                                <!-- 模板生成 -->
+                                <li>
+                                    <img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+                                    <p class="proName">
+                                        <span class="b">[包邮]</span>双十一红包 今日开启
+                                    </p>
+                                    <div class="info">
+                                        <p>
+                                            券后: <em>¥</em>0.0
+                                            <del>¥0</del>
+                                        </p>                                       
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+                                    <p class="proName">
+                                        <span class="b">[包邮]</span>双十一红包 今日开启
+                                    </p>
+                                    <div class="info">
+                                        <p>
+                                            券后: <em>¥</em>0.0
+                                            <del>¥0</del>
+                                        </p>                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 模板生成分类菜单 -->
+<script type="text/html" id="menuList">
+
+    <ul class="menuList">
+        {{each result value key}}
+        <li data-id={{value.titleId}}><a href="./cabbageList.html?titleid={{value.titleId}}">{{value.title}}</a></li>
+        {{/each}}
+    </ul>
+    <button class="mui-btn close">收起分类</button>
+
+</script>
+
+<!-- 模板生成主页商家优惠信息列表 -->
+<script type="text/html" id="goodlist">
+    {{each result value key}}
+    <li>
+        {{#value.productImg}}
+        <p class="proName">
+            {{#value.productName}}
+        </p>
+        <div class="info">
+            <p>
+                {{#value.productPrice}}
+            </p>         
+        </div> 
+    </li>
+    {{/each}}
+</script>
+
+<!-- 模板生成超级人气版部分 -->
+<script type="text/html" id="superList">
+    {{each result value key}}
+    <a class="mui-control-item">
+        {{#value.productImg}}
+        <p class="proName">
+            {{#value.productName}}
+        </p>
+        <p class="price">
+            {{#value.productPrice}}
+        </p>
+    </a>
+    {{/each}}
+</script>

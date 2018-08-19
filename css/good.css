@@ -1,0 +1,356 @@
+body,
+div,
+span,
+p,
+a,
+img,
+input,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+strong,
+em,
+i,
+del {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input {
+  border: 0 none;
+  outline: 0 none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 0.3733333333rem;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.4533333333rem;
+  padding-right: 0.2666666667rem;
+}
+.container .header .logo {
+  height: 0.64rem;
+  width: 4.9333333333rem;
+  background: url("../images/logo.png") no-repeat top left/100%;
+}
+.container .header .download {
+  height: 0.96rem;
+  width: 0.9333333333rem;
+  background: url("../images/download.png") no-repeat top left/100%;
+}
+.container .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .searchbar {
+  width: 100%;
+  height: 1.3866666667rem;
+  padding: 0.2666666667rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.container .main .searchbar .search {
+  display: flex;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #f1f1f1;
+  border-radius: 0.8rem;
+}
+.container .main .searchbar .search input {
+  height: 100%;
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  padding-left: 0.5333333333rem;
+  background-color: #f1f1f1;
+}
+.container .main .searchbar .search input::placeholder {
+  font-size: 0.3733333333rem;
+}
+.container .main .searchbar .search .searchbtn {
+  flex-basis: 1.68rem;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-color: #ff841d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .scroll {
+  flex: 1;
+  position: relative;
+}
+.container .main .scroll .mui-scroll-wrapper {
+  background-color: #fff;
+}
+.container .main .scroll .mui-scroll-wrapper .inner {
+  margin-bottom: 0.32rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer {
+  width: 100%;
+  height: 2.56rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top {
+  height: 0.96rem;
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .login {
+  flex: 1;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .register {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .back-top {
+  height: 100%;
+  flex-basis: 4rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom {
+  height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p {
+  text-align: center;
+  color: #5a5a5a;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p .warning {
+  color: #f4483e;
+}
+
+.main .scroll {
+  background-color: #f2f2f2;
+}
+.main .scroll div.inner#content {
+  margin-bottom: 0;
+}
+.main .scroll div.inner#content .navbar {
+  width: 100%;
+  height: 1.0133333333rem;
+  border-bottom: 0.0266666667rem solid #ccc;
+  display: flex;
+  align-items: center;
+  padding-left: 0.2666666667rem;
+  background: linear-gradient(to bottom, #fff, #ececec);
+}
+.main .scroll div.inner#content .navbar .breadcrumb {
+  display: flex;
+}
+.main .scroll div.inner#content .navbar .breadcrumb .arrows {
+  padding: 0rem 0.08rem;
+}
+.main .scroll div.inner#content .navbar .breadcrumb li {
+  font-size: 0.3733333333rem;
+}
+.main .scroll div.inner#content .navbar .breadcrumb li a {
+  color: #5a5a5a;
+  font-size: 0.3733333333rem;
+}
+.main .scroll div.inner#content .products {
+  padding: 0.5333333333rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.main .scroll div.inner#content .products img {
+  align-self: center;
+}
+.main .scroll div.inner#content .products .collect {
+  position: absolute;
+  right: 0.5333333333rem;
+  bottom: 0.5333333333rem;
+  width: 0.9066666667rem;
+}
+.main .scroll div.inner#content .products .title {
+  color: #000;
+  text-align: center;
+  font-size: 0.4266666667rem;
+  margin-bottom: 0.2666666667rem;
+}
+.main .scroll div.inner#content .more .tags {
+  margin-bottom: 0.2666666667rem;
+}
+.main .scroll div.inner#content .more .tags .tagList {
+  display: flex;
+  border-top: 0.0266666667rem solid #000;
+  border-bottom: 0.0266666667rem solid #000;
+}
+.main .scroll div.inner#content .more .tags .tagList li {
+  position: relative;
+  width: 33.3333333333%;
+  background: linear-gradient(to bottom, #ffcf4c, #ffbc05);
+}
+.main .scroll div.inner#content .more .tags .tagList li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 0.8rem;
+  color: #fff;
+}
+.main .scroll div.inner#content .more .tags .tagList li.active {
+  background: linear-gradient(to bottom, #ffa52f, #ff9001);
+}
+.main .scroll div.inner#content .more .tags .tagList li .triAngle {
+  width: 0;
+  height: 0;
+  border: 0.1333333333rem solid #ff9001;
+  border-color: #ff9001 transparent transparent transparent;
+  position: absolute;
+  bottom: -0.2666666667rem;
+  left: 50%;
+  display: none;
+}
+.main .scroll div.inner#content .more .tags .tagList li:nth-child(2) {
+  border-left: 0.0266666667rem solid #000;
+  border-right: 0.0266666667rem solid #000;
+}
+.main .scroll div.inner#content .more .record {
+  padding: 0.2666666667rem 0.1333333333rem;
+  border-bottom: 0.0266666667rem solid #ccc;
+}
+.main .scroll div.inner#content .more .record tbody tr td:nth-child(2) a {
+  padding-left: -0.4rem;
+}
+.main .scroll div.inner#content .more .record tbody tr .red {
+  color: #fc175c;
+  padding-left: 4rem;
+}
+.main .scroll div.inner#content .more .tip {
+  padding: 0.2666666667rem 0.5333333333rem 0.2666666667rem 0.1866666667rem;
+  color: #666;
+  font-size: 0.32rem;
+  border-bottom: 0.08rem solid #eee;
+}
+.main .scroll div.inner#content .comments {
+  border-top: 0.08rem solid #7a7a7a;
+}
+.main .scroll div.inner#content .comments .title {
+  background-color: #dbdbdb;
+  color: #000;
+  text-align: center;
+  line-height: 1.0133333333rem;
+}
+.main .scroll div.inner#content .comments .commentList .comment {
+  padding: 0.2666666667rem 0.2666666667rem 0 0.2666666667rem;
+  border-bottom: 0.0266666667rem solid #ccc;
+}
+.main .scroll div.inner#content .comments .commentList .comment .info,
+.main .scroll div.inner#content .comments .commentList .comment .subInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.32rem;
+}
+.main .scroll div.inner#content .comments .commentList .comment .subInfo {
+  margin-bottom: 0.1333333333rem;
+}
+.main .scroll div.inner#content .comments .commentList .comment .subInfo .star .icon-start {
+  color: #fe9b19;
+}
+.main .scroll div.inner#content .comments .commentList .comment .subInfo .store {
+  color: #333;
+}
+.main .scroll div.inner#content .comments .commentList .comment .info .date {
+  color: #666;
+}
+.main .scroll div.inner#content .comments .commentList .comment .content {
+  color: #000;
+  margin-bottom: 0.1333333333rem;
+}
+.main .scroll div.inner#content .comments .commentList .comment .reply {
+  font-size: 0.32rem;
+}
+.main .scroll div.inner#content .moreComment {
+  padding: 0.5333333333rem 0.1333333333rem;
+  background-color: #f2f2f2;
+}
+.main .scroll div.inner#content .moreComment button {
+  width: 100%;
+  border-radius: 0.2666666667rem;
+  background: linear-gradient(to bottom, #eeeeee, #d5d5d5);
+}
+
+.mui-navigate-right:after,
+.mui-push-right:after {
+  right: 0.1066666667rem;
+  font-size: 0.48rem;
+}
+
+/*# sourceMappingURL=good.css.map */

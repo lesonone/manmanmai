@@ -68,7 +68,8 @@ i {
   *zoom: 1;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -159,6 +160,18 @@ body {
   border-radius: 0.8rem;
   padding-left: 0.53333rem;
   background-color: #f1f1f1;
+}
+.container .main .searchbar .search input::-webkit-input-placeholder {
+  font-size: 0.37333rem;
+}
+.container .main .searchbar .search input::-moz-placeholder {
+  font-size: 0.37333rem;
+}
+.container .main .searchbar .search input:-ms-input-placeholder {
+  font-size: 0.37333rem;
+}
+.container .main .searchbar .search input::placeholder {
+  font-size: 0.37333rem;
 }
 .container .main .searchbar .search .searchbtn {
   -webkit-flex-basis: 1.68rem;

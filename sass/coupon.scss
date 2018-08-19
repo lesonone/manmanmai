@@ -1,0 +1,142 @@
+@import './common.scss';
+.container {
+    // 头部
+    .header {
+        background-color: $deepRed;
+        .mui-pull-left {
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+        }
+    }
+    .main {
+        .mui-content {
+            background-color: #fff;
+            //优惠券标题
+            .coupontitle {
+                display: flex;
+                flex-wrap: wrap;
+                padding: pr(5);
+                //height: pr(300);
+                div {
+                    width: 33.33333%;
+                    padding: pr(3);
+                    a {
+                        //height: pr(35);
+                        padding: pr(10) pr(0);
+                        border: 1px solid #f6f6f6;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        img {
+                            width: pr(25);
+                        }
+                    }
+                }
+            }
+            //导航条样式
+            .navbar {
+                width: 100%;
+                height: pr(38);
+                border-bottom: pr(2) solid #ccc;
+                display: flex;
+                align-items: center;
+                padding-left: pr(10);
+                background: linear-gradient(to bottom, #fff, #ececec);
+                .breadcrumb {
+                    display: flex;
+                    .arrows {
+                        padding: pr(0) pr(3);
+                    }
+                    li {
+                        font-size: $font-xs;
+                        a {
+                            color: #5a5a5a;
+                            font-size: $font-xs;
+                        }
+                    }
+                }
+                margin-bottom: pr(20);
+            }
+        }
+        .commodity {
+            ul {
+                border: none;
+            }
+            .hint {
+                color: #b3b3b3;
+                text-align: center;
+                padding: pr(3) pr(0);
+                //border: none;
+                font-size: $font-xs;
+            }
+            .discount {
+                width: 100%;
+                border-bottom: 1px solid #f6f6f6;
+                ;
+                //padding: pr(0);
+                .demonstrating {
+                    padding: pr(5);
+                    display: flex;
+                    .left {
+                        flex-basis: pr(70);
+                        img {
+                            width: pr(70);
+                        }
+                    }
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        flex: 1;
+                        margin-left: pr(10);
+                        p {
+                            color: #000;
+                        }
+                        .intro {
+                            white-space: normal;
+                            padding-right: pr(25);
+                        }
+                        .dates {
+                            color: $deepOrange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 遮罩层
+.mui-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mui-slider {
+        width: 50%;
+        position: relative;
+        z-index: 101;
+    }
+    .mui-icon {
+        color: #fff;
+        background-color: rgba(0, 0, 0, .3);
+        margin: pr(0) pr(5);
+    }
+    .mui-icon-refreshempty {
+        position: absolute;
+        right: pr(62);
+        top: pr(233);
+        &:hover {
+            background-color: $deeppink;
+        }
+    }
+}
