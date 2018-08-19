@@ -195,6 +195,10 @@ body {
   color: #f4483e;
 }
 
+.mui-off-canvas-wrap .mui-inner-wrap .mui-bar {
+  position: static !important;
+}
+
 .mui-scroll-wrapper .inner {
   margin-bottom: 0.32rem;
   background-color: #f2f2f2;
@@ -223,8 +227,132 @@ body {
 .mui-scroll-wrapper .inner .productslist {
   background-color: #fff;
 }
+.mui-scroll-wrapper .inner .productslist .listbar .mui-bar-nav {
+  background-color: #fff;
+  height: 1.3866666667rem !important;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  color: #666;
+}
+.mui-scroll-wrapper .inner .productslist .listbar .mui-bar-nav span.active {
+  color: #fc175c;
+}
+.mui-scroll-wrapper .inner .productslist .listbar .mui-bar-nav a {
+  color: #666;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product {
+  padding: 0.2666666667rem 0.2133333333rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product img {
+  width: 3.2rem;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product .info {
+  padding-left: 0.2666666667rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product .info .protittle {
+  line-height: 0.6933333333rem;
+  color: #000;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product .info .proprice {
+  color: #f4483e;
+  font-weight: bold;
+  line-height: 0.7466666667rem;
+}
+.mui-scroll-wrapper .inner .productslist .productsinfo .product .info .procomments {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.32rem;
+  line-height: 0.6933333333rem;
+}
+.mui-scroll-wrapper .inner .productslist .page {
+  height: 1.3333333333rem;
+  background-color: pink;
+}
+.mui-scroll-wrapper .inner .link {
+  margin-top: 0.5333333333rem;
+  padding: 0.2666666667rem;
+  display: flex;
+  flex-direction: column;
+}
+.mui-scroll-wrapper .inner .link .ltittle {
+  font-size: 0.4266666667rem;
+  color: #000;
+  line-height: 0.6933333333rem;
+}
+.mui-scroll-wrapper .inner .link a {
+  color: #666;
+  font-size: 0.32rem;
+  line-height: 0.6933333333rem;
+}
 .mui-scroll-wrapper .footer {
   background-color: #f2f2f2;
+}
+
+.mui-off-canvas-left .mui-scroll-wrapper {
+  background-color: #fff;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .slidetittle {
+  background-color: #fff;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .slidetittle .closebtn {
+  font-size: 0.96rem;
+  padding: 0;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view {
+  width: 100%;
+  position: absolute;
+  top: 1.0666666667rem;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view::before {
+  height: 0;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view::after {
+  height: 0;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell::after {
+  height: 0;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .mui-navigate-right::after {
+  font-size: 0.64rem;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .mui-navigate-right .brandname {
+  color: #ff5e5d;
+  font-size: 0.32rem;
+  padding-left: 0.08rem;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .showlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .showlist .showbox {
+  flex-basis: 33.333333333%;
+  padding: 0.08rem;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .showlist .showbox .showone {
+  padding: 0.08rem 0.1333333333rem;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.16rem;
+  color: #666;
+  font-size: 0.32rem;
+  margin: 0.08rem;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .showlist .showbox .showone.active {
+  background-color: #ff7f23;
+  color: #fff;
+}
+.mui-off-canvas-left .mui-scroll-wrapper .mui-table-view .mui-table-view-cell .mui-collapse-content {
+  margin-top: 0;
+  padding: 0rem 0.4rem;
 }
 
 /*# sourceMappingURL=brandProducts.css.map */
