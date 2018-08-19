@@ -40,7 +40,7 @@
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
-                        <div class="inner">
+                        <div class="inner" id="content">
                             <!-- 面包屑导航 -->
                             <div class="navbar">
                                 <ol class="breadcrumb">
@@ -57,14 +57,7 @@
                             </div>
                             <!-- 商品展示 -->
                             <div class="products">
-                                <img src="./images/sc.jpg" alt="" class="collect">
-                                <img class="product" src="./images/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg" alt="">
-                                <p class="title">lalalalllalalal</p>
-                                <p class="info">
-                                    <span class="price">当前最低：lalalallal</span>
-                                    <span class="comment">优选评论：</span>
-                                    <span class="num">3600条</span>
-                                </p>
+
                             </div>
                             <!-- 比价购买部分 -->
                             <div class="more">
@@ -86,7 +79,7 @@
                                     </ul>
                                 </div>
                                 <div class="record">
-                                    <ul>
+                                    <!-- <ul>
                                         <li class="mui-table-view-cell">
                                             <a class="mui-navigate-right">
                                                 <div class="left mui-pull-left">
@@ -116,27 +109,16 @@
                                                 </div>
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
-                                <p class="lowPrice">该商品的历史最低价：298.00 ></p>
+                                <!-- <p class="lowPrice">该商品的历史最低价：298.00 ></p> -->
                                 <p class="tip">*实际价格以个网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
                             </div>
                             <!-- 评价部分 -->
                             <div class="comments">
                                 <p class="title">优选网友评价</p>
-                                <div class="comment">
-                                    <p class="info">
-                                        <span class="name">hahaha</span>
-                                        <span class="date">2010/11/2</span>
-                                    </p>
-                                    <p class="subInfo">
-                                        <span class="star">
-                                            <i class="iconfont icon-start"></i><i class="iconfont icon-start"></i><i class="iconfont icon-start"></i><i class="iconfont icon-start"></i><i class="iconfont icon-start"></i>
-                                        </span>
-                                        <span class="store">购买自：京东商城</span>
-                                    </p>
-                                    <p class="content">挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的</p>
-                                    <p class="reply">回复</p>
+                                <div class="commentList">
+
                                 </div>
                             </div>
                             <div class="moreComment">
@@ -166,5 +148,40 @@
     </div>
 
 </body>
+<script type="text/html" id="productData">
+    <p class="title">{{#result[0].productName}}</p>
+    <img class="collect" src="./images/sc.jpg" alt=""> {{#result[0].productImg}}
+    <!-- <p class="info">
+        <span class="price">当前最低：lalalallal</span>
+        <span class="comment">优选评论：</span>
+        <span class="num">3600条</span>
+    </p> -->
+</script>
+<script type="text/html" id="recordData">
+    {{#result[0].bjShop}}
+</script>
+<script type="text/html" id="commentData">
+    {{each result v i}}
+    
+    <div class="comment">
+        <p class="info">
+            <span class="name">{{v.comName}}</span>
+            <span class="date">{{v.comTime}}</span>
+        </p>
+        <p class="subInfo">
+            <span class="star">
+                <i class="iconfont icon-start"></i>
+                <i class="iconfont icon-start"></i>
+                <i class="iconfont icon-start"></i>
+                <i class="iconfont icon-start"></i>
+                <i class="iconfont icon-start"></i>
+            </span>
+            <span class="store">{{v.comFrom}}</span>
+        </p>
+        <p class="content">{{v.comContent}}</p>
+        <p class="reply">回复</p>
+    </div>
+    {{/each}}
+</script>
 
 </html>

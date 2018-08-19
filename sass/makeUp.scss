@@ -1,0 +1,98 @@
+@import "common.scss";
+.container {
+    // 头部
+    .header {
+        font-size: pr(20);
+        color: #fff;
+        .back {
+            font-size: pr(20);
+        }
+        .title {
+            margin: 0 auto;
+        }
+    }
+    // 排序条
+    .sortBar {
+        height: pr(37.5);
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        font-size: pr(16);   
+        position: relative;  
+        border-bottom: pr(1) solid #ccc;  
+        .left {
+            flex: 1;
+            display: flex;
+            align-items: center;            
+            a {
+                flex: 1;
+                text-align: center;
+                color: #5a5a5a;
+            }
+        }
+        .right {
+            flex-basis: pr(46);
+        }
+        .hideSort{
+            ul {
+                z-index: 99;
+                display: none;
+                position: absolute;
+                left: pr(0);
+                top: pr(37.5);            
+                font-size: pr(16);
+                color: #5a5a5a;
+                background-color: #fff;
+                width: 100%;
+                li {
+                    line-height: pr(40);
+                    padding: pr(0) pr(10);
+                    border-bottom: pr(1) solid #ccc;  
+                    span {
+                        color: red;
+                    }
+                }
+            }
+        }
+       
+    }
+    .main {
+        .mui-scroll {
+            ul {
+                background-color: #f1f1f1;
+                padding: pr(8);
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: pr(175);
+                    border: 1px solid #ddd;
+                    margin-right: pr(9);
+                    background-color: #fff;
+                    margin-bottom: pr(8);
+                    &:nth-child(2n) {
+                        margin-right: pr(0);
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    p {
+                        padding-left: pr(7);
+                    }
+                    .title {
+                        color: #000;
+                        font-size: pr(13);
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                        margin-top: pr(5);
+                    }
+                    .price {
+                        color: #f8601d;
+                        font-size: pr(17);
+                    }
+                }
+            }
+        }
+    }
+}

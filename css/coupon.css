@@ -297,19 +297,29 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 998;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mui-backdrop #lunbo {
+.mui-backdrop .mui-slider {
   width: 50%;
+  position: relative;
+  z-index: 101;
 }
 .mui-backdrop .mui-icon {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
   margin: 0rem 0.1333333333rem;
+}
+.mui-backdrop .mui-icon-refreshempty {
+  position: absolute;
+  right: 1.6533333333rem;
+  top: 6.2133333333rem;
+}
+.mui-backdrop .mui-icon-refreshempty:hover {
+  background-color: #fe4a65;
 }
 
 /*# sourceMappingURL=coupon.css.map */
