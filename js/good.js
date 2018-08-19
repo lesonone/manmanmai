@@ -5,7 +5,12 @@ $(function(){
        var urlArr = str.split("&");
        var param = {};
        param[urlArr.split("=")[0]]=urlArr.split("=")[1];
+       return param;
    }
+   $(".tagList li").click(function(){
+       $(this).addClass("active").siblings().removeClass("active");
+       $(this).children(".triAngle").show().parent().siblings().children(".triAngle").hide();
+   })
    $(".tagList .active .triAngle").show();
    renderProduct(1);
    renderComment(1);
