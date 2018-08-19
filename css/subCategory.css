@@ -195,6 +195,60 @@ body {
   color: #f4483e;
 }
 
+.mui-off-canvas-left {
+  width: 80%;
+  background: #fff;
+}
+.mui-off-canvas-left .title {
+  text-align: center;
+  position: relative;
+  height: 1.0666666667rem;
+  line-height: 1.0666666667rem;
+  font-size: 0.48rem;
+  border-bottom: 0.0266666667rem solid #ccc;
+}
+.mui-off-canvas-left .title .close {
+  position: absolute;
+  right: 0.2666666667rem;
+  top: 0.1333333333rem;
+  font-size: 0.64rem;
+}
+.mui-off-canvas-left .kind {
+  padding: 0.4rem 0.2666666667rem;
+}
+.mui-off-canvas-left .kind .all .brand {
+  color: #000;
+}
+.mui-off-canvas-left .kind .all .allbrand {
+  color: #ff7f23;
+  font-size: 0.32rem;
+  margin-left: 0.08rem;
+}
+.mui-off-canvas-left .kind .trademark ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mui-off-canvas-left .kind .trademark ul li {
+  width: 30%;
+  margin: 0.1333333333rem 0;
+  border-radius: 0.1333333333rem;
+  background-color: #f2f2f2;
+}
+.mui-off-canvas-left .kind .trademark ul li a {
+  display: block;
+  padding: 0.08rem 0.2666666667rem;
+  font-size: 0.32rem;
+  color: #666;
+  text-align: center;
+}
+.mui-off-canvas-left .kind .trademark ul li.active {
+  background-color: #ff7f23;
+}
+.mui-off-canvas-left .kind .trademark ul li.active a {
+  color: #fff;
+}
+
 .inner {
   background-color: #f2f2f2;
 }

@@ -1,5 +1,64 @@
 @import "./common.scss";
-
+.mui-off-canvas-left {
+    width:80%;
+    background: #fff;
+    .title {
+        text-align: center;
+        position: relative;
+        height:pr(40);
+        line-height: pr(40);
+        font-size: $font-lg;
+        border-bottom: pr(1) solid #ccc;
+        .close {
+            position: absolute;
+            right:pr(10);
+            top:pr(5);
+            font-size: pr(24);
+        }
+    }
+    .kind {
+        padding:pr(15) pr(10);
+        .all {
+            .brand {
+                color:#000;
+            }
+            .allbrand {
+                color:$orangeRed;
+                font-size: $font-xs;
+                margin-left: pr(3);
+            }
+        }
+        .trademark {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    width: 30%;
+                    margin:pr(5) 0;
+                        border-radius: pr(5);
+                        background-color: #f2f2f2;
+                    a {
+                        display: block;
+                        padding:pr(3) pr(10);
+                        font-size: $font-xs;
+                        color:#666;
+                        text-align: center;
+                        
+                    }
+                    &.active {
+                        background-color: $orangeRed;
+                        a {
+                            color:#fff;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
 .inner {
     background-color: #f2f2f2;
     .navbar {
