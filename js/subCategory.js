@@ -35,6 +35,8 @@ $(function () {
         pageid: 1
     };
     var pagesize = 0;
+    var totalCount;
+    
     renderProduct(data);
 // 渲染列表页面
     function renderProduct(data) {
@@ -48,6 +50,7 @@ $(function () {
                 var dropHtml = template("dropdownData",res);
                 $(".dropdown-menu").html(dropHtml);
                 pagesize = res.pagesize;
+                totalCount = res.totalCount;
             }
         })
     };
@@ -66,7 +69,7 @@ $(function () {
         data.pageid = $(this).data("pageid");
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
-        // $(".dropdown-toggle .name").html($(this).html());
+        $(".dropdown-toggle .name").html($(this).html());
         $(".dropdown-menu").hide();
     })
     $(".down").on("tap",function(){
@@ -78,6 +81,7 @@ $(function () {
         if(data.pageid<1) data.pageid=1;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
+        $(".dropdown-toggle .name").html(data.pageid+"/"+totalCount/pagesize);
     });
     // 下一页的点击事件
     $(".paging .next").on("tap",function () {
@@ -85,10 +89,14 @@ $(function () {
         if(data.pageid>=pagesize) data.pageid = pagesize;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
+        $('.dropdown-toggle .name').html(data.pageid+"/"+totalCount/pagesize);
     })
 //侧面导航部分
     $(".filtrate").click(function () {
         mui('.mui-off-canvas-wrap').offCanvas().show();
+    })
+    $(".close").on("tap",function(){
+        mui('.mui-off-canvas-wrap').offCanvas().close();
     })
     $(".trademark ul").on("tap","li",function(){
       
