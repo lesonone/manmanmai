@@ -249,7 +249,7 @@ body {
   margin-top: 0.0533333333rem;
 }
 .main .inner .discount .top {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   display: flex;
   justify-content: space-between;
   padding: 0rem 0.2666666667rem;
@@ -258,11 +258,11 @@ body {
   background: linear-gradient(to bottom, #ffad44, #ff9203);
 }
 .main .inner .discount .top span {
-  font-size: 0.3733333333rem;
+  font-size: 0.4266666667rem;
   font-weight: bold;
 }
 .main .inner .discount .top img {
-  width: 0.4rem;
+  width: 0.5333333333rem;
 }
 .main .inner .discount .products a {
   display: flex;
@@ -270,10 +270,10 @@ body {
   padding: 0.2666666667rem 0.1333333333rem;
 }
 .main .inner .discount .products a .left {
-  margin-right: 0.1333333333rem;
+  margin-right: 0.2666666667rem;
 }
 .main .inner .discount .products a .left img {
-  width: 1.6rem;
+  width: 2.6666666667rem;
 }
 .main .inner .discount .products a .right {
   flex: 1;
@@ -282,7 +282,7 @@ body {
   justify-content: space-between;
 }
 .main .inner .discount .products a .right .title {
-  font-size: 0.2666666667rem;
+  font-size: 0.4266666667rem;
   color: #000;
 }
 .main .inner .discount .products a .right .title .color {
@@ -306,7 +306,7 @@ body {
   background: linear-gradient(to bottom, #fff, #f2f2f2);
 }
 .main .ranking {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   margin-bottom: 0.2666666667rem;
   display: flex;
   justify-content: space-between;
@@ -314,10 +314,10 @@ body {
   color: #fff;
   align-items: center;
   background: linear-gradient(to bottom, #ffad44, #ff9203);
-  font-size: 0.3733333333rem;
+  font-size: 0.4266666667rem;
 }
 .main .ranking img {
-  width: 0.4rem;
+  width: 0.5333333333rem;
 }
 .main .footer {
   background: #f2f2f2;
