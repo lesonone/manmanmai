@@ -195,132 +195,64 @@ body {
   color: #f4483e;
 }
 
-.main .inner {
-  background: #f2f2f2;
+.container .jiantou {
+  width: 0.8rem;
+  height: 0.6933333333rem;
+  line-height: 0.6933333333rem;
 }
-.main .inner .nav {
-  margin-top: 0.1333333333rem;
-  background: #fff;
+.container .jiantou .iconfont {
+  color: #FFD0A9;
+  font-size: 0.6933333333rem;
 }
-.main .inner .nav ul {
-  margin-bottom: 0.1333333333rem;
+.container .tit-center {
+  font-size: 0.4266666667rem;
+  color: #fff;
+}
+.container .gbq {
   display: flex;
   flex-wrap: wrap;
 }
-.main .inner .nav ul li {
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  position: relative;
-  padding: 0.1333333333rem 0rem;
-}
-.main .inner .nav ul li .popularity {
-  position: absolute;
-  width: 0.9333333333rem;
-  height: 0.5333333333rem;
-  background: #ff614f;
-  border: 0.0266666667rem solid #fff;
-  top: 0;
-  right: 0.2666666667rem;
-  color: #fff;
-  font-size: 0.32rem;
-  line-height: 0.48rem;
-  text-align: center;
-  border-radius: 0.4rem;
-}
-.main .inner .nav ul li a {
+.container .gbq .inner {
+  width: 50%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.main .inner .nav ul li a img {
-  width: 1.3333333333rem;
+.container .gbq .inner .img img {
+  width: 100%;
 }
-.main .inner .nav ul li a span {
-  margin-top: 0.1333333333rem;
-  font-size: 0.3733333333rem;
-  color: #666;
-}
-.main .inner .nav ul li:nth-child(n+9) {
-  display: none;
-}
-.main .inner .discount {
-  background: #fff;
-  margin-top: 0.0533333333rem;
-}
-.main .inner .discount .top {
-  height: 0.8rem;
+.container .gbq .inner .tro {
   display: flex;
-  justify-content: space-between;
-  padding: 0rem 0.2666666667rem;
-  color: #fff;
-  align-items: center;
-  background: linear-gradient(to bottom, #ffad44, #ff9203);
-}
-.main .inner .discount .top span {
-  font-size: 0.4266666667rem;
-  font-weight: bold;
-}
-.main .inner .discount .top img {
-  width: 0.5333333333rem;
-}
-.main .inner .discount .products a {
-  display: flex;
-  border-bottom: 0.0133333333rem solid #ccc;
-  padding: 0.2666666667rem 0.1333333333rem;
-}
-.main .inner .discount .products a .left {
-  margin-right: 0.2666666667rem;
-}
-.main .inner .discount .products a .left img {
-  width: 2.6666666667rem;
-}
-.main .inner .discount .products a .right {
   flex: 1;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.main .inner .discount .products a .right .title {
-  font-size: 0.4266666667rem;
-  color: #000;
+.container .gbq .inner .tro .title {
+  margin-bottom: 10px;
+  font-size: 14px;
 }
-.main .inner .discount .products a .right .title .color {
-  color: #ff9203;
+.container .gbq .inner .tro .price {
+  color: #ff7f23;
+  margin-bottom: 10px;
 }
-.main .inner .discount .products a .right .other {
-  font-size: 0.2133333333rem;
+.container .gbq .inner .tro .time-mall {
+  color: #A1A1A1;
+  font-size: 0.32rem;
   display: flex;
   justify-content: space-between;
-}
-.main .inner .discount .products a .right .other i {
-  font-size: 0.2666666667rem;
-  margin-right: 0.08rem;
-}
-.main .button {
-  width: 100%;
-  padding: 0rem 0.2666666667rem 0.2666666667rem 0.2666666667rem;
-}
-.main .button button {
-  width: 100%;
-  background: linear-gradient(to bottom, #fff, #f2f2f2);
-}
-.main .ranking {
-  height: 0.8rem;
-  margin-bottom: 0.2666666667rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0rem 0.2666666667rem;
-  color: #fff;
   align-items: center;
-  background: linear-gradient(to bottom, #ffad44, #ff9203);
-  font-size: 0.4266666667rem;
 }
-.main .ranking img {
-  width: 0.5333333333rem;
+.container .gbq .inner .tro .comment {
+  vertical-align: middle;
 }
-.main .footer {
-  background: #f2f2f2;
+.container .gbq .inner .tro .comment .icon-coment {
+  display: inline-block;
+  width: 0.4266666667rem;
+  height: 0.3466666667rem;
+  background: url("../images/icon-coment.png") no-repeat left center/100%;
+}
+.container .footer {
+  background: #EFEFF4;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=inlanddiscount.css.map */
