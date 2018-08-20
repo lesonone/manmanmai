@@ -19,6 +19,7 @@
     .kind {
         padding: pr(15) pr(10);
         .all {
+            margin-bottom: pr(10);
             .brand {
                 color: #000;
             }
@@ -27,23 +28,35 @@
                 font-size: $font-xs;
                 margin-left: pr(3);
             }
+            .more {
+                float:right;
+            }
         }
         .trademark {
             ul {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                
+                overflow: hidden;
+                &.hiden {
+                    height:pr(70);
+                }
                 li {
                     width: 30%;
-                    margin: pr(5) 0;
+                    height:pr(30);
                     border-radius: pr(5);
                     background-color: #f2f2f2;
+                    margin-bottom: pr(5);
+                    margin-right:pr(5);
+
                     a {
-                        display: block;
-                        padding: pr(3) pr(10);
+                        display: flex;
+                        width:100%;
+                        height: 100%;
                         font-size: $font-xs;
                         color: #666;
-                        text-align: center;
+                        align-items: center;
+                        justify-content: center;
                     }
                     &.active {
                         background-color: $orangeRed;
@@ -133,15 +146,23 @@
                 position: relative;
                 background-color: #fff;
                 .dropdown-toggle {
+                    position: relative;
+                    height:pr(35);
                     width: pr(85);
                     border: pr(1) solid #666;
                     border-radius: 0;
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: center;
                     span {
                         font-size: $font-md;
 
+                    }
+                    #down {
+                        font-size: $font-xs;
+                        position: absolute;
+                        right:pr(5);
+                        top:pr(10);
                     }
                 }
                 .dropdown-menu {

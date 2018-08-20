@@ -14,7 +14,7 @@ $(function () {
     renderCategory(param.categoryid);
     var categoryName = "";
     // renderCategory(1);
-// 渲染面包屑分类标题
+    // 渲染面包屑分类标题
     function renderCategory(categoryId) {
         $.ajax({
             url: "http://mmb.ittun.com/api/getcategorybyid",
@@ -36,9 +36,9 @@ $(function () {
     };
     var pagesize = 0;
     var totalCount;
-    
+
     renderProduct(data);
-// 渲染列表页面
+    // 渲染列表页面
     function renderProduct(data) {
         $.ajax({
             url: "http://mmb.ittun.com/api/getproductlist",
@@ -47,75 +47,89 @@ $(function () {
             success: function (res) {
                 pagesize = res.pagesize;
                 totalCount = res.totalCount;
-                res.count = Math.ceil(totalCount/pagesize);
+                res.count = Math.ceil(totalCount / pagesize);
                 var html = template("productData", res);
                 $(".products").html(html);
-                var dropHtml = template("dropdownData",res);
+                var dropHtml = template("dropdownData", res);
                 $(".dropdown-menu").html(dropHtml);
-                
+
                 console.log(res.count);
             }
 
         })
     };
-    $(".logo,.toindex").on("tap",function(){
+    $(".logo,.toindex").on("tap", function () {
         location.href = "./index.html";
     })
-    $(".allBrand").on("tap",function(){
+    $(".allBrand").on("tap", function () {
         location.href = "./category.html";
     })
-    $(".products").on("tap",".product" ,function(){
-        location.href = "./good.html?productid="+$(this).data("productid")+"&categoryName="+categoryName;
+    $(".products").on("tap", ".product", function () {
+        location.href = "./good.html?productid=" + $(this).data("productid") + "&categoryName=" + categoryName;
+    })
+    $(".more").on("tap", function () {
+        if ($(this).parent().siblings(".trademark").children().hasClass("hiden")) {
+            $(this).parent().siblings(".trademark").children().removeClass("hiden");
+            $(this).addClass("mui-icon-arrowup").removeClass("mui-icon-arrowdown");
+        } else {
+            $(this).parent().siblings(".trademark").children().addClass("hiden");
+            $(this).addClass("mui-icon-arrowdown").removeClass("mui-icon-arrowup");
+        }
     })
     //下拉框
-    $(".dropdown-menu").on("tap","a",function(){
-        
+    $(".dropdown-menu").on("tap", "a", function () {
+
         data.pageid = $(this).data("pageid");
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
         $(".dropdown-toggle .name").html($(this).html());
         $(".dropdown-menu").hide();
     })
-    $(".down").on("tap",function(){
+    $(".down").on("tap", function () {
         $(".dropdown-menu").show();
     })
     // 上一页的点击事件
-    $(".paging .previous").on("tap",function () {
+    $(".paging .previous").on("tap", function () {
         data.pageid--;
-        if(data.pageid<1) data.pageid=1;
+        if (data.pageid < 1) data.pageid = 1;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
-        $(".dropdown-toggle .name").html(data.pageid+"/"+totalCount/pagesize);
+        $(".dropdown-toggle .name").html(data.pageid + "/" + totalCount / pagesize);
     });
     // 下一页的点击事件
-    $(".paging .next").on("tap",function () {
+    $(".paging .next").on("tap", function () {
         data.pageid++;
         console.log(pagesize);
-        if(data.pageid>=totalCount/pagesize) data.pageid = totalCount/pagesize;
+        if (data.pageid >= totalCount / pagesize) data.pageid = totalCount / pagesize;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
-        $('.dropdown-toggle .name').html(data.pageid+"/"+totalCount/pagesize);
+        $('.dropdown-toggle .name').html(data.pageid + "/" + totalCount / pagesize);
     })
-//侧面导航部分
+
+
+    //侧面导航部分
     $(".filtrate").click(function () {
         mui('.mui-off-canvas-wrap').offCanvas().show();
     })
-    $(".close").on("tap",function(){
+    $(".close").on("tap", function () {
         mui('.mui-off-canvas-wrap').offCanvas().close();
     })
-    $(".trademark ul").on("tap","li",function(){
-      
+    $(".trademark ul").on("tap", "li", function () {
+
         $(this).addClass("active").siblings().removeClass("active");
     })
-    
+
     mui.init();
     //侧滑容器父节点
     var offCanvasWrapper = mui('#offCanvasWrapper');
     //主界面容器
     var offCanvasInner = offCanvasWrapper[0].querySelector('.mui-inner-wrap');
+    offCanvasInner.addEventListener('drag', function (event) {
+        event.stopPropagation();
+    });
     //菜单容器
     var offCanvasSide = document.getElementById("offCanvasSide");
-   
+
     //移动效果是否为整体移动
     var moveTogether = false;
     //侧滑容器的class列表，增加.mui-slide-in即可实现菜单移动、主界面不动的效果；
@@ -128,7 +142,7 @@ $(function () {
     classList.add('mui-slide-in');
     offCanvasWrapper.offCanvas().refresh();
     //菜单界面，‘关闭侧滑菜单’按钮的点击事件
-    
+
     //侧滑菜单界面均支持区域滚动；
     mui('#offCanvasSideScroll').scroll();
     //实现ios平台原生侧滑关闭页面；
