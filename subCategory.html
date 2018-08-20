@@ -135,7 +135,7 @@
             <div id="offCanvasContentScroll" class="container mui-content">
                 <!-- 顶部 -->
                 <div class="header">
-                    <a class="logo"></a>
+                    <a href="./index.html" class="logo"></a>
                     <a class="download"></a>
                 </div>
                 <!-- 主体部分 -->
@@ -157,11 +157,11 @@
                                     <div class="navbar">
                                         <ol class="breadcrumb">
                                             <li>
-                                                <a href="./index.html">首页</a>
+                                                <a class="toindex" href="./index.html">首页</a>
                                             </li>
                                             <span class="arrows">></span>
                                             <li>
-                                                <a href="./brandList.html">全部分类</a>
+                                                <a class="allBrand" href="./category.html">全部分类</a>
                                             </li>
                                             <span class="arrows">></span>
                                             <li class="categoryName"></li>
@@ -239,7 +239,7 @@
 <!-- 列表页面模板 -->
 <script type="text/html" id="productData">
     {{each result v i}}
-    <div class="product">
+    <div data-productid="{{v.productId}}" class="product">
         <div class="img">
             {{#v.productImg}}
         </div>

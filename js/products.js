@@ -52,4 +52,7 @@ $(function () {
         /*清空输入框*/
         $('textarea').val('');
     })
+    $(".back").click(function(){
+        history.back();
+    })
 })

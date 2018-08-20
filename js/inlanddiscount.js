@@ -11,7 +11,7 @@ $(function(){
             }
         })
         $('.jiantou').click(function(){
-            location.href="login.html";
+            location.href="./index.html";
         })
     
 })
