@@ -273,7 +273,7 @@ body {
   margin-right: 0.1333333333rem;
 }
 .main .inner .discount .products a .left img {
-  width: 1.6rem;
+  width: 2.1333333333rem;
 }
 .main .inner .discount .products a .right {
   flex: 1;
@@ -282,7 +282,7 @@ body {
   justify-content: space-between;
 }
 .main .inner .discount .products a .right .title {
-  font-size: 0.32rem;
+  font-size: 0.4266666667rem;
   color: #000;
 }
 .main .inner .discount .products a .right .title .color {

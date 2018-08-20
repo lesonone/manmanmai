@@ -86,7 +86,7 @@
                         
                         margin-right: pr(5);
                         img{
-                            width: pr(60);
+                            width: pr(80);
                         }
                     }
 
@@ -97,7 +97,7 @@
                         justify-content: space-between;
 
                         .title{
-                            font-size: $font-xs;
+                            font-size: $font-md;
                             color: #000;
                             .color{
                                 color: #ff9203;
