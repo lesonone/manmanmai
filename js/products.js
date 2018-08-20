@@ -1,6 +1,6 @@
 $(function () {
     var obj = getUrl();
-    console.log(obj);
+    // console.log(obj);
     $.ajax({
         url: "http://mmb.ittun.com/api/getdiscountproduct",
 
