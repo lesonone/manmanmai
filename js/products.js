@@ -6,7 +6,6 @@ $(function () {
         success: function (res) {
             var htmlStr = template("gooddetail", res);
             $(".inner").html(htmlStr);
-            console.log(htmlStr)
         }
     })
     // 发射弹幕
