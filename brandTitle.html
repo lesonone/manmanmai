@@ -10,6 +10,7 @@
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
 
     <!-- 引擎模板 -->
     <script src="lib/artTemplate/template-web.js"></script>
@@ -94,7 +95,7 @@
     <!-- 渲染产品列表页 -->
     <script type="text/html" id="product">
         {{each result v i }}
-        <div class="fl_t" data-id="{{v.brandTitleId}}">
+        <div class="fl_t animated pulse" data-id="{{v.brandTitleId}}">
                 <a href="./brandSublist.html?id={{v.brandTitleId}}&brandTitle={{v.brandTitle}}">
                     <p>{{v.brandTitle}}</p>
                     <i class="mui-icon mui-icon-arrowdown"></i>

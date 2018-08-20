@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
 
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
     <!-- 引擎模板 -->
     <script src="lib/artTemplate/template-web.js"></script>
 
@@ -49,12 +51,12 @@
                             <div class="nav">
                                 <a href="./index.html" class="index">首页 > &nbsp;</a>
                                 <a href="./brandTitle.html" class="brand"> 品牌大全 > &nbsp;</a>
-                                <a class="good">
+                                <a class="good animated bounceIn" >
                                     <span class="update">平板电视</span>哪个牌子好
                                 </a>
                             </div>
                             <!-- 热门品牌排行 -->
-                            <div class="hot">
+                            <div class="hot" >
                                 <a href=""><span id="goodBrand">平板电视</span>哪个品牌好</a>
                             </div>
                             <!-- 产品列表 (哪个品牌好展示 10条)-->
@@ -194,7 +196,7 @@
     <!-- 渲染产品列表页 哪个品牌好展示 10条 -->
     <script type="text/html" id="product">
         {{each result v i}}
-        <li>
+        <li class="animated bounceIn">
             <a href="./brandProducts.html?id={{v.brandId}}&pagesize=4" data-title="{{v.brandName}}">
                 <span class="colorLump {{if i==0}}colorred{{/if}} {{if i==1}}coloryellow{{/if}} {{if i==2}}colorgreen{{/if}}">{{i+1}}</span>
                 <div class="title">
@@ -210,7 +212,7 @@
     <!-- 产品销量 四条 -->
     <script type="text/html" id="salveList">
         {{each result v i}}
-        <li>
+        <li >
                 <a href="./good.html?id={{v.brandId}}">
                     <div class="img">
                         <!-- 生成的是标签  -->
