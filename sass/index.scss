@@ -20,11 +20,11 @@
                         flex-direction: column;
                         align-items: center;
                         img{
-                            width: pr(40);
+                            width: pr(50);
                         }
                         span{
                             margin-top: pr(5);
-                            font-size: pr(10);
+                            font-size: pr(14);
                             color: #666;
                         }
                     }
@@ -33,6 +33,15 @@
                         display: none;
                     }
                 }
+
+                // li:nth-child(7){
+                //     position: relative;
+                //     div{
+                //         width: pr(20);
+                //         height: pr(10);
+                //         background: red;
+                //     }
+                // }
             }
         }
 
@@ -47,7 +56,11 @@
                 color: #fff;
                 align-items: center;
                 background: linear-gradient(to bottom, #ffad44,#ff9203);
-
+                
+                span{
+                    font-size: pr(14);
+                    font-weight: bold;
+                }
                 img{
                     width: pr(15);
                 }
@@ -115,7 +128,7 @@
         color: #fff;
         align-items: center;
         background: linear-gradient(to bottom, #ffad44,#ff9203);
-        
+        font-size: pr(14);
 
         img{
             width: pr(15);
