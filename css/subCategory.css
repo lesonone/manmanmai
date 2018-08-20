@@ -309,12 +309,52 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.inner .paging .mui-content-padded {
-  padding: 0.2666666667rem;
+.inner .paging .pagination {
+  padding: 0.5333333333rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.inner .paging .mui-content-padded .mui-pager li a {
+.inner .paging .pagination .pager {
+  padding: 0.1333333333rem 0.5333333333rem;
   background: linear-gradient(to bottom, #eeeeee, #d8d8d8);
   color: #666;
+  border-radius: 0.2666666667rem;
+  border: 0.0266666667rem solid #bbb;
+}
+.inner .paging .pagination .dropdown {
+  position: relative;
+  background-color: #fff;
+}
+.inner .paging .pagination .dropdown .dropdown-toggle {
+  width: 2.2666666667rem;
+  border: 0.0266666667rem solid #666;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner .paging .pagination .dropdown .dropdown-toggle span {
+  font-size: 0.4266666667rem;
+}
+.inner .paging .pagination .dropdown .dropdown-menu {
+  display: none;
+  bottom: 0.8rem;
+  position: absolute;
+  width: 100%;
+  border-right: 0.0266666667rem solid #666;
+  border-left: 0.0266666667rem solid #666;
+}
+.inner .paging .pagination .dropdown .dropdown-menu li {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.0266666667rem solid #666;
+}
+.inner .paging .pagination .dropdown .dropdown-menu li a {
+  display: block;
+  padding: 0.1333333333rem 0rem;
+  font-size: 0.4266666667rem;
 }
 .inner .paging .link {
   padding: 0rem 0.2666666667rem;

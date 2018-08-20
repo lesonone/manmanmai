@@ -148,10 +148,11 @@
                     </div>
                     <!-- 内部滚动区 -->
                     <div class="scroll">
-                        <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll-wrapper scroll-content">
                             <div class="mui-scroll">
                                 <!--这里放置真实显示的DOM内容-->
                                 <div class="inner" id="content">
+                                    <!-- 面包屑导航栏 -->
                                     <div class="navbar">
                                         <ol class="breadcrumb">
                                             <li>
@@ -166,28 +167,31 @@
                                         </ol>
                                         <button class="mui-btn-default filtrate">筛选</button>
                                     </div>
+                                    <!-- 列表页面 -->
                                     <div class="products">
 
                                     </div>
+                                    <!-- 分页部分 -->
                                     <div class="paging">
-                                        <div class="mui-content-padded">
-                                            <ul class="mui-pager">
-                                                <li class="mui-previous">
-                                                    <a href="#">
-                                                        上一页
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <select name="" id="">
-                                                        <option value=""></option>
-                                                    </select>
-                                                </li>
-                                                <li class="mui-next">
-                                                    <a href="#">
-                                                        下一页
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                        <div class="pagination">
+
+                                            <a class="pager previous" href="#">
+                                                上一页
+                                            </a>
+
+                                            <div class="dropdown">
+                                                <button class="dropdown-toggle" type="button">
+                                                  <span class="name"></span>
+                                                  <span class="down mui-pull-right mui-icon mui-icon-arrowdown"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                  
+                                                </ul>
+                                              </div>
+                                            <a class="pager next" href="#">
+                                                下一页
+                                            </a>
+
                                         </div>
                                         <div class="link">
                                             <p class="title">相关链接：</p>
@@ -227,9 +231,11 @@
 
 
 </body>
+<!-- 分类标题模板 -->
 <script type="text/html" id="categoryId">
     {{result[0].category}}
 </script>
+<!-- 列表页面模板 -->
 <script type="text/html" id="productData">
     {{each result v i}}
     <div class="product">
@@ -247,5 +253,10 @@
     </div>
     {{/each}}
 </script>
-
+<!-- 分页下拉框模板 -->
+<script type="text/html" id="dropdownData">
+    <% for(var i = 0;i < pagesize;i++){  %>
+    <li><a data-pageid="{{i+1}}" href="#"><%=(i+1)+"/"+pagesize %></a></li>
+    <% } %>
+</script>
 </html>
