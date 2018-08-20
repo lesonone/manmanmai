@@ -31,10 +31,10 @@ $(function () {
                     $(".hate").html(html);
                     $(".hate").on("tap",".subMenu",function(){
 <<<<<<< HEAD
-       
-=======
                         console.log(1);
->>>>>>> 2277726d177688dc7b45696b782a7203f3bd19eb
+=======
+       
+>>>>>>> 7a270ce28770843b1b3b8d9913338025f53f50e6
                         location.href="./subCategory.html?categoryid="+$(this).data("id");
                 
                     })
