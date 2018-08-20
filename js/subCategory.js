@@ -45,13 +45,17 @@ $(function () {
             type: "get",
             data: data,
             success: function (res) {
+                pagesize = res.pagesize;
+                totalCount = res.totalCount;
+                res.count = Math.ceil(totalCount/pagesize);
                 var html = template("productData", res);
                 $(".products").html(html);
                 var dropHtml = template("dropdownData",res);
                 $(".dropdown-menu").html(dropHtml);
-                pagesize = res.pagesize;
-                totalCount = res.totalCount;
+                
+                console.log(res.count);
             }
+
         })
     };
     $(".logo,.toindex").on("tap",function(){
@@ -86,7 +90,8 @@ $(function () {
     // 下一页的点击事件
     $(".paging .next").on("tap",function () {
         data.pageid++;
-        if(data.pageid>=pagesize) data.pageid = pagesize;
+        console.log(pagesize);
+        if(data.pageid>=totalCount/pagesize) data.pageid = totalCount/pagesize;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
         $('.dropdown-toggle .name').html(data.pageid+"/"+totalCount/pagesize);

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="./images/icon-m.jpg" type="image/x-icon">
-    <title>慢慢买比价网--手机版</title>
+    <title>Document</title>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
@@ -113,7 +112,7 @@
                                         <a class="link" href="#">全高清</a>
                                     </li>
                                     <li>
-                                        <a class="link" href="#">高清</a>
+                                        <a class="link" href="#">高清/a>
                                     </li>
    
                                 </ul>
@@ -252,8 +251,8 @@
 </script>
 <!-- 分页下拉框模板 -->
 <script type="text/html" id="dropdownData">
-    <% for(var i = 0;i < totalCount/pagesize;i++){  %>
-    <li><a class="count" data-pageid="{{i+1}}" href="#"><%=(i+1)+"/"+totalCount/pagesize %></a></li>
+    <% for(var i = 0;i < count;i++){  %>
+    <li><a class="count" data-pageid="{{i+1}}" href="#"><%=(i+1)+"/"+count %></a></li>
     <% } %>
 </script>
 </html>
