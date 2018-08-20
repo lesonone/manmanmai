@@ -1,8 +1,15 @@
 $(function() {
+    $('.mui-icon-undo').click(function() {
+        window.location.reload();
+    })
 
-    function back() {
+    // 点击刷新
+    $('.back').click(function() {
+
+        //var arr = location.href.split("/").pop();
         window.history.back();
-    }
+    })
+
 
     // 获取标题数据
     function title() {
@@ -44,7 +51,6 @@ $(function() {
             data: { couponid: cid },
             dataType: 'json',
             success: function(obj) {
-                //console.log(obj);
                 var html = template(muban, obj);
                 //console.log(html);
                 addres.html(html);
@@ -74,7 +80,11 @@ $(function() {
 
         discount($(this).data('id'), 'commodity', $('#commoditys'));
 
-        $('.mui-title').html($(this).data('tit') + '优惠券');
+        $('h1').html($(this).data('tit') + '优惠券');
+
+
+
+
 
     });
 
@@ -127,6 +137,10 @@ $(function() {
         var slider = mui('#slider').slider();
         slider.nextItem();
     })
+
+
+
+
 
 
 

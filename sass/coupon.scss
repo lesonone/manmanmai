@@ -1,14 +1,32 @@
 @import './common.scss';
 .container {
+    // 返回按钮
+    .mui-icon-undo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        // background-color: red;
+        //color: blue;
+        z-index: 80;
+    }
     // 头部
     .header {
         background-color: $deepRed;
+        display: flex;
         .mui-pull-left {
             color: #fff;
         }
         h1 {
             color: #fff;
+            font-size: pr(17);
+            font-weight: 500;
+            line-height: pr(44);
+            display: block;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
         }
+        .download {}
     }
     .main {
         .mui-content {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="lib/zepto/zepto.min.js"></script>
@@ -11,6 +11,7 @@
     <script src="./lib/artTemplate/template-web.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./lib/animate/animate.css">
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
@@ -24,14 +25,14 @@
         <!-- 顶部 -->
         <div class="headerTop">
             <a href="./cabbage.html">
-                <h3>白菜价</h3>
+                <h3 >白菜价</h3>
             </a>
             <input type="text" placeholder="好宝贝  等你搜">
             <i class="mui-icon mui-icon-settings category"></i>
         </div>
             
         <!-- 主体部分 -->
-        <div class="main">
+        <div class="main" >
             <!-- 下拉框 -->
             <div class="menu">                
                 <div class="menu-content">
@@ -40,8 +41,8 @@
                 <div class="mask"></div>
             </div>
             <!-- 内部滚动区 -->
-            <div class="scroll">
-                <div class="mui-scroll-wrapper">
+            <div class="scroll" >
+                <div class="mui-scroll-wrapper anchorTop">
                     <div class="mui-scroll">
                         <!-- 轮播图部分 -->
                         <div id="slider" class="mui-slider">
@@ -93,17 +94,17 @@
                         <!-- 导航栏部分 -->
                         <div class="nav">
                             <ul>
-                                <li><a href=""><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
-                                <li><a href=""><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
-                                <li><a href=""><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
-                                <li><a href=""><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
+                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=0&title=全部"><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
+                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=1&title=热销"><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
+                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=2&title=9块邮"><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
+                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=3&title=19块邮"><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
                             </ul>
                         </div>
                         <!-- 超级人气榜 -->
                         <div class="superHot">
                             <div class="topBar">
                                 <span class="super">超级人气榜</span>
-                                <a href="" class="more">更多</a>
+                                <a href="./cabbageList.html?titleid=12&title=美妆" class="more">更多</a>
                             </div>
                             <!-- 横向滚动 -->
                             <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
@@ -157,25 +158,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- 回到顶部 -->
+        <a  class="anchor" href="javascript:scrollTo(0,0,1000)">           
+            <img src="./images/anchor.png" alt="">
+            <i></i>
+        </a>
     </div>
 </body>
 
 </html>
 <!-- 模板生成分类菜单 -->
 <script type="text/html" id="menuList">
-
     <ul class="menuList">
-        {{each result value key}}
-        <li data-id={{value.titleId}}><a href="./cabbageList.html?titleid={{value.titleId}}">{{value.title}}</a></li>
-        {{/each}}
+    {{each result value key}}
+        <li><a href="./cabbageList.html?titleid={{value.titleId}}&title={{value.title}}">{{value.title}}</a></li>
+    {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>
-
 </script>
 
 <!-- 模板生成主页商家优惠信息列表 -->
 <script type="text/html" id="goodlist">
-    {{each result value key}}
+{{each result value key}}
     <li>
         {{#value.productImg}}
         <p class="proName">
@@ -187,12 +192,12 @@
             </p>         
         </div> 
     </li>
-    {{/each}}
+{{/each}}
 </script>
 
 <!-- 模板生成超级人气版部分 -->
 <script type="text/html" id="superList">
-    {{each result value key}}
+{{each result value key}}
     <a class="mui-control-item">
         {{#value.productImg}}
         <p class="proName">
@@ -202,5 +207,5 @@
             {{#value.productPrice}}
         </p>
     </a>
-    {{/each}}
+{{/each}}
 </script>

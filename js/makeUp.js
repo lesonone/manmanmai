@@ -95,7 +95,12 @@ $(function () {
 
     // 点击返回箭头,返回上一级页面
     $(".header .back").click(function() {
-        location.back();
+        history.back();
+    });
+
+    // 点击某一商品携带id跳转到上商品详情页
+    $(".mui-scroll ul").on("click","li",function() {
+        location.href = "./products.html?productid=" + $(this).data("productid");
     });
 
 
