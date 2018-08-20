@@ -323,4 +323,14 @@ body {
   background: #f2f2f2;
 }
 
+.download {
+  position: fixed;
+  z-index: 100;
+  right: 0.2666666667rem;
+  bottom: 0.8rem;
+}
+.download img {
+  width: 1.6rem;
+}
+
 /*# sourceMappingURL=index.css.map */
