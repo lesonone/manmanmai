@@ -125,6 +125,9 @@
                                 margin-left: pr(10);
                                 font-size: $font-xs;
                             }
+                            em{  
+                                margin: pr(0) pr(5);
+                            }
                         }
                         .bar{
                             display: flex;
@@ -145,7 +148,6 @@
                                     position: absolute;
                                     left: 0;
                                     top: 0;
-                                    
                                 }
                                 span{
                                     color: #fff;
