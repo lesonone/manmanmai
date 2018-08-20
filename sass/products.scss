@@ -1,0 +1,132 @@
+@import "common.scss";
+.container {
+    padding-bottom: pr(50);
+    .header {
+        .back {
+            color: #fff;
+        }
+        h4 {
+            color: #fff;
+        }
+    }
+    .main {
+        .scroll {
+            .inner {
+                .product {
+                    padding-left: pr(10);
+                    .title {
+                        font-weight:bold;
+                        width: 100%;
+                        p {
+                            font-size: pr(20);
+                            padding: pr(20) 0 pr(10) 0;
+                            color: #5a5a5a;
+                        }
+                    }
+                    .subtitle {
+                        display: flex;
+                        padding: pr(10) 0 pr(10) pr(5);
+                        p {
+                            font-size: $font-xs;
+                        }
+                    }
+                    .banner {
+                        .topBanner {
+                            display: flex;
+                            .left {
+                                width: 65%;
+                                .explain {
+                                    display: flex;
+                                    padding-bottom: pr(10);
+                                    p {
+                                        font-size: $font-md;
+                                        color: #666;
+                                    }
+                                }
+                            }
+                            .right {
+                                width: 35%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .bottomBanner {
+                            .price {
+                                font-size: $font-md;
+                                color: $darkOrange;
+                            }
+                            img {
+                                padding-top: pr(10);
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .goBuy {
+                    background-color: #ff9000;
+                    color: #fff;
+                    width: 100%; // padding: pr(10) pr(20);
+                    font-size: $font-md;
+                    margin-top: pr(10);
+                    margin-bottom: pr(10);
+                }
+                .QRcode {
+                    padding: pr(10);
+                    width: 100%;
+                    height: 100%;
+                }
+                .form {
+                    padding: pr(10) 0 pr(10) 0;
+                    textarea {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .ctrl {
+                        height: pr(40);
+                        margin-top: pr(-5);
+                        background-color: #f1f1f1;
+                        .tjdp {
+                            height: 100%;
+                            background-color: #ff9000;
+                            border: none;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bottom {
+    position: fixed;
+    background-color: $darkOrange;
+    height: pr(50);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    border: pr(1) solid #ccc;
+    z-index: 100;
+    .discuss {
+        width: 100%;
+        height: 100%;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        align-items: center;
+    }
+    .GoBuy {
+        width: 100%;
+        height: 100%;
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

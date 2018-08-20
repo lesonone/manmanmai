@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="lib/zepto/zepto.min.js"></script>
@@ -42,10 +42,11 @@
             </div>
             <!-- 内部滚动区 -->
             <div class="scroll">
-                <div class="mui-scroll-wrapper">
+                <div class="mui-scroll-wrapper anchorTop">
                     <div class="mui-scroll">
-                        <ul class="goodList">
-                            <li>
+                        <ul class="goodList" id="list">
+                            <!-- 模板生成 -->
+                            <!-- <li>
                                 <img src="https://gd2.alicdn.com/imgextra/i3/160157396/TB2xO8VaheK.eBjSZFlXXaywXXa_!!160157396.jpg_400x400.jpg">
                                 <div class="proInfo">
                                     <p class="proName">
@@ -65,56 +66,36 @@
                                     <div class="coupon">
                                         <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558" target="_blank">点此领10元优惠券</a>
                                         <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a>
-                                    </div>
-                                    
+                                    </div>                                   
                                 </div>
-                            </li>
-                            <li>
-                                <img src="https://gd2.alicdn.com/imgextra/i3/160157396/TB2xO8VaheK.eBjSZFlXXaywXXa_!!160157396.jpg_400x400.jpg">
-                                <div class="proInfo">
-                                    <p class="proName">
-                                        <span class="b">[包邮]</span>双十一红包 今日开启
-                                    </p>
-                                    <p class="price">
-                                        券后 : <em>¥</em>0.0<del>¥0</del>
-                                    </p>
-                                    <div class="bar clearfix">
-                                        <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558" class="goquan" target="_blank"></a>
-                                        <i>
-                                            <em style="width:30%;"></em>
-                                            <span>30%</span>
-                                        </i>
-                                        <b>已领112张</b>
-                                    </div>
-                                    <div class="coupon">
-                                        <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558" target="_blank">点此领10元优惠券</a>
-                                        <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a>
-                                    </div>
-                                    
-                                </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 回到顶部 -->
+        <a  class="anchor" >           
+            <img src="./images/anchor.png" alt="">
+            <i></i>
+        </a>
     </div>
 </body>
 </html>
 <!-- 模板生成分类菜单 -->
 <script type="text/html" id="menuList">
-
     <ul class="menuList">
-        {{each result value key}}
-        <li data-id={{value.titleId}}><a href="">{{value.title}}</a></li>
-        {{/each}}
+    {{each result value key}}
+        <li data-id={{value.titleId}}><a class="category">{{value.title}}</a></li>
+    {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>
-
 </script>
 
+<!-- 模板生成列表页 -->
 <script type="text/html" id='goodListtpl'>
-    {{each result value key}}
+{{each result value key}}
     <li>
         {{#value.productImg}}
         <div class="proInfo">
@@ -131,5 +112,5 @@
             </div>            
         </div>
     </li>
-    {{/each}}
+{{/each}}
 </script>

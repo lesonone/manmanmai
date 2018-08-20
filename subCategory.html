@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/subCategory.css">
+    <script src="./js/subCategory.js"></script>
+
+</head>
+
+<body>
+    <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+        <!--侧滑菜单部分-->
+        <aside id="offCanvasSide" class="mui-off-canvas-left">
+            <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="title">
+                        <span class="selecter">筛选</span>
+                        <span class="mui-icon mui-icon-closeempty close"></span>
+                    </div>
+                    <div class="kind">
+                        <p class="all">
+                            <span class="brand">品牌</span>
+                            <span class="allbrand">全部品牌</span>
+                            <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
+                        </p>
+                        <div class="trademark">
+                            <ul>
+                                <li class="active">
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <div class="kind">
+                        <p class="all">
+                            <span class="brand">品牌</span>
+                            <span class="allbrand">全部品牌</span>
+                            <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
+                        </p>
+                        <div class="trademark">
+                            <ul>
+                                <li class="active">
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <div class="kind">
+                        <p class="all">
+                            <span class="brand">品牌</span>
+                            <span class="allbrand">全部品牌</span>
+                            <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
+                        </p>
+                        <div class="trademark">
+                            <ul>
+                                <li class="active">
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">全部品牌</a>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--主界面部分-->
+        <div class="mui-inner-wrap">
+            <!-- 主页面内容容器 -->
+            <div id="offCanvasContentScroll" class="container mui-content">
+                <!-- 顶部 -->
+                <div class="header">
+                    <a class="logo"></a>
+                    <a class="download"></a>
+                </div>
+                <!-- 主体部分 -->
+                <div class="main">
+                    <!-- 搜索栏 -->
+                    <div class="searchbar">
+                        <div class="search">
+                            <input type="text" placeholder="请输入你想比价的商品">
+                            <span class="searchbtn">搜索</span>
+                        </div>
+                    </div>
+                    <!-- 内部滚动区 -->
+                    <div class="scroll">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <!--这里放置真实显示的DOM内容-->
+                                <div class="inner" id="content">
+                                    <div class="navbar">
+                                        <ol class="breadcrumb">
+                                            <li>
+                                                <a href="./index.html">首页</a>
+                                            </li>
+                                            <span class="arrows">></span>
+                                            <li>
+                                                <a href="./brandList.html">全部分类</a>
+                                            </li>
+                                            <span class="arrows">></span>
+                                            <li class="categoryName"></li>
+                                        </ol>
+                                        <button class="mui-btn-default filtrate">筛选</button>
+                                    </div>
+                                    <div class="products">
+
+                                    </div>
+                                    <div class="paging">
+                                        <div class="mui-content-padded">
+                                            <ul class="mui-pager">
+                                                <li class="mui-previous">
+                                                    <a href="#">
+                                                        上一页
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <select name="" id="">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </li>
+                                                <li class="mui-next">
+                                                    <a href="#">
+                                                        下一页
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="link">
+                                            <p class="title">相关链接：</p>
+                                            <p>电视机十大品牌</p>
+                                            <p>电视机口碑大全</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 底部内容 -->
+                                    <div class="footer">
+                                        <div class="footer-top">
+                                            <a class="login">登录</a>
+                                            <a class="register">注册</a>
+                                            <a class="back-top">
+                                                <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                                        </div>
+                                        <div class="footer-bottom">
+                                            <p>
+                                                <span class="warning">手机APP下载</span>
+                                                <span>慢慢买手机版--掌上比价平台</span>
+                                            </p>
+                                            <p>m.manmanbuy.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- off-canvas backdrop -->
+            <div class="mui-off-canvas-backdrop"></div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script type="text/html" id="categoryId">
+    {{result[0].category}}
+</script>
+<script type="text/html" id="productData">
+    {{each result v i}}
+    <div class="product">
+        <div class="img">
+            {{#v.productImg}}
+        </div>
+        <div class="right">
+            <p class="name">{{#v.productName}}</p>
+            <p class="price">{{#v.productPrice}}</p>
+            <p class="info">
+                <span class="offer">{{#v.productQuote}}</span>
+                <span class="comments">{{#v.productCom}}</span>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+</html>

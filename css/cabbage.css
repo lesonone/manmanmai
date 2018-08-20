@@ -99,7 +99,7 @@ body {
 .container .header .download {
   height: 0.96rem;
   width: 0.9333333333rem;
-  background: url("../images/download.png") no-repeat top left/100%;
+  background: url("../images/home.png") no-repeat top left/100%;
 }
 .container .main {
   flex: 1;
@@ -226,6 +226,9 @@ body {
   color: #fff;
   width: 1.0666666667rem;
   text-align: center;
+}
+.container .main {
+  position: relative;
 }
 .container .main .menu {
   position: absolute;
@@ -414,6 +417,7 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0.1333333333rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li img {
@@ -447,6 +451,32 @@ body {
   border: 0.0266666667rem dashed #fe4a65;
   padding: 0rem 0.08rem;
   margin-top: 0.1066666667rem;
+}
+.container .anchor {
+  position: fixed;
+  right: 0.2666666667rem;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .anchor img {
+  width: 1.0666666667rem;
+  height: 1.0666666667rem;
+  animation: circle 50s alternate infinite;
+  transition: all 50s;
+}
+.container .anchor i {
+  width: 0.1333333333rem;
+  height: 0.8rem;
+  background-color: #ccc;
+  margin-top: -0.1333333333rem;
+}
+@keyframes circle {
+  to {
+    transform: rotateZ(-3000deg);
+  }
 }
 
 /*# sourceMappingURL=cabbage.css.map */

@@ -33,6 +33,7 @@
     }
     
     .main {
+        position: relative;
         .menu{
             position: absolute;
             width: 100%;
@@ -225,6 +226,7 @@
                             width: 50%;                     
                             display: flex;
                             flex-direction: column;
+                            align-items: center;
                             padding: pr(5);
                             img{
                                 width: pr(176);
@@ -262,6 +264,36 @@
                     }
                 }
             }
+        }
+    }
+
+    .anchor{
+        position: fixed;
+        right: pr(10);
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // display: none;
+        img{
+            width: pr(40);
+            height: pr(40);
+            animation: circle 50s alternate infinite;
+            transition: all 50s;
+        }
+        i{
+            width: pr(5);
+            height: pr(30);
+            background-color: #ccc;
+            margin-top: pr(-5);
+        }
+    }
+
+    //小风车的动画
+    @keyframes circle {
+        to {
+            transform: rotateZ(-3000deg);
         }
     }
 }

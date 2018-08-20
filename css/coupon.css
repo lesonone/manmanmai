@@ -99,7 +99,7 @@ body {
 .container .header .download {
   height: 0.96rem;
   width: 0.9333333333rem;
-  background: url("../images/download.png") no-repeat top left/100%;
+  background: url("../images/home.png") no-repeat top left/100%;
 }
 .container .main {
   flex: 1;
@@ -195,14 +195,28 @@ body {
   color: #f4483e;
 }
 
+.container .mui-icon-undo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+}
 .container .header {
   background-color: #f4483e;
+  display: flex;
 }
 .container .header .mui-pull-left {
   color: #fff;
 }
 .container .header h1 {
   color: #fff;
+  font-size: 0.4533333333rem;
+  font-weight: 500;
+  line-height: 1.1733333333rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
 }
 .container .main .mui-content {
   background-color: #fff;

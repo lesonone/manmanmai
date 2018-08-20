@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <script src="lib/artTemplate/template-web.js"></script>
+
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/makeUp.css">
+    <script src="js/makeUp.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <span class="iconfont icon-arrow-right back"></span>
+            <span class="title">凑单品</span>
+        </div>
+        <!-- 排序条 -->
+        <div class="sortBar">
+            <div class="left">
+                <a href="javascript: ;" class="platform">
+                    <span>京东</span>
+                    <span class="iconfont icon-xiazai"></span>
+                </a>
+                <a href="javascript: ;" class="area">
+                    <span>华北</span>
+                    <span class="iconfont icon-xiazai"></span>
+                </a>
+                <a href="javascript: ;" class="priceBar">
+                    <span>1元</span>
+                    <span class="iconfont icon-xiazai"></span>
+                </a>
+
+            </div>
+            <div class="right">
+                <span class="iconfont icon-sousuo"></span>
+            </div>
+            <div class="hideSort">
+                <ul class="store">
+                    <!-- 店铺 -->
+                </ul>
+                <ul class="region">
+                    <!-- 区域 -->
+                </ul>
+                <ul class="prices">
+                    <li>全部价格
+                        <span class="mui-pull-right"></span>
+                    </li>
+                    <li>1-3元
+                        <span class="mui-pull-right"></span>
+                    </li>
+                    <li>3-5元
+                        <span class="mui-pull-right"></span>
+                    </li>
+                    <li>5-10元
+                        <span class="mui-pull-right"></span>
+                    </li>
+                    <li>10-15元
+                        <span class="mui-pull-right"></span>
+                    </li>
+                    <li>15元以上
+                        <span class="mui-pull-right"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul>
+
+                        </ul>
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top">
+                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>
+                                    <span class="warning">手机APP下载</span>
+                                    <span>慢慢买手机版--掌上比价平台</span>
+                                </p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- 隐藏排序的模板 -->
+<script type="text/html" id="sortBarTmp">
+{{ each result v i }}
+    <% if(v.shopName) { %>
+        <li data-shopid="{{ v.shopId }}" class="sortLi" >{{ v.shopName }} <span class="mui-pull-right"></span></li>
+    <% }else { %>
+        <li data-areaid="{{ v.areaId }}" class="sortLi" >{{ v.areaName }} <span class="mui-pull-right"></span></li>    
+    <% } %>    
+{{ /each }}
+</script>
+
+<!-- 商品模板 -->
+<script type="text/html" id="productTmp">
+{{ each result v i }}
+    <li data-productid="{{ v.productId }}" >
+        <img src="{{ v.productImg }}" alt="">
+        <p class="title">{{ v.productName }}</p>
+        <p class="price">{{ v.productPrice }}</p>
+    </li>
+{{ /each }}
+</script>
