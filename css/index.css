@@ -249,7 +249,7 @@ body {
   margin-top: 0.0533333333rem;
 }
 .main .inner .discount .top {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   display: flex;
   justify-content: space-between;
   padding: 0rem 0.2666666667rem;
@@ -273,7 +273,7 @@ body {
   margin-right: 0.1333333333rem;
 }
 .main .inner .discount .products a .left img {
-  width: 1.6rem;
+  width: 2.1333333333rem;
 }
 .main .inner .discount .products a .right {
   flex: 1;
@@ -282,7 +282,7 @@ body {
   justify-content: space-between;
 }
 .main .inner .discount .products a .right .title {
-  font-size: 0.2666666667rem;
+  font-size: 0.4266666667rem;
   color: #000;
 }
 .main .inner .discount .products a .right .title .color {
@@ -306,7 +306,7 @@ body {
   background: linear-gradient(to bottom, #fff, #f2f2f2);
 }
 .main .ranking {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   margin-bottom: 0.2666666667rem;
   display: flex;
   justify-content: space-between;
