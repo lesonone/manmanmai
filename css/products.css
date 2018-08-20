@@ -208,6 +208,7 @@ body {
   padding-left: 0.2666666667rem;
 }
 .container .main .scroll .inner .product .title {
+  font-weight: bold;
   width: 100%;
 }
 .container .main .scroll .inner .product .title p {
