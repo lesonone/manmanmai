@@ -211,7 +211,22 @@ body {
   display: flex;
   justify-content: center;
   width: 25%;
+  position: relative;
   padding: 0.1333333333rem 0rem;
+}
+.main .inner .nav ul li .popularity {
+  position: absolute;
+  width: 0.9333333333rem;
+  height: 0.5333333333rem;
+  background: #ff614f;
+  border: 0.0266666667rem solid #fff;
+  top: 0;
+  right: 0.2666666667rem;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  text-align: center;
+  border-radius: 0.4rem;
 }
 .main .inner .nav ul li a {
   display: flex;
@@ -219,11 +234,11 @@ body {
   align-items: center;
 }
 .main .inner .nav ul li a img {
-  width: 1.0666666667rem;
+  width: 1.3333333333rem;
 }
 .main .inner .nav ul li a span {
   margin-top: 0.1333333333rem;
-  font-size: 0.2666666667rem;
+  font-size: 0.3733333333rem;
   color: #666;
 }
 .main .inner .nav ul li:nth-child(n+9) {
@@ -241,6 +256,10 @@ body {
   color: #fff;
   align-items: center;
   background: linear-gradient(to bottom, #ffad44, #ff9203);
+}
+.main .inner .discount .top span {
+  font-size: 0.3733333333rem;
+  font-weight: bold;
 }
 .main .inner .discount .top img {
   width: 0.4rem;
@@ -295,6 +314,7 @@ body {
   color: #fff;
   align-items: center;
   background: linear-gradient(to bottom, #ffad44, #ff9203);
+  font-size: 0.3733333333rem;
 }
 .main .ranking img {
   width: 0.4rem;

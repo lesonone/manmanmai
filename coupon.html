@@ -31,12 +31,13 @@
 
     <div class="container">
         <!-- 返回按钮 -->
-        <span class="mui-icon mui-icon-undo"></span>
+        <!-- <span class="mui-icon mui-icon-undo"></span> -->
+
         <!-- 顶部 -->
         <div class="header animated zoomInLeft">
             <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
             <h1>优惠券</h1>
-            <a class="download"></a>
+            <a class="mui-icon mui-icon-home"></a>
         </div>
         <!-- 进度条 -->
         <div id="demo1" class="mui-progressbar">
@@ -73,7 +74,7 @@
                             <div class="navbar">
                                 <ol class="breadcrumb">
                                     <li>
-                                        <a href=" ">首页</a>
+                                        <a href="./index.html">首页</a>
                                     </li>
                                     <span class="arrows">></span>
                                     <!-- <li>
@@ -133,12 +134,14 @@
     <script type="text/html" id="coupontitle">
         <div class="mui-card-content-inner coupontitle">
             {{each result v i}}
+
             <div class='animated bounceInUp'>
                 <a data-id="{{v.couponId}}" data-tit="{{v.couponTitle}}">
                     <img src="{{v.couponImg}}" alt="">
                     <p>{{v.couponTitle}}</p>
                 </a>
             </div>
+
             {{/each}}
         </div>
     </script>

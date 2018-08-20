@@ -31,6 +31,18 @@ $(function(){
 
     //导航点击更多显示下面四个菜单
     $('.nav').on("click","li:nth-child(8)",function(){
-        $('.nav li:nth-child(n+9)').slideToggle(500);
-    })
+        $('.nav li:nth-child(n+9)').stop().slideToggle(400);
+    });
+
+    //点击超值折扣栏跳转到省钱控页面
+    $(".discount").click(function(){
+        window.location.href = "./moneyctrl.html";
+    });
+
+    //点击品牌排行栏跳转到口碑页面
+    $(".ranking").click(function(){
+        window.location.href = "./category.html";
+    });
+
+
 })

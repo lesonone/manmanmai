@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
 
+    <!-- 动画效果 -->
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
     <!-- 引擎模板 -->
     <script src="lib/artTemplate/template-web.js"></script>
 
@@ -32,7 +35,7 @@
             <a class="download"></a>
         </div>
         <!-- 主体部分 -->
-        <div class="main">
+        <div class="main ">
             <!-- 搜索栏 -->
             <!-- <div class="searchbar">
                 <div class="search">
@@ -96,7 +99,7 @@
     <!-- 渲染产品列表页 -->
     <script type="text/html" id="product">
         {{each result v i}}
-        <li>
+        <li class="animated bounce">
                 <a href="{{v.navHref}}" data-id="{{v.navId}}">
                     <img src="{{v.navImg}}" alt="">
                     <span class="ti">{{v.navTitle}}</span>
