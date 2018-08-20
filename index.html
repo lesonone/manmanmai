@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
     <script src="./lib/artTemplate/template-web.js"></script>
 
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
@@ -102,7 +104,7 @@
             {{ each result v i}}
 
             {{ if i == 6 }}
-            <li>
+            <li class="animated swing">
                 <div class="popularity">
                     <span>人气</span>
                 </div>
@@ -110,7 +112,7 @@
             </li>
             
             {{else}}
-            <li><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
+            <li class="animated swing"><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
             {{ /if }}
             {{ /each }}
         </ul>
