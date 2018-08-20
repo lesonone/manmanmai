@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
     <script src="./lib/artTemplate/template-web.js"></script>
 
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
@@ -42,7 +44,7 @@
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
                         <div class="inner">
-                            <!-- 导航菜单 -->
+                            <!-- 渲染导航菜单 -->
                             <div class="nav">
 
                             </div>
@@ -50,7 +52,7 @@
                             <!-- 超值折扣推荐 -->
                             <div class="discount">
                                 <div class="top">
-                                    <h4>超值折扣推荐</h4>
+                                    <span>超值折扣推荐</span>
                                     <img src="./images/more.png" alt="">
                                 </div>
 
@@ -72,7 +74,7 @@
 
                         <!-- 品牌排行 -->
                         <div class="ranking">
-                            <h4>品牌排行</h4>
+                            <span>品牌排行</span>
                             <img src="./images/more.png" alt="">
                         </div>
                         
@@ -100,7 +102,18 @@
         
         <ul>
             {{ each result v i}}
-            <li><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
+
+            {{ if i == 6 }}
+            <li class="animated swing">
+                <div class="popularity">
+                    <span>人气</span>
+                </div>
+                <a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a>
+            </li>
+            
+            {{else}}
+            <li class="animated swing"><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
+            {{ /if }}
             {{ /each }}
         </ul>
     
@@ -109,33 +122,7 @@
 
 
 
-    <!-- 超值折扣推荐 -->
-
-    <!-- <script id="productlist" type="text/html">
-    {{ each result v i}}
-        <div class="product" data-id="{{v.productId}}">
-                <div class="left">
-                    {{#v.productImgSm}}
-                </div>
-
-                <div class="right">
-                    <p class="title">
-                            <span>{{v.productName}}</span>
-                            <span class="color">{{v.productPinkage}}</span>
-                    </p>
-
-
-                    <p class="other">
-                        <span>{{v.productFrom}}丨{{v.productTime}}</span>
-                        <span class="comment"><i class="mui-icon mui-icon-chat"></i>{{v.productComCount}}</span>
-                    </p>
-                    
-                </div>
-            </div>
-    {{ /each }}
-    </script> -->
-
-    <!-- 超值折扣推荐 -->
+    <!-- 超值折扣推荐模板   -->
     <script id="productlist" type="text/html">
 
         <ul>
