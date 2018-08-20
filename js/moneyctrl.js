@@ -41,6 +41,6 @@ $(function(){
             mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 100);
         })
         $('.jiantou').click(function(){
-            location.href="login.html";
+            location.href="./index.html";
         })
 })
