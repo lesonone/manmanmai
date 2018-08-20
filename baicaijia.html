@@ -15,8 +15,8 @@
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
-    <script src="js/cabbage.js"></script>
-    <link rel="stylesheet" href="css/cabbage.css">
+    <script src="js/baicaijia.js"></script>
+    <link rel="stylesheet" href="css/baicaijia.css">
 
 </head>
 
@@ -24,7 +24,7 @@
     <div class="container">
         <!-- 顶部 -->
         <div class="headerTop">
-            <a href="./cabbage.html">
+            <a href="./baicaijia.html">
                 <h3 >白菜价</h3>
             </a>
             <input type="text" placeholder="好宝贝  等你搜">
@@ -94,17 +94,17 @@
                         <!-- 导航栏部分 -->
                         <div class="nav">
                             <ul>
-                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=0&title=全部"><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
-                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=1&title=热销"><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
-                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=2&title=9块邮"><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
-                                <li class="animated rubberBand"><a href="./cabbageList.html?titleid=3&title=19块邮"><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
+                                <li class="animated rubberBand"><a href="./baicaijiaList.html?titleid=0&title=全部"><i class="iconfont all icon-paihangbang"></i><span>全部</span></a></li>
+                                <li class="animated rubberBand"><a href="./baicaijiaList.html?titleid=1&title=热销"><i class="iconfont hot icon-rexiaotuijian"></i><span>热销</span></a></li>
+                                <li class="animated rubberBand"><a href="./baicaijiaList.html?titleid=2&title=9块邮"><i class="iconfont nine icon-9"></i><span>9块邮</span></a></li>
+                                <li class="animated rubberBand"><a href="./baicaijiaList.html?titleid=3&title=19块邮"><i class="iconfont nineteen icon-liwu-copy"></i><span>19块邮</span></a></li>
                             </ul>
                         </div>
                         <!-- 超级人气榜 -->
                         <div class="superHot">
                             <div class="topBar">
                                 <span class="super">超级人气榜</span>
-                                <a href="./cabbageList.html?titleid=12&title=美妆" class="more">更多</a>
+                                <a href="./baicaijiaList.html?titleid=12&title=美妆" class="more">更多</a>
                             </div>
                             <!-- 横向滚动 -->
                             <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
@@ -172,7 +172,7 @@
 <script type="text/html" id="menuList">
     <ul class="menuList">
     {{each result value key}}
-        <li><a href="./cabbageList.html?titleid={{value.titleId}}&title={{value.title}}">{{value.title}}</a></li>
+        <li><a href="./baicaijiaList.html?titleid={{value.titleId}}&title={{value.title}}">{{value.title}}</a></li>
     {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>

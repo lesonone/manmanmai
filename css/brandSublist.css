@@ -195,200 +195,205 @@ body {
   color: #f4483e;
 }
 
-.scroll .inner .navbar {
-  width: 100%;
-  height: 1.0133333333rem;
-  border-bottom: 0.0533333333rem solid #ccc;
+.scroll .inner {
+  background-color: #f2f2f2;
+}
+.scroll .inner .nav {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb));
+  font-size: 0.3733333333rem;
+  border-bottom: 0.0266666667rem solid #dbdbdb;
+  height: 0.96rem;
+  padding-left: 0.2133333333rem;
   display: flex;
   align-items: center;
-  padding-left: 0.2666666667rem;
-  background: linear-gradient(to bottom, #fff, #ececec);
 }
-.scroll .inner .navbar .breadcrumb {
-  display: flex;
+.scroll .inner .nav a {
+  color: #999;
 }
-.scroll .inner .navbar .breadcrumb .arrows {
-  padding: 0rem 0.1333333333rem;
+.scroll .inner .nav .good {
+  color: #666;
 }
-.scroll .inner .navbar .breadcrumb li {
-  font-size: 0.3733333333rem;
+.scroll .inner .nav .index {
+  color: #999;
 }
-.scroll .inner .navbar .breadcrumb li a {
-  color: #5a5a5a;
-  font-size: 0.3733333333rem;
-}
-.scroll .inner .tittle {
-  width: 100%;
-  height: 0.9866666667rem;
+.scroll .inner .hot {
+  background: #f3f3f3;
+  height: 0.96rem;
   display: flex;
   align-items: center;
-  background-color: #f3f3f3;
-  border-bottom: 0.0266666667rem solid #ccc;
-  color: #fe9913;
+  border-bottom: 0.0266666667rem solid #d6d6d6;
+}
+.scroll .inner .hot a {
+  font-weight: bold;
   padding: 0rem 0.2666666667rem;
-  font-size: 0.3733333333rem;
+  color: #874604;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell {
-  padding: 0.2666666667rem;
+.scroll .inner .bd {
+  border-bottom: 0.0266666667rem solid #dbdbdb;
+  background: #fff;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell::after,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell::after {
-  left: 0;
+.scroll .inner .bd ul li {
+  padding: 0.1333333333rem 0rem;
+  border-bottom: 0.0266666667rem solid #dbdbdb;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right {
-  height: 1.6rem;
+.scroll .inner .bd ul li a {
   display: flex;
-  padding-left: 0.4rem;
+  padding: 0rem 0.2666666667rem;
+  justify-content: space-between;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right::after,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right::after,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right::after {
-  font-size: 0.64rem;
-}
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .numlist {
+.scroll .inner .bd ul li a .colorLump {
+  flex-basis: 0.5333333333rem;
   width: 0.5333333333rem;
   height: 0.5333333333rem;
   background-color: #c9c9c9;
-  color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: #fff;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand {
+.scroll .inner .bd ul li a .coloryellow {
+  background-color: #ff841d;
+}
+.scroll .inner .bd ul li a .colorgreen {
+  background-color: #8adf5b;
+}
+.scroll .inner .bd ul li a .colorred {
+  background-color: #f4483e;
+}
+.scroll .inner .bd ul li a .title {
+  flex: 1;
   margin-left: 0.2666666667rem;
-  padding-top: 0.0533333333rem;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .brandname {
-  color: #000;
-  font-size: 0.4266666667rem;
+.scroll .inner .bd ul li a .title .t1 {
+  color: black;
 }
-.scroll .inner .brandlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales,
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales,
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .mui-navigate-right .onebrand .sales {
+.scroll .inner .bd ul li a .title .t2 {
+  color: #999;
   font-size: 0.32rem;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell {
+.scroll .inner .bd ul li a .iconfont {
+  flex-basis: 0.5333333333rem;
+  padding-top: 0.2666666667rem;
+}
+.scroll .inner .salve .hd {
+  height: 0.96rem;
   display: flex;
   align-items: center;
+  border-bottom: 0.0266666667rem solid #d6d6d6;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell img {
-  width: 2.6666666667rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright {
-  flex: 1;
-  height: 100%;
-  margin-left: 0.2666666667rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bpltittle {
-  color: #000;
-  font-size: 0.3733333333rem;
-  line-height: 0.5333333333rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.4266666667rem;
-  margin: 0.08rem 0rem;
-}
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .price {
-  padding-top: 0.0533333333rem;
-  color: #ff7f23;
+.scroll .inner .salve .hd a {
   font-weight: bold;
+  padding: 0rem 0.2666666667rem;
+  color: #874604;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star {
+.scroll .inner .salve .pd {
+  background: #fff;
+}
+.scroll .inner .salve .pd ul li {
+  padding: 0.2666666667rem 0rem;
+  border-bottom: 0.0266666667rem solid #d6d6d6;
+}
+.scroll .inner .salve .pd ul li a {
+  display: flex;
+}
+.scroll .inner .salve .pd ul li a .img {
+  flex-basis: 2.9333333333rem;
+  padding: 0rem 0.2666666667rem;
+}
+.scroll .inner .salve .pd ul li a .img img {
+  width: 100%;
+}
+.scroll .inner .salve .pd ul li a .content {
+  flex: 1;
+  font-size: 0.32rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.scroll .inner .salve .pd ul li a .content p {
+  color: black;
+}
+.scroll .inner .salve .pd ul li a .content .money {
+  display: flex;
+  justify-content: space-between;
+}
+.scroll .inner .salve .pd ul li a .content .money .num {
+  color: #f4483e;
+  font-size: 0.4266666667rem;
+}
+.scroll .inner .salve .pd ul li a .content .money .star {
   color: #fe9913;
   display: flex;
+  margin-right: 0.5333333333rem;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplprice .star .icon-start {
+.scroll .inner .salve .pd ul li a .content .money .star .icon-start {
   font-size: 0.5333333333rem;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplcomments {
+.scroll .inner .salve .pd ul li a .content .appraise {
+  color: #666;
   font-size: 0.32rem;
 }
-.scroll .inner .brandProductslist .mui-table-view .mui-table-view-cell .bplright .bplcomments .offer {
-  margin-right: 0.2666666667rem;
-}
-.scroll .inner .brandCommentlist .mui-table-view {
-  background-color: #efefef;
-}
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct {
-  white-space: pre-wrap;
-  width: 100%;
-  height: 2.1333333333rem;
-  display: flex;
-  margin: 0rem;
-  padding: 0;
+.scroll .inner .conmment {
   margin-bottom: 0.2666666667rem;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct img {
-  width: 2.1333333333rem;
+.scroll .inner .conmment .hd {
+  height: 0.96rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0266666667rem solid #d6d6d6;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .theproduct .desc {
+.scroll .inner .conmment .hd a {
+  font-weight: bold;
+  padding: 0rem 0.2666666667rem;
+  color: #874604;
+}
+.scroll .inner .conmment .pd {
+  padding: 0rem 0.2666666667rem;
+  border-bottom: 0.0266666667rem solid #d6d6d6;
+}
+.scroll .inner .conmment .pd .top {
+  display: flex;
+  margin-top: 0.2666666667rem;
+}
+.scroll .inner .conmment .pd .top img {
+  width: 20%;
+  height: 20%;
+}
+.scroll .inner .conmment .pd .top .title {
   margin-left: 0.2666666667rem;
-  flex: 1;
+  color: #999;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 0.2666666667rem;
-  margin: 0;
-  position: relative;
-  overflow: visible;
+.scroll .inner .conmment .content {
+  margin-top: 0.2666666667rem;
+  padding: 0.2666666667rem 0.2666666667rem;
+  background: #fff;
+  border: 0.0266666667rem solid #d6d6d6;
+  margin-bottom: 10px;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars {
+.scroll .inner .conmment .content .name {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark {
+.scroll .inner .conmment .content .name a {
   display: flex;
   align-items: center;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .username {
-  padding-top: 0.1866666667rem;
-  color: #4f6900;
+.scroll .inner .conmment .content .name a .font {
+  color: #999;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .cut {
-  padding: 0rem 0.08rem;
-  padding-top: 0.1866666667rem;
+.scroll .inner .conmment .content .name a .star {
+  display: flex;
+  margin-left: 0.5333333333rem;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .stars .mark .icon-start {
+.scroll .inner .conmment .content .name a .star .icon-start {
+  font-size: 0.48rem;
   color: #fe9913;
-  font-size: 0.5333333333rem;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .comment {
-  margin-top: 0.2666666667rem;
-  white-space: normal;
-  color: #000;
+.scroll .inner .conmment .content .name span {
+  color: #999;
 }
-.scroll .inner .brandCommentlist .mui-table-view .mui-table-view-cell .comments .box {
-  z-index: 100;
-  position: absolute;
-  width: 0.4rem;
-  height: 0.4rem;
-  background-color: #fff;
-  top: -0.2133333333rem;
-  left: 0.8rem;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  transform: rotateZ(45deg);
-}
-.scroll .footer {
-  background-color: #efefef;
+.scroll .inner .conmment .content .con {
+  margin: 0.2666666667rem 0rem;
 }
 
 /*# sourceMappingURL=brandSublist.css.map */
