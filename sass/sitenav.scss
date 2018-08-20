@@ -1,0 +1,44 @@
+@import './common.scss';
+
+.container {
+    .header {
+        .iconfont {
+            color: #fff;
+            font-size: pr(16);
+        }
+        .shopNav {
+            color: #fff;
+            font-size: pr(16);
+            // font-weight: bold;
+        }
+    }
+
+    .main {
+
+    }
+
+    .scroll {
+        .inner {
+            .pic {
+                padding: pr(10) pr(40);
+                background: #fff;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        margin: pr(3) pr(3);
+                        padding: pr(10) pr(10);
+                        background-color: #f4f4f4;
+                        border: pr(1) solid #bfbfbf;
+                        a {
+
+                            .ti {
+                                margin-left: pr(3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

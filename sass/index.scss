@@ -14,17 +14,34 @@
                     display: flex;
                     justify-content: center;
                     width: 25%;
+                    position: relative;
                     padding: pr(5) pr(0);
+
+                    .popularity{
+                        position: absolute;
+                        width: pr(35);
+                        height: pr(20);
+                        background: #ff614f;
+                        border: pr(1) solid #fff;
+                        top: 0;
+                        right: pr(10);
+                        color: #fff;
+                        font-size: pr(12);
+                        line-height: pr(18);
+                        text-align: center;
+                        border-radius: pr(15);
+                       
+                    }
                     a{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         img{
-                            width: pr(40);
+                            width: pr(50);
                         }
                         span{
                             margin-top: pr(5);
-                            font-size: pr(10);
+                            font-size: pr(14);
                             color: #666;
                         }
                     }
@@ -33,6 +50,8 @@
                         display: none;
                     }
                 }
+
+               
             }
         }
 
@@ -47,7 +66,11 @@
                 color: #fff;
                 align-items: center;
                 background: linear-gradient(to bottom, #ffad44,#ff9203);
-
+                
+                span{
+                    font-size: pr(14);
+                    font-weight: bold;
+                }
                 img{
                     width: pr(15);
                 }
@@ -115,7 +138,7 @@
         color: #fff;
         align-items: center;
         background: linear-gradient(to bottom, #ffad44,#ff9203);
-        
+        font-size: pr(14);
 
         img{
             width: pr(15);

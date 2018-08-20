@@ -48,7 +48,7 @@
                             <!-- 面包屑 -->
                             <div class="nav">
                                 <a href="./index.html" class="index">首页 > &nbsp;</a>
-                                <a href="./brandList.html" class="brand"> 品牌大全 > &nbsp;</a>
+                                <a href="./brandTitle.html" class="brand"> 品牌大全 > &nbsp;</a>
                                 <a class="good">
                                     <span class="update">平板电视</span>哪个牌子好
                                 </a>
@@ -195,7 +195,7 @@
     <script type="text/html" id="product">
         {{each result v i}}
         <li>
-            <a href="./brandProducts.html?id={{v.brandTitleId}}&pagesize=4" data-title="{{v.brandName}}">
+            <a href="./brandProducts.html?id={{v.brandId}}&pagesize=4" data-title="{{v.brandName}}">
                 <span class="colorLump {{if i==0}}colorred{{/if}} {{if i==1}}coloryellow{{/if}} {{if i==2}}colorgreen{{/if}}">{{i+1}}</span>
                 <div class="title">
                     <p class="t1">{{v.brandName}}</p>
@@ -211,11 +211,7 @@
     <script type="text/html" id="salveList">
         {{each result v i}}
         <li>
-<<<<<<< HEAD
-                <a href="./subCategory.html?id={{v.brandTitleId}}">
-=======
-                <a href="./good.html?id={{v.brandTitleId}}">
->>>>>>> f3637bc29ad2f8fbfdc3691cec8413cbffded144
+                <a href="./good.html?id={{v.brandId}}">
                     <div class="img">
                         <!-- 生成的是标签  -->
                         {{#v.productImg}}

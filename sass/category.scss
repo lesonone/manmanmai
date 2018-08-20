@@ -1,0 +1,54 @@
+@import "./common.scss";
+@function pr($p){
+    @return($p/37.5)+rem
+}
+.min {
+   width: 100%;
+   height: pr(480);
+   background-color: #ededed;
+   margin-top: pr(10);
+}
+
+
+.write {
+    font-size: pr(20) ;
+    margin: 0;
+}
+
+
+
+div.hate{
+margin: 10px -16px -21px -16px !important;
+padding:  0 !important; 
+
+    .menu {   
+        background-color: #f9f9f9;
+        display: flex;
+        flex-wrap: wrap;   
+        
+        li {
+           
+            width: 33.33333%;
+            border: pr(1) solid#cccccc;
+            padding: 0;
+            text-align: center;
+            color: #333333;
+            height: pr(45);
+            font-size: pr(16);
+            line-height: pr(45);
+            background-color: #fff;
+            
+           
+            a{
+               
+                width: 100%;
+                height: 100%;
+            }
+        
+            
+        }
+    }
+}
+
+
+

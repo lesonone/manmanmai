@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+    <!-- 引擎模板 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
+    <script src="./js/brandTitle.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a class="logo"></a>
+            <a class="download"></a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <div class="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <span class="searchbtn">搜索</span>
+                </div>
+            </div>
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="inner">
+                            <!-- 面包屑 -->
+                            <div class="nav">
+                                <a href="./index.html" class="index">首页 > &nbsp;</a>
+                                <a  class="brand"> 品牌大全</a>
+                            </div>
+                            <!-- 热门品牌排行 -->
+                            <div class="hot">
+                                <a href="">热门品牌排行</a>
+                            </div>
+                            <!-- 产品列表 -->
+                            <div class="productList">
+                                <!-- 模板生成 -->
+                                <!-- <div class="fl_t">
+                                    <a href="">
+                                        <p>平板电视十大品牌</p>
+                                        <img src="./images/arrow1.gif" alt="">
+                                    </a>
+                                </div>
+                                <div class="fl_t">
+                                    <a href="">
+                                        <p>平板电视十大品牌</p>
+                                        <img src="./images/arrow1.gif" alt="">
+                                    </a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- 底部 -->
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top">
+                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>
+                                    <span class="warning">手机APP下载</span>
+                                    <span>慢慢买手机版--掌上比价平台</span>
+                                </p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 渲染产品列表页 -->
+    <script type="text/html" id="product">
+        {{each result v i }}
+        <div class="fl_t" data-id="{{v.brandTitleId}}">
+                <a href="./brandSublist.html?id={{v.brandTitleId}}&brandTitle={{v.brandTitle}}">
+                    <p>{{v.brandTitle}}</p>
+                    <i class="mui-icon mui-icon-arrowdown"></i>
+                </a>
+            </div>
+        {{/each}}
+
+    </script>
+
+
+
+</body>
+
+</html>
