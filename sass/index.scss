@@ -153,4 +153,14 @@
 
 }
 
+.download{
+    position: fixed;
+    z-index: 100;
+    right: pr(10);
+    bottom: pr(30);
+    img{
+        width: pr(60);
+    }
+}
+
 

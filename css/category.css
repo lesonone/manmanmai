@@ -197,7 +197,6 @@ body {
 
 .min {
   width: 100%;
-  height: 12.8rem;
   background-color: #ededed;
   margin-top: 0.2666666667rem;
 }
@@ -234,6 +233,52 @@ div.hate .menu li {
 div.hate .menu li a {
   width: 100%;
   height: 100%;
+}
+
+.scroll .footer {
+  position: absolute;
+  z-index: 99;
+  bottom: 0.0533333333rem;
+  width: 100%;
+  height: 2.56rem;
+}
+.scroll .footer .footer-top {
+  height: 0.96rem;
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .footer .footer-top a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+.scroll .footer .footer-top .login {
+  flex: 1;
+}
+.scroll .footer .footer-top .register {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.scroll .footer .footer-top .back-top {
+  height: 100%;
+  flex-basis: 4rem;
+}
+.scroll .footer .footer-bottom {
+  height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scroll .footer .footer-bottom p {
+  text-align: center;
+  color: #5a5a5a;
+}
+.scroll .footer .footer-bottom p .warning {
+  color: #f4483e;
 }
 
 /*# sourceMappingURL=category.css.map */

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="icon" href="./images/icon-m.jpg" type="image/x-icon">
+    <title>慢慢买比价网--比价搜索</title>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
@@ -47,7 +48,7 @@
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
                         <div class="inner">
-
+                            
                             <div class="min">
                                
                                 <div class="mui-content ">
@@ -63,11 +64,11 @@
                              {{each result v i}}
                       
                              <li class="mui-table-view-cell mui-collapse love" data-id="{{v.titleId}}">
-                                    <a class="mui-navigate-right write" href="#"> {{v.title}}</a>
-                                    <div class="mui-collapse-content hate">
-                                  
-                                    </div>
-                                </li>
+                                <a class="mui-navigate-right write" href="#"> {{v.title}}</a>
+                                <div class="mui-collapse-content hate">
+                              
+                                </div>
+                            </li>
                          {{/each}}
                         </script>
 
@@ -86,23 +87,24 @@
 
                        
 
-                        <div class="footer">
-                            <div class="footer-top">
-                                <a class="login">登录</a>
-                                <a class="register">注册</a>
-                                <a class="back-top">
-                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
-                            </div>
-                            <div class="footer-bottom">
-                                <p>
-                                    <span class="warning">手机APP下载</span>
-                                    <span>慢慢买手机版--掌上比价平台</span>
-                                </p>
-                                <p>m.manmanbuy.com</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
+                <div class="footer">
+                        <div class="footer-top">
+                            <a class="login">登录</a>
+                            <a class="register">注册</a>
+                            <a class="back-top">
+                                <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>
+                                <span class="warning">手机APP下载</span>
+                                <span>慢慢买手机版--掌上比价平台</span>
+                            </p>
+                            <p>m.manmanbuy.com</p>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
