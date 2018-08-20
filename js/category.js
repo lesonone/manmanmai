@@ -31,6 +31,9 @@ $(function () {
                     $(".hate").html(html);
                     $(".hate").on("tap",".subMenu",function(){
 <<<<<<< HEAD
+       
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
        
 =======
@@ -42,6 +45,7 @@ $(function () {
        
 >>>>>>> 7a270ce28770843b1b3b8d9913338025f53f50e6
 >>>>>>> 1a8c18553b772be79354ebc22c78acacce84bd20
+>>>>>>> 163e824977f68f2ceb72c9d075fba1c941dab0bc
                         location.href="./subCategory.html?categoryid="+$(this).data("id");
                 
                     })
