@@ -1,12 +1,15 @@
 $(function() {
+    $('.mui-icon-undo').click(function() {
+        window.location.reload();
+    })
 
-    // $('.back').click(function() {
-    //     back();
-    // })
+    // 点击刷新
+    $('.back').click(function() {
 
-    function back() {
+        //var arr = location.href.split("/").pop();
         window.history.back();
-    }
+    })
+
 
     // 获取标题数据
     function title() {
@@ -77,7 +80,7 @@ $(function() {
 
         discount($(this).data('id'), 'commodity', $('#commoditys'));
 
-        $('.mui-title').html($(this).data('tit') + '优惠券');
+        $('h1').html($(this).data('tit') + '优惠券');
 
 
 

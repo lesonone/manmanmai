@@ -16,6 +16,8 @@
     <!-- 引入模板引擎 -->
     <script src="./lib/artTemplate/template-web.js"></script>
 
+    <link rel="stylesheet" href="./lib/animate/animate.css">
+
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
@@ -26,10 +28,13 @@
 </head>
 
 <body>
+
     <div class="container">
+        <!-- 返回按钮 -->
+        <span class="mui-icon mui-icon-undo"></span>
         <!-- 顶部 -->
-        <div class="header">
-            <a href="javascript:back();" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
+        <div class="header animated zoomInLeft">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
             <h1>优惠券</h1>
             <a class="download"></a>
         </div>
@@ -53,6 +58,7 @@
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
 
+
                         <!-- 优惠券标题 -->
                         <!-- style="display: none;" -->
                         <div class="mui-content">
@@ -74,7 +80,7 @@
                                         <a href="./brandList.html">品牌大全</a>
                                     </li> -->
                                     <!-- <span class="arrows">></span> -->
-                                    <li>优惠券</li>
+                                    <li class="backthis">优惠券</li>
                                 </ol>
                             </div>
                         </div>
@@ -86,7 +92,7 @@
                             </ul>
                         </div>
 
-                        <div class="footer">
+                        <div class="footer animated zoomInRight">
                             <div class="footer-top">
                                 <a class="login">登录</a>
                                 <a class="register">注册</a>
@@ -127,7 +133,7 @@
     <script type="text/html" id="coupontitle">
         <div class="mui-card-content-inner coupontitle">
             {{each result v i}}
-            <div>
+            <div class='animated bounceInUp'>
                 <a data-id="{{v.couponId}}" data-tit="{{v.couponTitle}}">
                     <img src="{{v.couponImg}}" alt="">
                     <p>{{v.couponTitle}}</p>
@@ -141,7 +147,7 @@
     <script type="text/html" id="commodity">
         <li class="mui-table-view-cell hint">--点餐前出示手机中的优惠券,即可享受优惠--</li>
         {{each result v i}}
-        <li class="mui-table-view-cell discount">
+        <li class="mui-table-view-cell discount animated bounceInRight">
             <a class="mui-navigate-right demonstrating">
                 <div class="left" data-zsid="{{v.couponProductId}}">
                     {{#v.couponProductImg}}
@@ -161,10 +167,10 @@
 
     <!-- 轮播图模板 -->
     <script type="text/html" id="couponlunbo">
-        <span class="mui-icon mui-icon-refreshempty"></span>
+        <span class="mui-icon mui-icon-refreshempty animated swing"></span>
 
-        <span class="mui-icon mui-icon-back"></span>
-        <div class="mui-slider" id='slider'>
+        <span class="mui-icon mui-icon-back animated rotateInDownLeft"></span>
+        <div class="mui-slider animated zoomIn" id='slider'>
             <!-- 每一屏的内容 -->
             <div class="mui-slider-group mui-slider-loop" id="lunbo1">
                 <!-- 图数数组的最后一张 -->
@@ -192,7 +198,7 @@
             </div>
 
         </div>
-        <span class="mui-icon mui-icon-forward"></span>
+        <span class="mui-icon mui-icon-forward animated rotateInDownRight"></span>
     </script>
 
 
