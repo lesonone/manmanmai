@@ -323,13 +323,13 @@ body {
   background: #f2f2f2;
 }
 
-.download {
+.download1 {
   position: fixed;
   z-index: 100;
   right: 0.2666666667rem;
   bottom: 0.8rem;
 }
-.download img {
+.download1 img {
   width: 1.6rem;
 }
 
