@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="lib/zepto/zepto.min.js"></script>
@@ -42,7 +42,7 @@
             </div>
             <!-- 内部滚动区 -->
             <div class="scroll">
-                <div class="mui-scroll-wrapper">
+                <div class="mui-scroll-wrapper anchorTop">
                     <div class="mui-scroll">
                         <ul class="goodList" id="list">
                             <!-- 模板生成 -->
@@ -76,7 +76,7 @@
         </div>
 
         <!-- 回到顶部 -->
-        <a  class="anchor" target="_self">
+        <a  class="anchor" >           
             <img src="./images/anchor.png" alt="">
             <i></i>
         </a>
@@ -85,18 +85,17 @@
 </html>
 <!-- 模板生成分类菜单 -->
 <script type="text/html" id="menuList">
-
     <ul class="menuList">
-        {{each result value key}}
+    {{each result value key}}
         <li data-id={{value.titleId}}><a class="category">{{value.title}}</a></li>
-        {{/each}}
+    {{/each}}
     </ul>
     <button class="mui-btn close">收起分类</button>
-
 </script>
 
+<!-- 模板生成列表页 -->
 <script type="text/html" id='goodListtpl'>
-    {{each result value key}}
+{{each result value key}}
     <li>
         {{#value.productImg}}
         <div class="proInfo">
@@ -113,5 +112,5 @@
             </div>            
         </div>
     </li>
-    {{/each}}
+{{/each}}
 </script>

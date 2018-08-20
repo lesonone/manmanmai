@@ -31,7 +31,6 @@ $(function(){
     });
 
 
-
     //5.主页商家优惠信息处,显示全部的列表信息
     renderData({
         url : 'http://mmb.ittun.com/api/getbaicaijiaproduct',
@@ -48,12 +47,10 @@ $(function(){
         cl : '.superHot .mui-scroll'
     });  
 
-    // //7.回到顶部
-    // $('.anchor').click(function () { 
-    //     // mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);
-    //     mui('.mui-scroll-wrapper').scroll().reLayout().scrollTo(0,0,100);
-    // });
+    //7.回到顶部
+    $('.anchor').click(function () {
+        mui('.anchorTop').scroll().scrollTo(0,0,1000);
+    });
 
-  
     
 });

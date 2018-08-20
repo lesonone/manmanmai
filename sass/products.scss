@@ -15,9 +15,10 @@
                 .product {
                     padding-left: pr(10);
                     .title {
+                        font-weight:bold;
                         width: 100%;
                         p {
-                            font-size: pr(20); // text-align: center;
+                            font-size: pr(20);
                             padding: pr(20) 0 pr(10) 0;
                             color: #5a5a5a;
                         }

@@ -386,8 +386,8 @@ body {
 .container .anchor img {
   width: 1.0666666667rem;
   height: 1.0666666667rem;
-  animation: circle 60s alternate infinite;
-  transition: all 60s;
+  animation: circle 50s alternate infinite;
+  transition: all 50s;
 }
 .container .anchor i {
   width: 0.1333333333rem;

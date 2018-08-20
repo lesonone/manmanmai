@@ -269,7 +269,7 @@
 
     .anchor{
         position: fixed;
-        right: pr(15);
+        right: pr(10);
         bottom: 0;
         z-index: 100;
         display: flex;
@@ -279,12 +279,12 @@
         img{
             width: pr(40);
             height: pr(40);
-            animation: circle 60s alternate infinite;
-            transition: all 60s;
+            animation: circle 50s alternate infinite;
+            transition: all 50s;
         }
         i{
             width: pr(5);
-            height: pr(24);
+            height: pr(30);
             background-color: #ccc;
             margin-top: pr(-5);
         }
