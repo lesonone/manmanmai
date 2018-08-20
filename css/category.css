@@ -236,4 +236,12 @@ div.hate .menu li a {
   height: 100%;
 }
 
+.mui-scroll {
+  position: relative;
+}
+.mui-scroll .footer {
+  position: absolute;
+  z-index: 99;
+}
+
 /*# sourceMappingURL=category.css.map */
