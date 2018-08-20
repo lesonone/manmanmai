@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- zepto.js -->
+    <script src='./lib/zepto/zepto.min.js'></script>
+    <script src='./js/common.js'></script>
+    <!-- 字体图标 -->
+    <script src='./lib/iconfont/iconfont.js'></script>
+    <link rel="stylesheet" type="text/css" href="./lib/iconfont/iconfont.css">
+    <!-- MUI.css -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- MUI.js -->
+    <script src='./lib/mui/js/mui.min.js'></script>
+        <!-- savaMoney样式引入 -->
+        <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <!-- 模板 -->
+    <script src='./lib/artTemplate/template-web.js'></script>
+    <script src='./js/inlanddiscount.js'></script>
+    <!-- 插件 -->
+    <!-- <script src='./lib/Jquery/jquery-3.1.1.min.js'></script>
+    <script src='./lib/bootstrap/js/bootstrap.min.js'></script>
+    <script src='./lib/twbs-pagination/jquery.twbsPagination.min.js'></script> -->
+</head>
+<body>
+     <!-- saveMoney-->
+        <div class="container">
+                <!-- 顶部 -->
+                <div class="header">
+                    <a class="jiantou">
+                        <i class='iconfont icon-arrow-right'></i>
+                    </a>
+                    <a href="#" class='tit-center'>国内折扣</a>
+                    <a class="download"></a>
+                </div>
+                <!-- 主体部分 -->
+                <div class="main">
+                    <!-- 搜索栏 -->
+                    <!-- <div class="searchbar">
+                        <div class="search">
+                            <input type="text" placeholder="请输入你想比价的商品">
+                            <span class="searchbtn">搜索</span>
+                        </div>
+                    </div> -->
+                    <!-- 内部滚动区 -->
+                    <div class="scroll">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <!--这里放置真实显示的DOM内容-->                              
+                                <!-- <div class="inner">
+                                    <div class="img">
+                                        <img src="./images/shishui.jpg" alt="">
+                                    </div>
+                                    <div class="tro">
+                                        <div class="title">
+                                            <span>移动端凑单品:海天 鲜有 生抽1.28L</span>
+                                            <i class='price'>10.90元</i>
+                                        </div>
+                                        <div class="time-mall">
+                                            <div class="left">
+                                                <span class="mall">京东商城</span>
+                                                <span class="time"><i>|</i> 时间</span>
+                                            </div>
+                                            <span class="comment">
+                                                <span class=''>字体图标</span>
+                                                <span class="num">个数</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                    <div class="gbq"></div>
+                                <!-- 分页   这里也要渲染-->
+                      
+                                <!-- 底部 -->
+                                <div class="footer">
+                                    <div class="footer-top">
+                                        <a class="login">登录</a>
+                                        <a class="register">注册</a>
+                                        <a class="back-top"><span class="iconfont icon-ai-top"></span>返回顶部</a>
+                                    </div>
+                                    <div class="footer-bottom">
+                                        <p><span class="warning">手机APP下载</span> <span>慢慢买手机版--掌上比价平台</span></p>
+                                        <p>m.manmanbuy.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 模板 -->
+            <script type='text/html' id='introduceTpl'>
+                    {{each result v i}}
+                    <div class="inner">
+                        <a href="./products.html?productId={{ v.productId }}">
+                        <div class="img">
+                            {{#v.productImg}}
+                        </div>
+                        <div class="tro">
+                            <div class="title">
+                                <span>{{v.productName}}</span>
+                            </div>
+                            <i class='price'>{{v.productPrice}}</i>
+                            <div class="time-mall">
+                                <div class="left">
+                                    <span class="mall">{{v.productFrom}}</span>
+                                    <span class="time"> <i>&nbsp;|</i> {{v.productTime}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                {{/each }}
+                </script>
+                    <!-- // 分页 -->
+</body>
+</html>
+ 
+

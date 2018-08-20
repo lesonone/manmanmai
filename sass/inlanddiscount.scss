@@ -1,0 +1,71 @@
+@import "./common.scss";
+.container {
+    .jiantou {
+        width: pr(30);
+        height: pr(26);
+        line-height: pr(26);
+        .iconfont {
+            color: #FFD0A9;
+            font-size: pr(26);
+        }
+    }
+    .tit-center {
+        font-size: $font-md;
+        color: #fff;
+    }
+    
+    // 内容区域
+    .gbq {
+        display: flex;
+        flex-wrap: wrap;
+        .inner {
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            // 图片
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+            // 右边介绍
+            .tro {
+                display: flex;
+                flex: 1;
+                flex-direction:column;
+                justify-content: space-between;
+                // align-items: center;
+                .title {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+                .price {
+                    color:$orangeRed;
+                    margin-bottom: 10px;
+                }
+                  // 京东商城修改颜色
+                  .time-mall {
+                    color: #A1A1A1;
+                    font-size: $font-xs;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .comment {
+                    vertical-align: middle;
+                    .icon-coment {
+                        display: inline-block;
+                        width: pr(16);
+                        height:pr(13);
+                        background: url("../images/icon-coment.png") no-repeat left center/100%;
+                    }
+                }
+            }
+    }
+    }
+    // 底部颜色
+    .footer {
+        background: #EFEFF4;
+    }
+}
