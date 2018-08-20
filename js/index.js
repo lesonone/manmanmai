@@ -44,10 +44,5 @@ $(function(){
         window.location.href = "./category.html";
     });
 
-    // var nav = document.querySelector(".main .nav");
-    // var lilist = nav.children[6];
 
-    // var newDiv = document.createElement("div");
-    // newDiv.innerHTML = "人气";
-    // lilist.appendChild(newDiv);
 })

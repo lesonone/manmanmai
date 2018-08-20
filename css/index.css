@@ -211,7 +211,22 @@ body {
   display: flex;
   justify-content: center;
   width: 25%;
+  position: relative;
   padding: 0.1333333333rem 0rem;
+}
+.main .inner .nav ul li .popularity {
+  position: absolute;
+  width: 0.9333333333rem;
+  height: 0.5333333333rem;
+  background: #ff614f;
+  border: 0.0266666667rem solid #fff;
+  top: 0;
+  right: 0.2666666667rem;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  text-align: center;
+  border-radius: 0.4rem;
 }
 .main .inner .nav ul li a {
   display: flex;

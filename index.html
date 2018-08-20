@@ -100,7 +100,18 @@
         
         <ul>
             {{ each result v i}}
+
+            {{ if i == 6 }}
+            <li>
+                <div class="popularity">
+                    <span>人气</span>
+                </div>
+                <a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a>
+            </li>
+            
+            {{else}}
             <li><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
+            {{ /if }}
             {{ /each }}
         </ul>
     
