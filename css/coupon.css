@@ -195,6 +195,12 @@ body {
   color: #f4483e;
 }
 
+.container .mui-icon-undo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+}
 .container .header {
   background-color: #f4483e;
   display: flex;
