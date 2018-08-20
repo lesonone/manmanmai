@@ -203,7 +203,11 @@ body {
 }
 
 .write {
-  font-size: 0.5333333333rem;
+  font-size: 0.4266666667rem;
+  margin: 0;
+}
+
+.mui-card {
   margin: 0;
 }
 
@@ -223,7 +227,7 @@ div.hate .menu li {
   text-align: center;
   color: #333333;
   height: 1.2rem;
-  font-size: 0.4266666667rem;
+  font-size: 0.3733333333rem;
   line-height: 1.2rem;
   background-color: #fff;
 }

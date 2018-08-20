@@ -13,6 +13,10 @@ $(function(){
    })
    $(".tagList .active .triAngle").show();
    var param = getUrl();
+   $(".categoryName").click(function(){
+       window.history.back();
+   })
+   $(".categoryName").html(decodeURI(param.categoryName));
    if(param){
     renderProduct(param.productid);
    renderComment(param.productid);
