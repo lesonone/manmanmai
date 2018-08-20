@@ -77,7 +77,7 @@ $(function(){
 
     //7.回到顶部
     $('.anchor').click(function () {
-        mui('.anchorTop').scroll().scrollTo(0,0,600);
+        mui('.anchorTop').scroll().scrollTo(0,0,1000);
     });
 
     

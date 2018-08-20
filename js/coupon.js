@@ -1,13 +1,15 @@
 $(function() {
-    $('.mui-icon-undo').click(function() {
-        window.location.reload();
+    // 点小房子返回首页
+    $('.mui-icon-home').click(function() {
+        window.location.href = "./index.html";
     })
 
-    // 点击刷新
+    // 点击放回刷新
     $('.back').click(function() {
-
+        window.location.href = "./coupon.html";
         //var arr = location.href.split("/").pop();
-        window.history.back();
+        // window.location.reload();
+        //window.history.back();
     })
 
 
@@ -18,7 +20,8 @@ $(function() {
             type: 'GET',
             dataType: 'json',
             success: function(obj) {
-                //console.log(obj);
+                // console.log(bj);
+                // console.log(obj.result);
                 var html = template('coupontitle', obj);
                 //console.log(html);
                 $('#srtitle').html(html);

@@ -218,6 +218,9 @@ body {
   text-align: center;
   white-space: nowrap;
 }
+.container .header .mui-icon-home {
+  color: #fff;
+}
 .container .main .mui-content {
   background-color: #fff;
 }
