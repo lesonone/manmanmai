@@ -1,16 +1,16 @@
 $(function () {
-    // function urlTool(urlStr){
-    //     var str = urlStr.split("?")[1];
-    //     var urlArr = str.split("&");
-    //     var param = {};
-    //     param[urlArr.split("=")[0]]=urlArr.split("=")[1];
-    //     return param;
-    // }
-    // var urlStr = location.href;
-    // var param = urlTool(urlStr);
-    // renderCategory(param.categoryId);
-    renderCategory(1);
-
+    function urlTool(urlStr){
+        var str = urlStr.split("?")[1];
+        var urlArr = str.split("&");
+        var param = {};
+        param[urlArr.split("=")[0]]=urlArr.split("=")[1];
+        return param;
+    }
+    var urlStr = location.href;
+    var param = urlTool(urlStr);
+    renderCategory(param.categoryId);
+    // renderCategory(1);
+// 渲染面包屑分类标题
     function renderCategory(categoryId) {
         $.ajax({
             url: "http://mmb.ittun.com/api/getcategorybyid",
@@ -25,12 +25,13 @@ $(function () {
         })
     }
     var data = {
-        // categoryid: param.categoryId,
-        categoryid: 1,
+        categoryid: param.categoryId,
+        // categoryid: 1,
         pageid: 1
     };
+    var pagesize = 0;
     renderProduct(data);
-
+// 渲染列表页面
     function renderProduct(data) {
         $.ajax({
             url: "http://mmb.ittun.com/api/getproductlist",
@@ -41,9 +42,11 @@ $(function () {
                 $(".products").html(html);
                 var dropHtml = template("dropdownData",res);
                 $(".dropdown-menu").html(dropHtml);
+                pagesize = res.pagesize;
             }
         })
     };
+    //下拉框
     $(".dropdown-menu").on("tap","a",function(){
         
         data.pageid = $(this).data("pageid");
@@ -55,14 +58,17 @@ $(function () {
     $(".down").on("tap",function(){
         $(".dropdown-menu").show();
     })
+    // 上一页的点击事件
     $(".paging .previous").on("tap",function () {
         data.pageid--;
         if(data.pageid<1) data.pageid=1;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
     });
+    // 下一页的点击事件
     $(".paging .next").on("tap",function () {
         data.pageid++;
+        if(data.pageid>=pagesize) data.pageid = pagesize;
         renderProduct(data);
         mui('.scroll-content').scroll().scrollTo(0, 0, 100);
     })
