@@ -1,7 +1,10 @@
 $(function () {
+    var obj = getUrl();
+    console.log(obj);
     $.ajax({
         url: "http://mmb.ittun.com/api/getdiscountproduct",
-        data: { productid: 0 },
+
+        data: { productid: obj.productid },
         type: "get",
         success: function (res) {
             var htmlStr = template("gooddetail", res);
