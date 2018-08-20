@@ -68,11 +68,11 @@
                 background: linear-gradient(to bottom, #ffad44,#ff9203);
                 
                 span{
-                    font-size: $font-sm;
+                    font-size: $font-md;
                     font-weight: bold;
                 }
                 img{
-                    width: pr(15);
+                    width: pr(20);
                 }
             }
 
@@ -84,9 +84,9 @@
 
                     .left{
                         
-                        margin-right: pr(5);
+                        margin-right: pr(10);
                         img{
-                            width: pr(80);
+                            width: pr(100);
                         }
                     }
 
@@ -138,10 +138,10 @@
         color: #fff;
         align-items: center;
         background: linear-gradient(to bottom, #ffad44,#ff9203);
-        font-size: $font-sm;
+        font-size: $font-md;
 
         img{
-            width: pr(15);
+            width: pr(20);
         }
     }
 
