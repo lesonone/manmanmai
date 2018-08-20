@@ -205,6 +205,10 @@ body {
 }
 .container .scroll .inner .pic {
   padding: 0.2666666667rem 1.0666666667rem;
+<<<<<<< HEAD
+=======
+  background: #fff;
+>>>>>>> f3637bc29ad2f8fbfdc3691cec8413cbffded144
 }
 .container .scroll .inner .pic ul {
   display: flex;
