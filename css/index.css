@@ -249,7 +249,7 @@ body {
   margin-top: 0.0533333333rem;
 }
 .main .inner .discount .top {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   display: flex;
   justify-content: space-between;
   padding: 0rem 0.2666666667rem;
@@ -306,7 +306,7 @@ body {
   background: linear-gradient(to bottom, #fff, #f2f2f2);
 }
 .main .ranking {
-  height: 0.6666666667rem;
+  height: 0.8rem;
   margin-bottom: 0.2666666667rem;
   display: flex;
   justify-content: space-between;
