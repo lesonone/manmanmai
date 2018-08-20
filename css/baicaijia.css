@@ -368,6 +368,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item.mui-active {
   border-bottom: 2px solid #fe4a65;
@@ -391,6 +392,9 @@ body {
 .container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .price del {
   color: #ccc;
   margin-left: 0.2666666667rem;
+}
+.container .main .scroll .mui-scroll-wrapper .superHot .mui-scroll-wrapper .mui-scroll .mui-control-item .price em {
+  margin: 0rem 0.08rem;
 }
 .container .main .scroll .mui-scroll-wrapper .discount {
   background-color: #fff;
@@ -422,6 +426,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0.1333333333rem;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li img {
   width: 4.6933333333rem;
@@ -448,6 +453,9 @@ body {
   color: #999;
   margin-left: 0.5333333333rem;
 }
+.container .main .scroll .mui-scroll-wrapper .discount .goodList li .info p em {
+  margin: 0rem 0.08rem;
+}
 .container .main .scroll .mui-scroll-wrapper .discount .goodList li a {
   font-size: 0.2666666667rem;
   color: #333;
@@ -468,11 +476,11 @@ body {
   width: 1.0666666667rem;
   height: 1.0666666667rem;
   animation: circle 60s alternate infinite;
-  transition: all 80s;
+  transition: all 60s;
 }
 .container .anchor i {
   width: 0.1333333333rem;
-  height: 0.8rem;
+  height: 0.64rem;
   background-color: #ccc;
   margin-top: -0.1333333333rem;
 }

@@ -175,11 +175,10 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
-                                    &.mui-active{
-                                        border-bottom: 2px solid $deeppink;
-                                    }
-                                    
-                                
+                                box-shadow: 0px 0px 1px 0px rgba(0,0,0,.1);  
+                                &.mui-active{
+                                    border-bottom: 2px solid $deeppink;
+                                }
                                 img{
                                     display: block;
                                     width: pr(90);
@@ -198,6 +197,9 @@
                                     del{
                                         color: #ccc;
                                         margin-left: pr(10);                                       
+                                    }
+                                    em{
+                                        margin: pr(0) pr(3);
                                     }
                                 }
                             }
@@ -233,6 +235,7 @@
                             flex-direction: column;
                             align-items: center;
                             padding: pr(5);
+                            box-shadow: 0px 0px 1px 0px rgba(0,0,0,.1); 
                             img{
                                 width: pr(176);
                                 height: pr(160);
@@ -255,7 +258,10 @@
                                     del{
                                         color: #999;
                                         margin-left: pr(20);
-                                    }                         
+                                    } 
+                                    em{
+                                        margin: pr(0) pr(3);
+                                    }                        
                                 }                                                     
                             }  
                             a {
@@ -285,11 +291,11 @@
             width: pr(40);
             height: pr(40);
             animation: circle 60s alternate infinite;
-            transition: all 80s;
+            transition: all 60s;
         }
         i{
             width: pr(5);
-            height: pr(30);
+            height: pr(24);
             background-color: #ccc;
             margin-top: pr(-5);
         }
