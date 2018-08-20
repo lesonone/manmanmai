@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>
+        平板电视什么牌子好,平板电视十大品牌排行榜
+    </title>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+    <!-- 引擎模板 -->
     <script src="lib/artTemplate/template-web.js"></script>
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
-    <link rel="stylesheet" href="css/brandSublist.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/brandSublist.css">
     <script src="./js/brandSublist.js"></script>
-
-
 </head>
+
 <body>
     <div class="container">
         <!-- 顶部 -->
@@ -40,159 +45,143 @@
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
                         <div class="inner">
-                            <!-- 面包屑导航 -->
-                            <div class="navbar">
-                                <ol class="breadcrumb">
-                                    <li><a href="./index.html">首页</a></li>
-                                    <span class="arrows">></span>
-                                    <li><a href="./brandList.html">品牌大全</a></li>
-                                    <span class="arrows">></span>
-                                    <li>等离子电视哪个好</li>
-                                </ol>
+                            <!-- 面包屑 -->
+                            <div class="nav">
+                                <a href="./index.html" class="index">首页 > &nbsp;</a>
+                                <a href="./brandList.html" class="brand"> 品牌大全 > &nbsp;</a>
+                                <a class="good">
+                                    <span class="update">平板电视</span>哪个牌子好
+                                </a>
                             </div>
-                            <!-- 十大品牌排行 -->
-                            <div class="brandlist">
-                                <div class="tittle">平板电视哪个牌子好</div>
-                                <ul class="mui-table-view">
-                                    <li class="mui-table-view-cell">
-                                        <a class="mui-navigate-right">
-                                            <span class="numlist">1</span>
-                                            <div class="onebrand">
-                                                <p class="brandname">海信平板电视</p>
-                                                <p class="sales">30天全网销量 : 10000000件</p>
+                            <!-- 热门品牌排行 -->
+                            <div class="hot">
+                                <a href=""><span id="goodBrand">平板电视</span>哪个品牌好</a>
+                            </div>
+                            <!-- 产品列表 (哪个品牌好展示 10条)-->
+                            <div class="bd sortlist">
+                                <ul class="prList">
+                                    <!-- <li>
+                                        <a href="">
+                                            <span class="colorLump colorred">1</span>
+                                            <div class="title">
+                                                <p class="t1">海信平板电视</p>
+                                                <p class="t2">30天全网销量:12434件</p>
                                             </div>
+                                            <i class="iconfont ">></i>
                                         </a>
                                     </li>
-                                    <li class="mui-table-view-cell">
-                                        <a class="mui-navigate-right">
-                                            <span class="numlist">1</span>
-                                            <div class="onebrand">
-                                                <p class="brandname">海信平板电视</p>
-                                                <p class="sales">30天全网销量 : 10000000件</p>
+                                    <li>
+                                        <a href="">
+                                            <span class="colorLump coloryellow">2</span>
+                                            <div class="title">
+                                                <p class="t1">海信平板电视</p>
+                                                <p class="t2">30天全网销量:12434件</p>
                                             </div>
+                                            <i class="iconfont ">></i>
                                         </a>
                                     </li>
-                                    
+                                    <li>
+                                        <a href="">
+                                            <span class="colorLump colorgreen">1</span>
+                                            <div class="title">
+                                                <p class="t1">海信平板电视</p>
+                                                <p class="t2">30天全网销量:12434件</p>
+                                            </div>
+                                            <i class="iconfont ">></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="colorLump colorccc">1</span>
+                                            <div class="title">
+                                                <p class="t1">海信平板电视</p>
+                                                <p class="t2">30天全网销量:12434件</p>
+                                            </div>
+                                            <i class="iconfont">></i>
+                                        </a>
+                                    </li> -->
                                 </ul>
                             </div>
 
-                            <!-- 产品销量排行 -->
-                            <div class="brandProductslist">
-                                <div class="tittle">平板电视哪个牌子好</div>
-                                <ul class="mui-table-view">
-                                    <li class="mui-table-view-cell">
-                                        <img src="./images/2016040016521576785.jpg" alt="">
-                                        <!-- bclright是产品销量排行右边内容的盒子类名 -->
-                                        <div class="bplright">
-                                            <!-- bpltittle是这个盒子内标题类名 -->
-                                           <p class="bpltittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
-                                           <!-- bplprice是价格跟五星好评类名 -->
-                                           <p class="bplprice">
-                                               <span class="price">¥2199.00</span>
-                                                <span class="star">
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                </span>
-                                            </p>
-                                           <!-- bplcomments是报价跟全网评论类名 -->
-                                           <p class="bplcomments">
-                                               <span class="offer">报价(3)</span>
-                                               <span class="allcomments">全网评价(10000000)</span>
-                                           </p>  
-                                        </div>
-                                    </li>
-                                    <li class="mui-table-view-cell">
-                                        <img src="./images/2016040016521576785.jpg" alt="">
-                                        <!-- bclright是产品销量排行右边内容的盒子类名 -->
-                                        <div class="bplright">
-                                            <!-- bpltittle是这个盒子内标题类名 -->
-                                           <p class="bpltittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
-                                           <!-- bplprice是价格跟五星好评类名 -->
-                                           <p class="bplprice">
-                                               <span class="price">¥2199.00</span>
-                                                <span class="star">
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                </span>
-                                            </p>
-                                           <!-- bplcomments是报价跟全网评论类名 -->
-                                           <p class="bplcomments">
-                                               <span class="offer">报价(3)</span>
-                                               <span class="allcomments">全网评价(10000000)</span>
-                                           </p>  
-                                        </div>
-                                    </li>
-                                </ul>
+                            <!-- 产品销量 四条-->
+                            <div class="salve">
+                                <div class="hd">
+                                    <a href="">
+                                        <span id="product-up">液晶电视</span>产品销量排行</a>
+                                </div>
+                                <div class="pd">
+                                    <ul class="salveList">
+                                        <!-- 模板生成四款产品销量排行 -->
+                                        <!-- <li>
+                                            <a href="">
+                                                <div class="img">
+                                                    <img src="./images/sales.jpg" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <p>海信(Hisense) LED55EC500U 55英寸 </p>
+                                                    <p>4K超高清 智能液晶电视</p>
+                                                    <p class="money">
+                                                        <span class="num">¥2099.00</span>
+                                                        <em class="star5"></em>
+                                                    </p>
+                                                    <p class="appraise">
+                                                        <span>报价(4)</span>
+                                                        <span>全网评论(234234234)</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+
                             </div>
 
-                            <!-- 用户评论 -->
-                            <div class="brandCommentlist">
-                                <div class="tittle">平板电视哪个牌子好</div>
-                                <ul class="mui-table-view">
-                                    <li class="mui-table-view-cell">
-                                        <a class="theproduct" href="">
-                                            <img src="images/2016040016521576785.jpg" alt="">
-                                            <p class="desc">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
-                                        </a>
-                                        <a class="comments" href="">
-                                            <p class="stars">
-                                                <span class="mark">
-                                                    <span class="username">小明</span>
-                                                    <span class="cut">:</span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                </span>
-                                                <span class="data">2014/12/20</span>
-                                            </p>
-                                            <p class="comment"> 这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的。
-                                            </p>
-                                            <span class="box"></span>
-                                        </a>
-                                    </li>
-                                    <li class="mui-table-view-cell">
-                                        <a class="theproduct" href="">
-                                            <img src="images/2016040016521576785.jpg" alt="">
-                                            <p class="desc">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
-                                        </a>
-                                        <a class="comments" href="">
-                                            <p class="stars">
-                                                <span class="mark">
-                                                    <span class="username">小明</span>
-                                                    <span class="cut">:</span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                    <span class="iconfont icon-start"></span>
-                                                </span>
-                                                <span class="data">2014/12/20</span>
-                                            </p>
-                                            <p class="comment"> 这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的。
-                                            </p>
-                                            <span class="box"></span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <!-- 用户评论五条 -->
+                            <div class="conmment">
+                                <div class="hd">
+                                    <a href="">
+                                       <span id="userComment">中央空调</span>最有用的用户评论</a>
+                                </div>
+
+                                <!-- 模板生成  -->
+                                <div class="pd">
+
+                                    <!-- <div class="top">
+                                        <img src="./images/commentpic.jpg" alt="">
+                                        <p class="title">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
+                                    </div>
+                                    <div class="content">
+                                        <div class="name">
+                                            <a href="">
+                                                <span>8***m:</span>
+                                                <img src="./images/star1.png" alt="">
+                                            </a>
+                                            <span>2014/12/20</span>
+                                        </div>
+                                        <div class="con">
+                                            这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的。
+                                        </div>
+                                    </div> -->
+
+                                </div>
+
+
                             </div>
 
                         </div>
+                        <!-- 底部 -->
                         <div class="footer">
                             <div class="footer-top">
                                 <a class="login">登录</a>
                                 <a class="register">注册</a>
-                                <a class="back-top"><span class="iconfont icon-ai-top"></span>返回顶部</a>
+                                <a class="back-top">
+                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
                             </div>
                             <div class="footer-bottom">
-                                <p><span class="warning">手机APP下载</span> <span>慢慢买手机版--掌上比价平台</span></p>
+                                <p>
+                                    <span class="warning">手机APP下载</span>
+                                    <span>慢慢买手机版--掌上比价平台</span>
+                                </p>
                                 <p>m.manmanbuy.com</p>
                             </div>
                         </div>
@@ -201,6 +190,83 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- 渲染产品列表页 哪个品牌好展示 10条 -->
+    <script type="text/html" id="product">
+        {{each result v i}}
+        <li>
+            <a href="./brandProducts.html?id={{v.brandTitleId}}&pagesize=4" data-title="{{v.brandName}}">
+                <span class="colorLump {{if i==0}}colorred{{/if}} {{if i==1}}coloryellow{{/if}} {{if i==2}}colorgreen{{/if}}">{{i+1}}</span>
+                <div class="title">
+                    <p class="t1">{{v.brandName}}</p>
+                    <p class="t2">{{v.brandInfo}}</p>
+                </div>
+                <i class="iconfont ">></i>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 产品销量 四条 -->
+    <script type="text/html" id="salveList">
+        {{each result v i}}
+        <li>
+                <a href="./subCategory.html?id={{v.brandTitleId}}">
+                    <div class="img">
+                        <!-- 生成的是标签  -->
+                        {{#v.productImg}}
+                        <!-- <img src="{{#v.productImg}}" alt=""> -->
+                    </div>
+                    <div class="content">
+                        <p>{{v.productName}} </p>
+                        <p class="money">
+                            <span class="num">{{v.productPrice}}</span>
+                            <span class="star">
+                                <span class="iconfont icon-start"></span>
+                                <span class="iconfont icon-start"></span>
+                                <span class="iconfont icon-start"></span>
+                                <span class="iconfont icon-start"></span>
+                                <span class="iconfont icon-start"></span>
+                            </span>
+                        </p>
+                        <p class="appraise">
+                            <span>{{v.productQuote}}</span>
+                            <span>全网{{v.productCom}}</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+    </script>
+
+    <script type="text/html" id="comment">
+        {{each result v i}}
+            <a class="top" href="./brandDetail.html?productid={{v.productId}}">
+                    <img src="./images/2016040016521576785.jpg" alt="">
+                    <p class="title">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
+            </a>
+            <div class="content">
+                <div class="name">
+                    <a href="">
+                        <span class="font">{{v.comName}}</span>
+                        <span class="star">
+                            <span class="iconfont icon-start"></span>
+                            <span class="iconfont icon-start"></span>
+                            <span class="iconfont icon-start"></span>
+                            <span class="iconfont icon-start"></span>
+                            <span class="iconfont icon-start"></span>
+                        </span>
+                    </a>
+                    <span>{{v.comTime}}</span>
+                </div>
+                <div class="con">
+                    {{v.comContent}}
+                    </div>
+            </div>
+        {{/each}}
+    </script>
+
+
 </body>
+
 </html>

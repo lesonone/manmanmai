@@ -39,7 +39,7 @@ $(function () {
             'font-size': '24px',
             'font-weight': 'bold',
             'right': -150,
-            'z-index':200,
+            'z-index': 200,
             'color': getRandomColor(),
             'top': getRandomTop()
         }).animate({ 'right': 500 }, 10000, 'linear', function () {

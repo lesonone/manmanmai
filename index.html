@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- <script src="lib/zepto/zepto.min.js"></script> -->
+    <script src="./lib/jquery.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <script src="./lib/artTemplate/template-web.js"></script>
 
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
+    <script src="./js/index.js"></script>
     <link rel="stylesheet" href="css/index.css">
 
 
@@ -39,8 +42,41 @@
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
                         <div class="inner">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo officia similique vel iusto quos pariatur necessitatibus velit tempora quibusdam sit aliquam mollitia quis placeat ut laborum maiores, harum voluptatem labore qui nihil! Laborum vel ea ratione rem delectus odit nisi vero, alias atque placeat nihil aut itaque quis eaque blanditiis harum maiores sapiente nulla facere nobis, sit corporis? Sequi perspiciatis explicabo eligendi atque tenetur, ipsum id non unde soluta numquam facilis vero cumque qui totam eius incidunt a maxime similique minima? Temporibus, nostrum dignissimos dicta laboriosam accusantium maiores? Aliquam tempore, suscipit repellendus vel quod voluptas optio sint nesciunt vitae. Delectus illo consectetur tempore praesentium alias quam cupiditate quasi repudiandae eligendi dignissimos autem impedit obcaecati at nostrum expedita, quos molestiae ipsa, nam laborum? Praesentium fugiat velit aspernatur voluptatibus. Quam a laborum commodi asperiores esse, tenetur eos repellendus impedit est molestias vel laboriosam eligendi cumque, facere, officiis iusto recusandae reprehenderit ducimus? Minima itaque deleniti sequi doloribus fuga officia quaerat vitae libero voluptate temporibus totam esse rerum, recusandae accusamus similique? Nulla molestias, suscipit earum quis, eum at iure soluta molestiae quisquam, saepe error provident. Sint commodi voluptatem non, debitis blanditiis tempora repellendus suscipit! Vel molestiae labore vero, ducimus officia inventore rerum doloremque ad numquam, incidunt repellat, ratione totam repellendus hic praesentium blanditiis corporis quaerat nostrum mollitia non nemo. Mollitia quae, adipisci perferendis fugiat explicabo molestiae debitis iste corrupti tempora doloremque, exercitationem distinctio cumque impedit inventore quisquam, provident quis numquam. Eveniet adipisci animi mollitia at ipsam eos dolores, a ut placeat aliquam consequuntur laboriosam!
+                            <!-- 导航菜单 -->
+                            <div class="nav">
+
+                            </div>
+
+                            <!-- 超值折扣推荐 -->
+                            <div class="discount">
+                                <div class="top">
+                                    <h4>超值折扣推荐</h4>
+                                    <img src="./images/more.png" alt="">
+                                </div>
+
+                                <!-- 模板渲染超值折扣 -->
+                                <div class="products">
+                                   
+
+                                </div>
+
+                            </div>
                         </div>
+                        
+                      
+
+                        <!-- 更多优惠信息 -->
+                        <div class="button">
+                            <button class="mui-btn">更多优惠信息>></button>
+                        </div>
+
+                        <!-- 品牌排行 -->
+                        <div class="ranking">
+                            <h4>品牌排行</h4>
+                            <img src="./images/more.png" alt="">
+                        </div>
+                        
+
                         <div class="footer">
                             <div class="footer-top">
                                 <a class="login">登录</a>
@@ -58,5 +94,73 @@
         </div>
     </div>
     
+
+    <!-- 导航菜单模板渲染 -->
+    <script id="navlist" type="text/html">
+        
+        <ul>
+            {{ each result v i}}
+            <li><a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">{{#v.img}}<span>{{v.name}}</span></a></li>
+            {{ /each }}
+        </ul>
+    
+    </script>
+
+
+
+
+    <!-- 超值折扣推荐 -->
+
+    <!-- <script id="productlist" type="text/html">
+    {{ each result v i}}
+        <div class="product" data-id="{{v.productId}}">
+                <div class="left">
+                    {{#v.productImgSm}}
+                </div>
+
+                <div class="right">
+                    <p class="title">
+                            <span>{{v.productName}}</span>
+                            <span class="color">{{v.productPinkage}}</span>
+                    </p>
+
+
+                    <p class="other">
+                        <span>{{v.productFrom}}丨{{v.productTime}}</span>
+                        <span class="comment"><i class="mui-icon mui-icon-chat"></i>{{v.productComCount}}</span>
+                    </p>
+                    
+                </div>
+            </div>
+    {{ /each }}
+    </script> -->
+
+    <!-- 超值折扣推荐 -->
+    <script id="productlist" type="text/html">
+
+        <ul>
+            {{ each result v i}}
+                <li>
+                    <a href="#" data-id="{{v.productId}}">
+                        <div class="left">
+                            {{#v.productImgSm}}
+                        </div>
+
+                        <div class="right">
+                            <p class="title">
+                                <span>{{v.productName}}</span>
+                                <span class="color">{{v.productPinkage}}</span>
+                            </p>
+                            <p class="other">
+                                <span>{{v.productFrom}}丨{{v.productTime}}</span>
+                                <span class="comment"><i class="mui-icon mui-icon-chat"></i>{{v.productComCount}}</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                {{ /each }}
+            </ul>
+
+    </script>
 </body>
 </html>
