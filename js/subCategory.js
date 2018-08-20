@@ -3,7 +3,10 @@ $(function () {
         var str = urlStr.split("?")[1];
         var urlArr = str.split("&");
         var param = {};
-        param[urlArr.split("=")[0]]=urlArr.split("=")[1];
+        urlArr.foreach(function(index,ele){
+            var data = ele.split("=");
+            param[data[0]]=data[1];
+        })
         return param;
     }
     var urlStr = location.href;
