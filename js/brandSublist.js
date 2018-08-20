@@ -61,7 +61,7 @@ $(function () {
             dataType: 'json',
             data: { brandtitleid: id.id },
             success: function (res) {
-                //console.log(res);
+                console.log(res);
                 var html = template('product', res);
                 $('.prList').html(html);
             }
@@ -80,7 +80,7 @@ $(function () {
             data: { brandtitleid: id.id, pagesize: 4 },
             type: 'get',
             success: function (res) {
-               // console.log(res);
+                console.log(res);
                 var html = template('salveList', res);
                 $('.salveList').html(html);
             }
