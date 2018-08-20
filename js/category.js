@@ -29,6 +29,11 @@ $(function () {
                     console.log(res);
                     var html = template("category", res);
                     $(".hate").html(html);
+                    $(".hate").on("tap",".subMenu",function(){
+       
+                        location.href="./subCategory.html?categoryid="+$(this).data("id");
+                
+                    })
                 }
             })
         }
@@ -36,9 +41,6 @@ $(function () {
 
     })
 
-    $(".liebiao").on("click",".subMenu",function(){
-        location.href="./subCategory.html?categoryid="+$(this).data("id");
-
-    })
+    
 })
 
