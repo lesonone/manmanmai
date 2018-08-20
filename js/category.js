@@ -26,7 +26,7 @@ $(function () {
                 type: "GET",
                 data: { titleid: sid },
                 success: function (res) {
-                    console.log(res);
+                    // console.log(res);
                     var html = template("category", res);
                     $(".hate").html(html);
                     $(".hate").on("tap",".subMenu",function(){
