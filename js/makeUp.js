@@ -56,10 +56,10 @@ $(function () {
 
     $(".sortBar .left a").click(function () {
         // 1.箭头样式切换
-        if ($(this).find(".iconfont").hasClass("icon-xiazai")) {
-            $(this).find(".iconfont").addClass("icon-ai-top").removeClass("icon-xiazai");
+        if ($(this).find(".iconfont").hasClass("icon-jiantouxia")) {
+            $(this).find(".iconfont").addClass("icon-jiantoucushang").removeClass("icon-jiantouxia");
         } else {
-            $(this).find(".iconfont").addClass("icon-xiazai").removeClass("icon-ai-top");
+            $(this).find(".iconfont").addClass("icon-jiantouxia").removeClass("icon-jiantoucushang");
         }
     });
 

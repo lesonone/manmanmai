@@ -175,6 +175,11 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                    &.mui-active{
+                                        border-bottom: 2px solid $deeppink;
+                                    }
+                                    
+                                
                                 img{
                                     display: block;
                                     width: pr(90);
@@ -279,8 +284,8 @@
         img{
             width: pr(40);
             height: pr(40);
-            animation: circle 50s alternate infinite;
-            transition: all 50s;
+            animation: circle 100s alternate infinite;
+            transition: all 100s;
         }
         i{
             width: pr(5);
@@ -293,7 +298,7 @@
     //小风车的动画
     @keyframes circle {
         to {
-            transform: rotateZ(-3000deg);
+            transform: rotateZ(-6000deg);
         }
     }
 }
