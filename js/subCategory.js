@@ -1,4 +1,14 @@
 $(function () {
+    // function urlTool(urlStr){
+    //     var str = urlStr.split("?")[1];
+    //     var urlArr = str.split("&");
+    //     var param = {};
+    //     param[urlArr.split("=")[0]]=urlArr.split("=")[1];
+    //     return param;
+    // }
+    // var urlStr = location.href;
+    // var param = urlTool(urlStr);
+    // renderCategory(param.categoryId);
     renderCategory(1);
 
     function renderCategory(categoryId) {
@@ -15,6 +25,7 @@ $(function () {
         })
     }
     var data = {
+        // categoryid: param.categoryId,
         categoryid: 1,
         pageid: 1
     };
@@ -28,20 +39,34 @@ $(function () {
             success: function (res) {
                 var html = template("productData", res);
                 $(".products").html(html);
+                var dropHtml = template("dropdownData",res);
+                $(".dropdown-menu").html(dropHtml);
             }
         })
     };
-    $(".paging .mui-previous a").click(function () {
-        data.pageid--;
+    $(".dropdown-menu").on("tap","a",function(){
+        
+        data.pageid = $(this).data("pageid");
         renderProduct(data);
-        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 100);
+        mui('.scroll-content').scroll().scrollTo(0, 0, 100);
+        // $(".dropdown-toggle .name").html($(this).html());
+        $(".dropdown-menu").hide();
+    })
+    $(".down").on("tap",function(){
+        $(".dropdown-menu").show();
+    })
+    $(".paging .previous").on("tap",function () {
+        data.pageid--;
+        if(data.pageid<1) data.pageid=1;
+        renderProduct(data);
+        mui('.scroll-content').scroll().scrollTo(0, 0, 100);
     });
-    $(".paging .mui-next a").click(function () {
+    $(".paging .next").on("tap",function () {
         data.pageid++;
         renderProduct(data);
-        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 100);
+        mui('.scroll-content').scroll().scrollTo(0, 0, 100);
     })
-
+//侧面导航部分
     $(".filtrate").click(function () {
         mui('.mui-off-canvas-wrap').offCanvas().show();
     })
