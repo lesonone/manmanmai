@@ -29,6 +29,7 @@
                         <span class="selecter">筛选</span>
                         <span class="mui-icon mui-icon-closeempty close"></span>
                     </div>
+                    
                     <div class="kind">
                         <p class="all">
                             <span class="brand">品牌</span>
@@ -41,19 +42,19 @@
                                     <a class="link" href="#">全部品牌</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">海信</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">夏普</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">小米</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">创维</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">TCL</a>
                                 </li>
                             </ul>
 
@@ -63,29 +64,29 @@
                     </div>
                     <div class="kind">
                         <p class="all">
-                            <span class="brand">品牌</span>
-                            <span class="allbrand">全部品牌</span>
+                            <span class="brand">品类</span>
+                            <span class="allbrand">全部品类</span>
                             <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
                         </p>
                         <div class="trademark">
                             <ul>
                                 <li class="active">
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">全部品类</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">液晶电视</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">曲面电视</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">3D电视</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">广告机</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#">全部品牌</a>
+                                    <a class="link" href="#">影院电视</a>
                                 </li>
                             </ul>
 
@@ -94,37 +95,32 @@
                         </div>
                     </div>
                     <div class="kind">
-                        <p class="all">
-                            <span class="brand">品牌</span>
-                            <span class="allbrand">全部品牌</span>
-                            <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
-                        </p>
-                        <div class="trademark">
-                            <ul>
-                                <li class="active">
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                                <li>
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                                <li>
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                                <li>
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                                <li>
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                                <li>
-                                    <a class="link" href="#">全部品牌</a>
-                                </li>
-                            </ul>
-
-
-
+                            <p class="all">
+                                <span class="brand">分辨率</span>
+                                <span class="allbrand">全部分辨率</span>
+                                <span class="more mui-icon mui-icon-arrowdown mui-pull-right"></span>
+                            </p>
+                            <div class="trademark">
+                                <ul>
+                                    <li class="active">
+                                        <a class="link" href="#">全分辨率</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href="#">超高清</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href="#">全高清</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href="#">高清</a>
+                                    </li>
+   
+                                </ul>
+    
+    
+    
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </aside>
@@ -255,8 +251,8 @@
 </script>
 <!-- 分页下拉框模板 -->
 <script type="text/html" id="dropdownData">
-    <% for(var i = 0;i < pagesize;i++){  %>
-    <li><a data-pageid="{{i+1}}" href="#"><%=(i+1)+"/"+pagesize %></a></li>
+    <% for(var i = 0;i < totalCount/pagesize;i++){  %>
+    <li><a class="count" data-pageid="{{i+1}}" href="#"><%=(i+1)+"/"+totalCount/pagesize %></a></li>
     <% } %>
 </script>
 </html>

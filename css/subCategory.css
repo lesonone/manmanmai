@@ -339,7 +339,6 @@ body {
 }
 .inner .paging .pagination .dropdown .dropdown-menu {
   display: none;
-  bottom: 0.8rem;
   position: absolute;
   width: 100%;
   border-right: 0.0266666667rem solid #666;
