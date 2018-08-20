@@ -208,192 +208,38 @@ body {
   align-items: center;
 }
 .scroll .inner .nav a {
-  color: #999;
-}
-.scroll .inner .nav .good {
   color: #666;
 }
 .scroll .inner .nav .index {
   color: #999;
 }
 .scroll .inner .hot {
-  background: #f3f3f3;
-  height: 0.96rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 0.0266666667rem solid #d6d6d6;
+  padding: 0.2666666667rem 0.1333333333rem;
 }
 .scroll .inner .hot a {
-  font-weight: bold;
-  padding: 0rem 0.2666666667rem;
+  padding-left: 0.2666666667rem;
+  border: 1px solid #ccc;
   color: #874604;
-}
-.scroll .inner .bd {
-  border-bottom: 0.0266666667rem solid #dbdbdb;
-  background: #fff;
-}
-.scroll .inner .bd ul li {
-  padding: 0.1333333333rem 0rem;
-  border-bottom: 0.0266666667rem solid #dbdbdb;
-}
-.scroll .inner .bd ul li a {
-  display: flex;
-  padding: 0rem 0.2666666667rem;
-  justify-content: space-between;
-}
-.scroll .inner .bd ul li a .colorLump {
-  flex-basis: 0.5333333333rem;
-  width: 0.5333333333rem;
-  height: 0.5333333333rem;
-  background-color: #c9c9c9;
+  background-color: #eee;
+  font-size: 0.4266666667rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
+  height: 1.2rem;
 }
-.scroll .inner .bd ul li a .coloryellow {
-  background-color: #ff841d;
+.scroll .inner .productList .fl_t {
+  padding: 0rem 0.2666666667rem;
 }
-.scroll .inner .bd ul li a .colorgreen {
-  background-color: #8adf5b;
-}
-.scroll .inner .bd ul li a .colorred {
-  background-color: #f4483e;
-}
-.scroll .inner .bd ul li a .title {
-  flex: 1;
-  margin-left: 0.2666666667rem;
-}
-.scroll .inner .bd ul li a .title .t1 {
-  color: black;
-}
-.scroll .inner .bd ul li a .title .t2 {
-  color: #999;
-  font-size: 0.32rem;
-}
-.scroll .inner .bd ul li a .iconfont {
-  flex-basis: 0.5333333333rem;
-  padding-top: 0.2666666667rem;
-}
-.scroll .inner .salve .hd {
-  height: 0.96rem;
+.scroll .inner .productList .fl_t a {
+  border-bottom: 0.0266666667rem solid #d6d6d6;
+  height: 1.0666666667rem;
   display: flex;
   align-items: center;
-  border-bottom: 0.0266666667rem solid #d6d6d6;
-}
-.scroll .inner .salve .hd a {
-  font-weight: bold;
-  padding: 0rem 0.2666666667rem;
-  color: #874604;
-}
-.scroll .inner .salve .pd {
-  background: #fff;
-}
-.scroll .inner .salve .pd ul li {
-  padding: 0.2666666667rem 0rem;
-  border-bottom: 0.0266666667rem solid #d6d6d6;
-}
-.scroll .inner .salve .pd ul li a {
-  display: flex;
-}
-.scroll .inner .salve .pd ul li a .img {
-  flex-basis: 2.9333333333rem;
-  padding: 0rem 0.2666666667rem;
-}
-.scroll .inner .salve .pd ul li a .img img {
-  width: 100%;
-}
-.scroll .inner .salve .pd ul li a .content {
-  flex: 1;
-  font-size: 0.32rem;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-.scroll .inner .salve .pd ul li a .content p {
-  color: black;
-}
-.scroll .inner .salve .pd ul li a .content .money {
-  display: flex;
   justify-content: space-between;
 }
-.scroll .inner .salve .pd ul li a .content .money .num {
-  color: #f4483e;
+.scroll .inner .productList .fl_t a p {
+  color: black;
+  font-weight: bold;
   font-size: 0.4266666667rem;
 }
-.scroll .inner .salve .pd ul li a .content .money .star {
-  color: #fe9913;
-  display: flex;
-  margin-right: 0.5333333333rem;
-}
-.scroll .inner .salve .pd ul li a .content .money .star .icon-start {
-  font-size: 0.5333333333rem;
-}
-.scroll .inner .salve .pd ul li a .content .appraise {
-  color: #666;
-  font-size: 0.32rem;
-}
-.scroll .inner .conmment {
-  margin-bottom: 0.2666666667rem;
-}
-.scroll .inner .conmment .hd {
-  height: 0.96rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 0.0266666667rem solid #d6d6d6;
-}
-.scroll .inner .conmment .hd a {
-  font-weight: bold;
-  padding: 0rem 0.2666666667rem;
-  color: #874604;
-}
-.scroll .inner .conmment .pd {
-  padding: 0rem 0.2666666667rem;
-  border-bottom: 0.0266666667rem solid #d6d6d6;
-}
-.scroll .inner .conmment .pd .top {
-  display: flex;
-  margin-top: 0.2666666667rem;
-}
-.scroll .inner .conmment .pd .top img {
-  width: 20%;
-  height: 20%;
-}
-.scroll .inner .conmment .pd .top .title {
-  margin-left: 0.2666666667rem;
-  color: #999;
-}
-.scroll .inner .conmment .content {
-  margin-top: 0.2666666667rem;
-  padding: 0.2666666667rem 0.2666666667rem;
-  background: #fff;
-  border: 0.0266666667rem solid #d6d6d6;
-  margin-bottom: 10px;
-}
-.scroll .inner .conmment .content .name {
-  display: flex;
-  justify-content: space-between;
-}
-.scroll .inner .conmment .content .name a {
-  display: flex;
-  align-items: center;
-}
-.scroll .inner .conmment .content .name a .font {
-  color: #999;
-}
-.scroll .inner .conmment .content .name a .star {
-  display: flex;
-  margin-left: 0.5333333333rem;
-}
-.scroll .inner .conmment .content .name a .star .icon-start {
-  font-size: 0.48rem;
-  color: #fe9913;
-}
-.scroll .inner .conmment .content .name span {
-  color: #999;
-}
-.scroll .inner .conmment .content .con {
-  margin: 0.2666666667rem 0rem;
-}
 
-/*# sourceMappingURL=brandSublist.css.map */
+/*# sourceMappingURL=brandList.css.map */
