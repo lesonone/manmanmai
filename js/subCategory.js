@@ -1,19 +1,4 @@
 $(function () {
-<<<<<<< HEAD
-    function urlTool(urlStr){
-        var str = urlStr.split("?")[1];
-        var urlArr = str.split("&");
-        var param = {};
-        urlArr.foreach(function(index,ele){
-            var data = ele.split("=");
-            param[data[0]]=data[1];
-        })
-        return param;
-    }
-    var urlStr = location.href;
-    var param = urlTool(urlStr);
-    renderCategory(param.categoryId);
-=======
     // function urlTool(urlStr){
     //     var str = urlStr.split("?")[1];
     //     var urlArr = str.split("&");
@@ -27,7 +12,7 @@ $(function () {
     // var urlStr = location.href;
     var param = getUrl();
     renderCategory(param.categoryid);
->>>>>>> 1a8c18553b772be79354ebc22c78acacce84bd20
+    var categoryName = "";
     // renderCategory(1);
 // 渲染面包屑分类标题
     function renderCategory(categoryId) {
@@ -40,6 +25,7 @@ $(function () {
             success: function (res) {
                 var html = template("categoryId", res);
                 $(".categoryName").html(html);
+                categoryName = res.result[0].category;
             }
         })
     }
@@ -65,6 +51,15 @@ $(function () {
             }
         })
     };
+    $(".logo,.toindex").on("tap",function(){
+        location.href = "./index.html";
+    })
+    $(".allBrand").on("tap",function(){
+        location.href = "./category.html";
+    })
+    $(".products").on("tap",".product" ,function(){
+        location.href = "./good.html?productid="+$(this).data("productid")+"&categoryName="+categoryName;
+    })
     //下拉框
     $(".dropdown-menu").on("tap","a",function(){
         

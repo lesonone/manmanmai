@@ -30,6 +30,11 @@ $(function () {
                     var html = template("category", res);
                     $(".hate").html(html);
                     $(".hate").on("tap",".subMenu",function(){
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> b246983408ca8001168204ac6e228f65d34dc743
                         location.href="./subCategory.html?categoryid="+$(this).data("id");
                 
                     })

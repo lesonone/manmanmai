@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="icon" href="./images/icon-m.jpg" type="image/x-icon">
+    <title>慢慢买比价网--手机版</title>
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
@@ -134,7 +135,7 @@
             <div id="offCanvasContentScroll" class="container mui-content">
                 <!-- 顶部 -->
                 <div class="header">
-                    <a class="logo"></a>
+                    <a href="./index.html" class="logo"></a>
                     <a class="download"></a>
                 </div>
                 <!-- 主体部分 -->
@@ -156,11 +157,11 @@
                                     <div class="navbar">
                                         <ol class="breadcrumb">
                                             <li>
-                                                <a href="./index.html">首页</a>
+                                                <a class="toindex" href="./index.html">首页</a>
                                             </li>
                                             <span class="arrows">></span>
                                             <li>
-                                                <a href="./brandList.html">全部分类</a>
+                                                <a class="allBrand" href="./category.html">全部分类</a>
                                             </li>
                                             <span class="arrows">></span>
                                             <li class="categoryName"></li>
@@ -238,7 +239,7 @@
 <!-- 列表页面模板 -->
 <script type="text/html" id="productData">
     {{each result v i}}
-    <div class="product">
+    <div data-productid="{{v.productId}}" class="product">
         <div class="img">
             {{#v.productImg}}
         </div>
