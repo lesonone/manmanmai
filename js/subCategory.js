@@ -1,4 +1,5 @@
 $(function () {
+<<<<<<< HEAD
     function urlTool(urlStr){
         var str = urlStr.split("?")[1];
         var urlArr = str.split("&");
@@ -12,6 +13,21 @@ $(function () {
     var urlStr = location.href;
     var param = urlTool(urlStr);
     renderCategory(param.categoryId);
+=======
+    // function urlTool(urlStr){
+    //     var str = urlStr.split("?")[1];
+    //     var urlArr = str.split("&");
+    //     var param = {};
+    //     urlArr.forEach(function(v){
+    //         var data = v.split("=");
+    //         param[data[0]]=data[1];
+    //     })
+    //     return param;
+    // }
+    // var urlStr = location.href;
+    var param = getUrl();
+    renderCategory(param.categoryid);
+>>>>>>> 1a8c18553b772be79354ebc22c78acacce84bd20
     // renderCategory(1);
 // 渲染面包屑分类标题
     function renderCategory(categoryId) {
@@ -28,7 +44,7 @@ $(function () {
         })
     }
     var data = {
-        categoryid: param.categoryId,
+        categoryid: param.categoryid,
         // categoryid: 1,
         pageid: 1
     };

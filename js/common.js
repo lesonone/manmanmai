@@ -12,6 +12,7 @@ $(function () {
     mui('.mui-scroll-wrapper').scroll({
         deceleration: 0.0005
     });
+    // 回到顶部按钮
     $(".back-top").click(function () {
         mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 1000);//1000毫秒滚动到顶
     })
