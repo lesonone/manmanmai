@@ -99,7 +99,7 @@ body {
 .container .header .download {
   height: 0.96rem;
   width: 0.9333333333rem;
-  background: url("../images/download.png") no-repeat top left/100%;
+  background: url("../images/home.png") no-repeat top left/100%;
 }
 .container .main {
   flex: 1;
@@ -208,6 +208,7 @@ body {
   padding-left: 0.2666666667rem;
 }
 .container .main .scroll .inner .product .title {
+  font-weight: bold;
   width: 100%;
 }
 .container .main .scroll .inner .product .title p {

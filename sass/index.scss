@@ -1,2 +1,133 @@
 @import './common.scss';
+.main{
+    .inner{
+        background: #f2f2f2;
+        .nav{
+            margin-top: pr(5);
+            // border-bottom: pr(0.5) solid #ccc;
+            background: #fff;
+            ul{
+                margin-bottom: pr(5);
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    display: flex;
+                    justify-content: center;
+                    width: 25%;
+                    padding: pr(5) pr(0);
+                    a{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            width: pr(40);
+                        }
+                        span{
+                            margin-top: pr(5);
+                            font-size: pr(10);
+                            color: #666;
+                        }
+                    }
+
+                    &:nth-child(n+9){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .discount{
+            background: #fff;
+            margin-top: pr(2);
+            .top{
+                height: pr(25);
+                display: flex;
+                justify-content: space-between;
+                padding: pr(0) pr(10);
+                color: #fff;
+                align-items: center;
+                background: linear-gradient(to bottom, #ffad44,#ff9203);
+
+                img{
+                    width: pr(15);
+                }
+            }
+
+            .products{
+                a{
+                    display: flex;
+                    border-bottom: pr(0.5) solid #ccc;
+                    padding: pr(10) pr(5);
+
+                    .left{
+                        
+                        margin-right: pr(5);
+                        img{
+                            width: pr(60);
+                        }
+                    }
+
+                    .right{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .title{
+                            font-size: pr(10);
+                            color: #000;
+                            .color{
+                                color: #ff9203;
+                            }
+                        }
+
+                        .other{
+                            font-size: pr(8);
+                            display: flex;
+                            justify-content: space-between;
+                            i{
+                                font-size: pr(10);
+                                margin-right: pr(3);
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .button{
+        width: 100%;
+        padding: pr(0) pr(10) pr(10) pr(10);
+        button{
+            width: 100%;
+            background: linear-gradient(to bottom, #fff,#f2f2f2);
+        }
+    }
+
+
+    .ranking{
+        height: pr(25);
+        margin-bottom: pr(10);
+        display: flex;
+        justify-content: space-between;
+        padding: pr(0) pr(10);
+        color: #fff;
+        align-items: center;
+        background: linear-gradient(to bottom, #ffad44,#ff9203);
+        
+
+        img{
+            width: pr(15);
+        }
+    }
+
+    .footer{
+        background: #f2f2f2;
+    }
+
+
+
+}
+
 

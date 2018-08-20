@@ -9,7 +9,7 @@
     <script src="lib/mui/js/mui.min.js"></script>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/iconfont/iconfont.css">
-
+    <script src="lib/artTemplate/template-web.js"></script>
 
     <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
     <script src="js/common.js"></script>
@@ -31,103 +31,114 @@
                             <h1 class="mui-title">筛选</h1>
                         </header>
                         <!-- 筛选条件大盒子 -->
-                        <ul class="mui-table-view">
-                            <!-- 每一类筛选条件的盒子 -->
-                            <li class="mui-table-view-cell mui-collapse">
-                                <a class="mui-navigate-right" href="#">
-                                    <span class="brand">品牌</span>
-                                    <span class="brandname">海信</span>
-                                </a>
-                                <div class="showlist">
-                                    <p class="showbox"><span class="showone">全部品牌</span></p>
-                                    <p class="showbox"><span class="showone active">海信</span></p>
-                                    <p class="showbox"><span class="showone">夏普</span></p>
-                                    <p class="showbox"><span class="showone">小米</span></p>
-                                    <p class="showbox"><span class="showone">创维</span></p>
-                                    <p class="showbox"><span class="showone">TCL</span></p>
-                                </div>
-                                <div class="mui-collapse-content">
-                                    <div class="showlist">
-                                        <p class="showbox"><span class="showone">全部品牌</span></p>
-                                        <p class="showbox"><span class="showone">海信</span></p>
-                                        <p class="showbox"><span class="showone">夏普</span></p>
-                                        <p class="showbox"><span class="showone">小米</span></p>
-                                        <p class="showbox"><span class="showone">创维</span></p>
-                                        <p class="showbox"><span class="showone">TCL</span></p>
-                                        <p class="showbox"><span class="showone">全部品牌</span></p>
-                                        <p class="showbox"><span class="showone">海信</span></p>
-                                        <p class="showbox"><span class="showone">夏普</span></p>
-                                        <p class="showbox"><span class="showone">小米</span></p>
-                                        <p class="showbox"><span class="showone">创维</span></p>
-                                        <p class="showbox"><span class="showone">TCL</span></p>
-                                        <p class="showbox"><span class="showone">全部品牌</span></p>
-                                        <p class="showbox"><span class="showone">海信</span></p>
-                                        <p class="showbox"><span class="showone">夏普</span></p>
-                                        <p class="showbox"><span class="showone">小米</span></p>
-                                        <p class="showbox"><span class="showone">创维</span></p>
-                                        <p class="showbox"><span class="showone">TCL</span></p>
+                        <div class="slidebox">
+                            <div class="box box1">
+                                    <div class="slidelist">
+                                            <p>
+                                                <span class="brand">品牌</span>
+                                                <span class="brandname">海信</span>
+                                            </p>
+                                            <span class="status iconfont icon-jiantou-copy"></span>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="mui-table-view-cell mui-collapse">
-                                    <a class="mui-navigate-right" href="#">
-                                        <span class="brand">品牌</span>
-                                        <span class="brandname">海信</span>
-                                    </a>
                                     <div class="showlist">
-                                        <p class="showbox"><span class="showone active">全部品牌</span></p>
-                                        <p class="showbox"><span class="showone">海信</span></p>
-                                        <p class="showbox"><span class="showone">夏普</span></p>
-                                        <p class="showbox"><span class="showone">小米</span></p>
-                                        <p class="showbox"><span class="showone">创维</span></p>
-                                        <p class="showbox"><span class="showone">TCL</span></p>
+                                            <p class="showbox"><span class="showone active">全部品牌</span></p>
+                                            <p class="showbox"><span class="showone">海信</span></p>
+                                            <p class="showbox"><span class="showone">夏普</span></p>
+                                            <p class="showbox"><span class="showone">小米</span></p>
+                                            <p class="showbox"><span class="showone">创维</span></p>
+                                            <p class="showbox"><span class="showone">TCL</span></p>
                                     </div>
-                                    <div class="mui-collapse-content">
+                                    <div class="hidelist">
                                         <div class="showlist">
-                                            <p class="showbox"><span class="showone">全部品牌</span></p>
-                                            <p class="showbox"><span class="showone">海信</span></p>
-                                            <p class="showbox"><span class="showone active">夏普</span></p>
-                                            <p class="showbox"><span class="showone">小米</span></p>
-                                            <p class="showbox"><span class="showone">创维</span></p>
-                                            <p class="showbox"><span class="showone">TCL</span></p>
-                                            <p class="showbox"><span class="showone">全部品牌</span></p>
-                                            <p class="showbox"><span class="showone">海信</span></p>
-                                            <p class="showbox"><span class="showone">夏普</span></p>
-                                            <p class="showbox"><span class="showone">小米</span></p>
-                                            <p class="showbox"><span class="showone">创维</span></p>
-                                            <p class="showbox"><span class="showone">TCL</span></p>
-                                            <p class="showbox"><span class="showone">全部品牌</span></p>
-                                            <p class="showbox"><span class="showone">海信</span></p>
-                                            <p class="showbox"><span class="showone">夏普</span></p>
-                                            <p class="showbox"><span class="showone">小米</span></p>
-                                            <p class="showbox"><span class="showone">创维</span></p>
-                                            <p class="showbox"><span class="showone">TCL</span></p>
+                                                <p class="showbox"><span class="showone">全部品牌</span></p>
+                                                <p class="showbox"><span class="showone">海信</span></p>
+                                                <p class="showbox"><span class="showone">夏普</span></p>
+                                                <p class="showbox"><span class="showone">小米</span></p>
+                                                <p class="showbox"><span class="showone">创维</span></p>
+                                                <p class="showbox"><span class="showone">TCL</span></p>
                                         </div>
                                     </div>
-                                </li>
-                        </ul>
+                                    
+                            </div>
+                            <div class="box box2">
+                                    <div class="slidelist">
+                                            <p>
+                                                <span class="brand">品牌</span>
+                                                <span class="brandname">海信</span>
+                                            </p>
+                                            <span class="status iconfont icon-jiantou-copy"></span>
+                                    </div>
+                                    <div class="showlist">
+                                            <p class="showbox"><span class="showone active">全部品牌</span></p>
+                                            <p class="showbox"><span class="showone">海信</span></p>
+                                            <p class="showbox"><span class="showone">夏普</span></p>
+                                            <p class="showbox"><span class="showone">小米</span></p>
+                                            <p class="showbox"><span class="showone">创维</span></p>
+                                            <p class="showbox"><span class="showone">TCL</span></p>
+                                    </div>
+                                    <div class="hidelist">
+                                        <div class="showlist">
+                                                <p class="showbox"><span class="showone">全部品牌</span></p>
+                                                <p class="showbox"><span class="showone">海信</span></p>
+                                                <p class="showbox"><span class="showone">夏普</span></p>
+                                                <p class="showbox"><span class="showone">小米</span></p>
+                                                <p class="showbox"><span class="showone">创维</span></p>
+                                                <p class="showbox"><span class="showone">TCL</span></p>
+                                        </div>
+                                    </div>
+                                    
+                            </div>
+                            <div class="box box3">
+                                    <div class="slidelist">
+                                            <p>
+                                                <span class="brand">品牌</span>
+                                                <span class="brandname">海信</span>
+                                            </p>
+                                            <span class="status iconfont icon-jiantou-copy"></span>
+                                    </div>
+                                    <div class="showlist">
+                                            <p class="showbox"><span class="showone active">全部品牌</span></p>
+                                            <p class="showbox"><span class="showone">海信</span></p>
+                                            <p class="showbox"><span class="showone">夏普</span></p>
+                                            <p class="showbox"><span class="showone">小米</span></p>
+                                            <p class="showbox"><span class="showone">创维</span></p>
+                                            <p class="showbox"><span class="showone">TCL</span></p>
+                                    </div>
+                                    <div class="hidelist">
+                                        <div class="showlist">
+                                                <p class="showbox"><span class="showone">全部品牌</span></p>
+                                                <p class="showbox"><span class="showone">海信</span></p>
+                                                <p class="showbox"><span class="showone">夏普</span></p>
+                                                <p class="showbox"><span class="showone">小米</span></p>
+                                                <p class="showbox"><span class="showone">创维</span></p>
+                                                <p class="showbox"><span class="showone">TCL</span></p>
+                                        </div>
+                                    </div>
+                                    
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>
             <!-- 主页面容器 -->
             <div class="mui-inner-wrap">
                     <div class="container">
-                            <!-- 顶部 -->
-                            <div class="header">
+                        <!-- 顶部 -->
+                        <div class="header">
                                 <a class="logo"></a>
                                 <a class="download"></a>
-                            </div>
-                            <!-- 主体部分 -->
-                            <div class="main">
-                                <!-- 搜索栏 -->
-                                <div class="searchbar">
+                        </div>
+                        <!-- 主体部分 -->
+                        <div class="main">
+                            <!-- 搜索栏 -->
+                            <div class="searchbar">
                                     <div class="search">
                                         <input type="text" placeholder="请输入你想比价的商品">
                                         <span class="searchbtn">搜索</span>
                                     </div>
-                                </div>
-                                <!-- 内部滚动区 -->
-                                <div class="scroll">
+                            </div>
+                            <!-- 内部滚动区 -->
+                            <div class="scroll">
                                     <div class="mui-scroll-wrapper">
                                         <div class="mui-scroll">
                                             <!--这里放置真实显示的DOM内容-->
@@ -146,39 +157,29 @@
                                                     <div class="listbar">
                                                         <!-- 触发侧滑栏所需条件 -->
                                                         <div class="mui-bar mui-bar-nav">
-                                                            <span class="all active">综合</span>
-                                                            <span class="sales">销量</span>
-                                                            <span class="pirces">价格</span> 
+                                                            <span class=" all active">综合</span>
+                                                            <span class=" sales">销量</span>
+                                                            <span class=" pirces">价格</span> 
                                                             <a class="mui-action-menu"><span></span> 筛选</a>
                                                         </div>
                                                     </div>
                                                     <!-- 产品信息 -->
                                                     <div class="productsinfo">
-                                                        <div class="product">
-                                                            <img src="images/2016040016521576785.jpg" alt="">
-                                                            <div class="info">
-                                                                <p class="protittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
-                                                                <p class="proprice">¥2999</p>
-                                                                <p class="procomments">
-                                                                    <span class="offer">4商城报价</span>
-                                                                    <span class="procomment">有1000000评论</span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product">
-                                                            <img src="images/2016040016521576785.jpg" alt="">
-                                                            <div class="info">
-                                                                <p class="protittle">海信(Hisense) LED55EC500U 55英寸 4K超高清  智能液晶电视</p>
-                                                                <p class="proprice">¥2999</p>
-                                                                <p class="procomments">
-                                                                    <span class="offer">4商城报价</span>
-                                                                    <span class="procomment">有1000000评论</span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                            <!-- 这里放商品的详细列表 -->
                                                     </div>
                                                     <!-- 分页控制器 -->
-                                                    <div class="page"></div>
+                                                    <div class="pagecontrol">
+                                                        <div class="mui-numbox" data-numbox-min='1' data-numbox-max='9'>
+                                                            <button class="mui-btn mui-btn-numbox-minus" type="button">上一页</button>
+                                                            <input id="test" class="mui-input-numbox" type="number"/>
+                                                            <button class="mui-btn mui-btn-numbox-plus" type="button">下一页</button>
+                                                        </div>
+                                                        <ul class="listbox">
+                                                            <li>1</li>
+                                                            <li>2</li>
+                                                            <li>3</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <!-- 相关链接 -->
                                                 <div class="link">
@@ -203,13 +204,29 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
-                
+                    </div>
+                    <!-- off-canvas backdrop -->
+				    <div class="mui-off-canvas-backdrop"></div>
             </div>
         </div>
    
-    
+        <script type="text/html" id="tpl">
+            {{each result v i}}
+                <div class="product" data-id="{{v.productId}}">
+                    {{@v.productImg}}
+                    <div class="info">
+                        <p class="protittle">{{v.productName}}</p>
+                        <p class="proprice">{{v.productPrice}}</p>
+                        <p class="procomments">
+                            <span class="offer">{{v.productQuote}}</span>
+                            <span class="procomment">{{v.brandName}}</span>
+                        </p>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+        
 </body>
 </html>
