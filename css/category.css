@@ -195,51 +195,41 @@ body {
   color: #f4483e;
 }
 
-.scroll .inner {
-  background-color: #f2f2f2;
-}
-.scroll .inner .nav {
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb));
-  font-size: 0.3733333333rem;
-  border-bottom: 0.0266666667rem solid #dbdbdb;
-  height: 0.96rem;
-  padding-left: 0.2133333333rem;
-  display: flex;
-  align-items: center;
-}
-.scroll .inner .nav a {
-  color: #666;
-}
-.scroll .inner .nav .index {
-  color: #999;
-}
-.scroll .inner .hot {
-  padding: 0.2666666667rem 0.1333333333rem;
-}
-.scroll .inner .hot a {
-  padding-left: 0.2666666667rem;
-  border: 1px solid #ccc;
-  color: #874604;
-  background-color: #eee;
-  font-size: 0.4266666667rem;
-  display: flex;
-  align-items: center;
-  height: 1.2rem;
-}
-.scroll .inner .productList .fl_t {
-  padding: 0rem 0.2666666667rem;
-}
-.scroll .inner .productList .fl_t a {
-  border-bottom: 0.0266666667rem solid #d6d6d6;
-  height: 1.0666666667rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.scroll .inner .productList .fl_t a p {
-  color: black;
-  font-weight: bold;
-  font-size: 0.4266666667rem;
+.min {
+  width: 100%;
+  height: 12.8rem;
+  background-color: #ededed;
+  margin-top: 0.2666666667rem;
 }
 
-/*# sourceMappingURL=brandList.css.map */
+.write {
+  font-size: 0.5333333333rem;
+  margin: 0;
+}
+
+.hate {
+  margin: 10px -15px 0px !important;
+  padding: 10px 0 !important;
+}
+.hate .menu {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hate .menu li {
+  width: 33.33333%;
+  border: 0.0266666667rem solid #cccccc;
+  padding: 0;
+  text-align: center;
+  color: #333333;
+  height: 1.2rem;
+  font-size: 0.4266666667rem;
+  line-height: 1.2rem;
+  background-color: #fff;
+}
+.hate .menu li a {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=category.css.map */
