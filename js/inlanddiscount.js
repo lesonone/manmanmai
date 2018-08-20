@@ -49,7 +49,4 @@ $(function () {
         /*清空输入框*/
         $('textarea').val('');
     })
-    $(".back-top").click(function () {
-        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 1000);//100毫秒滚动到顶
-    })
 })
