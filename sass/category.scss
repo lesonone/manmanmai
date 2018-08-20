@@ -50,8 +50,17 @@ padding:  0 !important;
         
             
         }
+
+        
     }
 }
 
+.mui-scroll {
+    position: relative;
+    .footer {
+        position: absolute;
+        z-index: 99;
+    }
+}
 
 
