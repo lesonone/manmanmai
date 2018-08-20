@@ -1,0 +1,245 @@
+body,
+div,
+span,
+p,
+a,
+img,
+input,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+strong,
+em,
+i,
+del {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input {
+  border: 0 none;
+  outline: 0 none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 0.3733333333rem;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.4533333333rem;
+  padding-right: 0.2666666667rem;
+}
+.container .header .logo {
+  height: 0.64rem;
+  width: 4.9333333333rem;
+  background: url("../images/logo.png") no-repeat top left/100%;
+}
+.container .header .download {
+  height: 0.96rem;
+  width: 0.9333333333rem;
+  background: url("../images/download.png") no-repeat top left/100%;
+}
+.container .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .searchbar {
+  width: 100%;
+  height: 1.3866666667rem;
+  padding: 0.2666666667rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.container .main .searchbar .search {
+  display: flex;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #f1f1f1;
+  border-radius: 0.8rem;
+}
+.container .main .searchbar .search input {
+  height: 100%;
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  padding-left: 0.5333333333rem;
+  background-color: #f1f1f1;
+}
+.container .main .searchbar .search input::placeholder {
+  font-size: 0.3733333333rem;
+}
+.container .main .searchbar .search .searchbtn {
+  flex-basis: 1.68rem;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-color: #ff841d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .scroll {
+  flex: 1;
+  position: relative;
+}
+.container .main .scroll .mui-scroll-wrapper {
+  background-color: #fff;
+}
+.container .main .scroll .mui-scroll-wrapper .inner {
+  margin-bottom: 0.32rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer {
+  width: 100%;
+  height: 2.56rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top {
+  height: 0.96rem;
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .login {
+  flex: 1;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .register {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-top .back-top {
+  height: 100%;
+  flex-basis: 4rem;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom {
+  height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p {
+  text-align: center;
+  color: #5a5a5a;
+}
+.container .main .scroll .mui-scroll-wrapper .footer .footer-bottom p .warning {
+  color: #f4483e;
+}
+
+.scroll .inner {
+  background-color: #f2f2f2;
+}
+.scroll .inner .nav {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ebebeb));
+  font-size: 0.3733333333rem;
+  border-bottom: 0.0266666667rem solid #dbdbdb;
+  height: 0.96rem;
+  padding-left: 0.2133333333rem;
+  display: flex;
+  align-items: center;
+}
+.scroll .inner .nav a {
+  color: #666;
+}
+.scroll .inner .nav .index {
+  color: #999;
+}
+.scroll .inner .hot {
+  padding: 0.2666666667rem 0.1333333333rem;
+}
+.scroll .inner .hot a {
+  padding-left: 0.2666666667rem;
+  border: 1px solid #ccc;
+  color: #874604;
+  background-color: #eee;
+  font-size: 0.4266666667rem;
+  display: flex;
+  align-items: center;
+  height: 1.2rem;
+}
+.scroll .inner .productList .fl_t {
+  padding: 0rem 0.2666666667rem;
+}
+.scroll .inner .productList .fl_t a {
+  border-bottom: 0.0266666667rem solid #d6d6d6;
+  height: 1.0666666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scroll .inner .productList .fl_t a p {
+  color: black;
+  font-weight: bold;
+  font-size: 0.4266666667rem;
+}
+
+/*# sourceMappingURL=brandTitle.css.map */

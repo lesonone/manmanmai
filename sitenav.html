@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        平板电视什么牌子好,平板电视十大品牌排行榜
+    </title>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+
+    <!-- 引擎模板 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 注意在引入自己写的css样式前 要先引入common.js 因为rem的初始化代码写在了common.js里 -->
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+    <script src="./js/sitenav.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <div class="header">
+            <a href="./index.html" class="iconfont icon-arrow-right"></a>
+            <span class="shopNav">商场导航</span>
+            <a class="download"></a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <!-- <div class="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <span class="searchbtn">搜索</span>
+                </div>
+            </div> -->
+            <!-- 内部滚动区 -->
+            <div class="scroll">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="inner">
+                           <div class="pic">
+                               <ul class="jd-list">
+                                   <!-- <li>
+                                       <a href="">
+                                           <img src="./images/1.png" alt="">
+                                           <span class="ti">京东商场</span>
+                                       </a>
+                                   </li>
+                                   <li>
+                                        <a href="">
+                                            <img src="./images/1.png" alt="">
+                                            <span class="ti">京东商场</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                            <a href="">
+                                                <img src="./images/1.png" alt="">
+                                                <span class="ti">京东商场</span>
+                                            </a>
+                                        </li> -->
+                               </ul>
+                           </div> 
+
+
+                        </div>
+                        <!-- 底部 -->
+                        <div class="footer">
+                            <div class="footer-top">
+                                <a class="login">登录</a>
+                                <a class="register">注册</a>
+                                <a class="back-top">
+                                    <span class="iconfont icon-ai-top"></span>返回顶部</a>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>
+                                    <span class="warning">手机APP下载</span>
+                                    <span>慢慢买手机版--掌上比价平台</span>
+                                </p>
+                                <p>m.manmanbuy.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 渲染产品列表页 -->
+    <script type="text/html" id="product">
+        {{each result v i}}
+        <li>
+                <a href="{{v.navHref}}" data-id="{{v.navId}}">
+                    <img src="{{v.navImg}}" alt="">
+                    <span class="ti">{{v.navTitle}}</span>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+@import "./common.scss";
+
+.container{
+    background-color: #ccc;
+
+    // 顶部
+    .headerTop {
+        height: pr(44);
+        background-color:$deeppink;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: pr(0) pr(10);
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+       .back{
+            font-size: pr(26);
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .drop {
+            color: #fff;
+            font-size: $font-sm;
+            i{
+                font-size: $font-lg;
+                font-weight: bold;
+            }
+        }
+        .home {
+            font-size: pr(24);
+            color: #fff;
+        }
+    }
+
+    //主体部分
+    .main{
+        position: relative;
+        //分类菜单
+        .menu{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: pr(44);
+            display: none;
+            .mask{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.3);
+                position: absolute;             
+                z-index: 5;
+            }
+            .menu-content{
+                background-color: #fff;
+                width: 100%;
+                position: fixed;
+                z-index: 100;
+                height: pr(300);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: 25%;
+                        height: pr(52);
+                        border-right: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
+                        a{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #333;
+                        }
+                    }
+                }
+                button{
+                    width: pr(100);
+                    height: pr(30);
+                    color: $deeppink;
+                    border: 1px solid $deeppink;
+                    margin-top: pr(30);
+                    font-size: $font-sm;
+                }
+                
+            }
+        }
+        //产品列表
+        .scroll{
+            margin-top: pr(44);
+            .goodList{
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #f2f2f2;
+                li{
+                    background-color: #fff;
+                    width: 100%;
+                    display: flex;
+                    padding: pr(10) pr(2);
+                    margin: pr(0) pr(3) pr(8);
+                    img{
+                        width: pr(130);
+                        height: pr(130);
+                        padding: pr(3);
+                        margin-right: pr(15);
+                    }
+                    .proInfo{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        .proName{                            
+                            color: #000;
+                            font-size: $font-sm;
+                        }
+                        .price{
+                            color: $deeppink;
+                            font-size: $font-sm;
+                            del{
+                                color: #777;
+                                margin-left: pr(10);
+                                font-size: $font-xs;
+                            }
+                        }
+                        .bar{
+                            display: flex;
+                            align-content: center;
+                            i{
+                                display: inline-block;
+                                width: pr(100);
+                                height: pr(16);
+                                background-color: #ffbbbb;
+                                border-radius: pr(10);
+                                position: relative;
+                                overflow: hidden;
+                                line-height: pr(18);
+                                em {
+                                    display: inline-block;
+                                    height: 100%;
+                                    background-color: $deeppink;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    
+                                }
+                                span{
+                                    color: #fff;
+                                    font-size: $font-xs;
+                                    position: absolute;
+                                    z-index: 1;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            b{
+                                color: $deeppink;
+                                margin-left: pr(15);
+                                font-size: $font-xs;
+                            }
+                        }
+                        .coupon{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            a{
+                                font-size: $font-xs;
+                                padding: pr(3);
+                                &:nth-child(1){
+                                    color: $deeppink;
+                                    border: 1px dashed $deeppink;                                    
+                                }
+                                &:nth-child(2){
+                                    margin-right: pr(10);
+                                    color: #fff;
+                                    background-color: $deeppink;
+                                    border-radius: pr(5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .anchor{
+        position: fixed;
+        right: pr(15);
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: pr(40);
+            height: pr(40);
+            animation: circle 100s alternate infinite;
+            transition: all 100s;
+        }
+        i{
+            width: pr(5);
+            height: pr(24);
+            background-color: #ccc;
+            margin-top: pr(-5);
+        }
+    }
+
+    //小风车的动画
+    @keyframes circle {
+        to {
+            transform: rotateZ(-6000deg);
+        }
+    }
+}
