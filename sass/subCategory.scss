@@ -1,29 +1,29 @@
 @import "./common.scss";
 .mui-off-canvas-left {
-    width:80%;
+    width: 80%;
     background: #fff;
     .title {
         text-align: center;
         position: relative;
-        height:pr(40);
+        height: pr(40);
         line-height: pr(40);
         font-size: $font-lg;
         border-bottom: pr(1) solid #ccc;
         .close {
             position: absolute;
-            right:pr(10);
-            top:pr(5);
+            right: pr(10);
+            top: pr(5);
             font-size: pr(24);
         }
     }
     .kind {
-        padding:pr(15) pr(10);
+        padding: pr(15) pr(10);
         .all {
             .brand {
-                color:#000;
+                color: #000;
             }
             .allbrand {
-                color:$orangeRed;
+                color: $orangeRed;
                 font-size: $font-xs;
                 margin-left: pr(3);
             }
@@ -35,30 +35,28 @@
                 justify-content: space-between;
                 li {
                     width: 30%;
-                    margin:pr(5) 0;
-                        border-radius: pr(5);
-                        background-color: #f2f2f2;
+                    margin: pr(5) 0;
+                    border-radius: pr(5);
+                    background-color: #f2f2f2;
                     a {
                         display: block;
-                        padding:pr(3) pr(10);
+                        padding: pr(3) pr(10);
                         font-size: $font-xs;
-                        color:#666;
+                        color: #666;
                         text-align: center;
-                        
                     }
                     &.active {
                         background-color: $orangeRed;
                         a {
-                            color:#fff;
+                            color: #fff;
                         }
                     }
                 }
-                
             }
-            
         }
     }
 }
+
 .inner {
     background-color: #f2f2f2;
     .navbar {
@@ -84,8 +82,8 @@
             }
         }
         button {
-            height:pr(30);
-            background: linear-gradient(to bottom,#dbdbdb,#fff);
+            height: pr(30);
+            background: linear-gradient(to bottom, #dbdbdb, #fff);
             border-radius: pr(10);
         }
     }
@@ -94,7 +92,7 @@
         .product {
             border-bottom: pr(1) solid #ccc;
             display: flex;
-            padding:pr(15) pr(10);
+            padding: pr(15) pr(10);
             .img {
                 margin-right: pr(10);
             }
@@ -103,12 +101,12 @@
                 flex-direction: column;
                 justify-content: space-around;
                 .name {
-                    color:#000;
+                    color: #000;
                     font-size: $font-md;
                 }
                 .price {
                     font-size: $font-md;
-                    color:$lightRed;
+                    color: $lightRed;
                 }
                 .info {
                     font-size: $font-xs;
@@ -119,31 +117,68 @@
         }
     }
     .paging {
-        
-        .mui-content-padded {
-            padding:pr(10);
-            .mui-pager {
-                li {
-                    a {
-                        background: linear-gradient(to bottom,#eeeeee,#d8d8d8);
-                        color:#666;
+        .pagination {
+            padding: pr(20) pr(0);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .pager {
+                padding: pr(5) pr(20);
+                background: linear-gradient(to bottom, #eeeeee, #d8d8d8);
+                color: #666;
+                border-radius: pr(10);
+                border: pr(1) solid #bbb;
+            }
+            .dropdown {
+                position: relative;
+                background-color: #fff;
+                .dropdown-toggle {
+                    width: pr(85);
+                    border: pr(1) solid #666;
+                    border-radius: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    span {
+                        font-size: $font-md;
+
                     }
                 }
+                .dropdown-menu {
+                    display: none;
+                    position: absolute;
+                    width:100%;
+                    border-right: pr(1) solid #666;
+                    border-left: pr(1) solid #666;
+                    li {
+                        background-color: #fff;
+                        width:100%;
+                        text-align: center;
+                        border-bottom: pr(1) solid #666;
+                        a {
+                            display: block;
+                            padding:pr(5) pr(0);
+                            font-size: $font-md;
+                        }
+                        
+                    }
+                    
+                }
             }
+            
         }
         .link {
-            padding:pr(0) pr(10);
+            padding: pr(0) pr(10);
             margin-bottom: pr(30);
             .title {
                 font-size: $font-sm;
-                color:#000;
+                color: #000;
             }
             p {
                 margin-top: pr(5);
                 font-size: $font-xs;
-                color:#666;
+                color: #666;
             }
-
         }
     }
 }
