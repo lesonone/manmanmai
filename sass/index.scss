@@ -26,7 +26,7 @@
                         top: 0;
                         right: pr(10);
                         color: #fff;
-                        font-size: pr(12);
+                        font-size: $font-xs;
                         line-height: pr(18);
                         text-align: center;
                         border-radius: pr(15);
@@ -41,7 +41,7 @@
                         }
                         span{
                             margin-top: pr(5);
-                            font-size: pr(14);
+                            font-size: $font-sm;
                             color: #666;
                         }
                     }
@@ -68,7 +68,7 @@
                 background: linear-gradient(to bottom, #ffad44,#ff9203);
                 
                 span{
-                    font-size: pr(14);
+                    font-size: $font-sm;
                     font-weight: bold;
                 }
                 img{
@@ -97,7 +97,7 @@
                         justify-content: space-between;
 
                         .title{
-                            font-size: pr(10);
+                            font-size: $font-xs;
                             color: #000;
                             .color{
                                 color: #ff9203;
@@ -138,7 +138,7 @@
         color: #fff;
         align-items: center;
         background: linear-gradient(to bottom, #ffad44,#ff9203);
-        font-size: pr(14);
+        font-size: $font-sm;
 
         img{
             width: pr(15);
