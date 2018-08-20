@@ -74,7 +74,7 @@ body {
 }
 
 body {
-  font-size: 0.37333rem;
+  font-size: 0.3733333333rem;
 }
 
 .container {
@@ -83,22 +83,22 @@ body {
   flex-direction: column;
 }
 .container .header {
-  height: 1.33333rem;
+  height: 1.3333333333rem;
   background-color: #ff841d;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0.45333rem;
-  padding-right: 0.26667rem;
+  padding-left: 0.4533333333rem;
+  padding-right: 0.2666666667rem;
 }
 .container .header .logo {
   height: 0.64rem;
-  width: 4.93333rem;
+  width: 4.9333333333rem;
   background: url("../images/logo.png") no-repeat top left/100%;
 }
 .container .header .download {
   height: 0.96rem;
-  width: 0.93333rem;
+  width: 0.9333333333rem;
   background: url("../images/download.png") no-repeat top left/100%;
 }
 .container .main {
@@ -108,8 +108,8 @@ body {
 }
 .container .main .searchbar {
   width: 100%;
-  height: 1.38667rem;
-  padding: 0.26667rem;
+  height: 1.3866666667rem;
+  padding: 0.2666666667rem;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
 }
@@ -126,11 +126,11 @@ body {
   border: none;
   outline: none;
   border-radius: 0.8rem;
-  padding-left: 0.53333rem;
+  padding-left: 0.5333333333rem;
   background-color: #f1f1f1;
 }
 .container .main .searchbar .search input::placeholder {
-  font-size: 0.37333rem;
+  font-size: 0.3733333333rem;
 }
 .container .main .searchbar .search .searchbtn {
   flex-basis: 1.68rem;
@@ -196,7 +196,7 @@ body {
 }
 
 .container {
-  padding-bottom: 1.33333rem;
+  padding-bottom: 1.3333333333rem;
 }
 .container .header .back {
   color: #fff;
@@ -205,20 +205,20 @@ body {
   color: #fff;
 }
 .container .main .scroll .inner .product {
-  padding-left: 0.26667rem;
+  padding-left: 0.2666666667rem;
 }
 .container .main .scroll .inner .product .title {
   font-weight: bold;
   width: 100%;
 }
 .container .main .scroll .inner .product .title p {
-  font-size: 0.53333rem;
-  padding: 0.53333rem 0 0.26667rem 0;
+  font-size: 0.5333333333rem;
+  padding: 0.5333333333rem 0 0.2666666667rem 0;
   color: #5a5a5a;
 }
 .container .main .scroll .inner .product .subtitle {
   display: flex;
-  padding: 0.26667rem 0 0.26667rem 0.13333rem;
+  padding: 0.2666666667rem 0 0.2666666667rem 0.1333333333rem;
 }
 .container .main .scroll .inner .product .subtitle p {
   font-size: 0.32rem;
@@ -231,10 +231,10 @@ body {
 }
 .container .main .scroll .inner .product .banner .topBanner .left .explain {
   display: flex;
-  padding-bottom: 0.26667rem;
+  padding-bottom: 0.2666666667rem;
 }
 .container .main .scroll .inner .product .banner .topBanner .left .explain p {
-  font-size: 0.42667rem;
+  font-size: 0.4266666667rem;
   color: #666;
 }
 .container .main .scroll .inner .product .banner .topBanner .right {
@@ -244,11 +244,11 @@ body {
   width: 100%;
 }
 .container .main .scroll .inner .product .banner .bottomBanner .price {
-  font-size: 0.42667rem;
+  font-size: 0.4266666667rem;
   color: #fe9b19;
 }
 .container .main .scroll .inner .product .banner .bottomBanner img {
-  padding-top: 0.26667rem;
+  padding-top: 0.2666666667rem;
   width: 100%;
   height: 100%;
 }
@@ -256,25 +256,25 @@ body {
   background-color: #ff9000;
   color: #fff;
   width: 100%;
-  font-size: 0.42667rem;
-  margin-top: 0.26667rem;
-  margin-bottom: 0.26667rem;
+  font-size: 0.4266666667rem;
+  margin-top: 0.2666666667rem;
+  margin-bottom: 0.2666666667rem;
 }
 .container .main .scroll .inner .QRcode {
-  padding: 0.26667rem;
+  padding: 0.2666666667rem;
   width: 100%;
   height: 100%;
 }
 .container .main .scroll .inner .form {
-  padding: 0.26667rem 0 0.26667rem 0;
+  padding: 0.2666666667rem 0 0.2666666667rem 0;
 }
 .container .main .scroll .inner .form textarea {
   margin: 0;
   padding: 0;
 }
 .container .main .scroll .inner .form .ctrl {
-  height: 1.06667rem;
-  margin-top: -0.13333rem;
+  height: 1.0666666667rem;
+  margin-top: -0.1333333333rem;
   background-color: #f1f1f1;
 }
 .container .main .scroll .inner .form .ctrl .tjdp {
@@ -287,13 +287,13 @@ body {
 .bottom {
   position: fixed;
   background-color: #fe9b19;
-  height: 1.33333rem;
+  height: 1.3333333333rem;
   width: 100%;
   left: 0;
   bottom: 0;
   display: flex;
   align-items: center;
-  border: 0.02667rem solid #ccc;
+  border: 0.0266666667rem solid #ccc;
   z-index: 100;
 }
 .bottom .discuss {

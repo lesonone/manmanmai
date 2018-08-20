@@ -29,6 +29,15 @@ $(function () {
                     console.log(res);
                     var html = template("category", res);
                     $(".hate").html(html);
+                    $(".hate").on("tap",".subMenu",function(){
+<<<<<<< HEAD
+       
+=======
+                        console.log(1);
+>>>>>>> 2277726d177688dc7b45696b782a7203f3bd19eb
+                        location.href="./subCategory.html?categoryid="+$(this).data("id");
+                
+                    })
                 }
             })
         }
@@ -36,9 +45,6 @@ $(function () {
 
     })
 
-    $(".liebiao").on("click",".subMenu",function(){
-        location.href="./subCategory.html?categoryid="+$(this).data("id");
-
-    })
+    
 })
 
