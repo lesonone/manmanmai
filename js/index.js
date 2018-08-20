@@ -31,6 +31,6 @@ $(function(){
 
     //导航点击更多显示下面四个菜单
     $('.nav').on("click","li:nth-child(8)",function(){
-        $('.nav li:nth-child(n+9)').toggle();
+        $('.nav li:nth-child(n+9)').slideToggle(500);
     })
 })
