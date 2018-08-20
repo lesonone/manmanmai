@@ -454,7 +454,7 @@ body {
 }
 .container .anchor {
   position: fixed;
-  right: 0.4rem;
+  right: 0.2666666667rem;
   bottom: 0;
   z-index: 100;
   display: flex;
@@ -464,12 +464,12 @@ body {
 .container .anchor img {
   width: 1.0666666667rem;
   height: 1.0666666667rem;
-  animation: circle 60s alternate infinite;
-  transition: all 60s;
+  animation: circle 50s alternate infinite;
+  transition: all 50s;
 }
 .container .anchor i {
   width: 0.1333333333rem;
-  height: 0.64rem;
+  height: 0.8rem;
   background-color: #ccc;
   margin-top: -0.1333333333rem;
 }

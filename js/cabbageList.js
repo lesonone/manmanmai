@@ -20,11 +20,13 @@ $(function(){
             $('.upDown').addClass("mui-icon-arrowup").removeClass("mui-icon-arrowdown");
         }
     });
+
     //收起分类按钮
     $('.menu-content').on('click','.close',function () {  
         $(".menu").hide();
         $('.upDown').addClass("mui-icon-arrowdown").removeClass("mui-icon-arrowup");
     })
+
     $('.mask').click(function () { 
         $(".menu").hide();
         $('.upDown').addClass("mui-icon-arrowdown").removeClass("mui-icon-arrowup");
@@ -33,7 +35,7 @@ $(function(){
     
 
     //3.获取页面跳转传递过来的id值
-    var obj = getUrl();  
+    var obj = getUrl(); 
     //console.log(decodeURI(obj.title));
     //decodeURI()函数可以将编码过的URL解码
     if(obj){
@@ -56,7 +58,7 @@ $(function(){
         $('.drop span').html("全部");
     }
 
-    //4.分类菜单的每个分类的点击事件
+    //6.分类菜单的每个分类的点击事件
     $('.menu-content').on('click',".category",function () {  
         //获取到自定义属性data-id中的titleid
         var id = $(this).parent().data('id');
@@ -67,11 +69,16 @@ $(function(){
             id : 'goodListtpl',
             cl : '.goodList'
         })
-        //隐藏下拉菜单
+        //隐藏下拉菜单,改变下拉框的title和箭头
         $(".menu").hide();
         $('.drop span').html($(this).text());
         $('.upDown').addClass("mui-icon-arrowdown").removeClass("mui-icon-arrowup");
+    });   
+
+    //7.回到顶部
+    $('.anchor').click(function () {
+        mui('.anchorTop').scroll().scrollTo(0,0,600);
     });
 
-        
+    
 });
