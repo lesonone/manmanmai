@@ -1,7 +1,9 @@
 @import "./common.scss";
+//侧面菜单部分
 .mui-off-canvas-left {
     width: 80%;
     background: #fff;
+    //标题
     .title {
         text-align: center;
         position: relative;
@@ -16,6 +18,7 @@
             font-size: pr(24);
         }
     }
+    //分类
     .kind {
         padding: pr(15) pr(10);
         .all {
@@ -69,9 +72,10 @@
         }
     }
 }
-
+//主界面部分
 .inner {
     background-color: #f2f2f2;
+    //导航栏
     .navbar {
         width: 100%;
         height: pr(38);
@@ -100,6 +104,7 @@
             border-radius: pr(10);
         }
     }
+    //商品详情
     .products {
         background-color: #fff;
         .product {
@@ -129,6 +134,7 @@
             }
         }
     }
+    //分页
     .paging {
         .pagination {
             padding: pr(20) pr(0);

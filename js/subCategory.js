@@ -1,5 +1,6 @@
 $(function () {
     // function urlTool(urlStr){
+        
     //     var str = urlStr.split("?")[1];
     //     var urlArr = str.split("&");
     //     var param = {};
@@ -10,10 +11,17 @@ $(function () {
     //     return param;
     // }
     // var urlStr = location.href;
+    // var param = urlTool(urlStr);
+
+    //获得url中传入的参数
     var param = getUrl();
+    //渲染分类标题
     renderCategory(param.categoryid);
+
+    //获取分类标题
     var categoryName = "";
     // renderCategory(1);
+
     // 渲染面包屑分类标题
     function renderCategory(categoryId) {
         $.ajax({
@@ -29,6 +37,7 @@ $(function () {
             }
         })
     }
+    //渲染列表页的参数
     var data = {
         categoryid: param.categoryid,
         // categoryid: 1,
@@ -48,8 +57,10 @@ $(function () {
                 pagesize = res.pagesize;
                 totalCount = res.totalCount;
                 res.count = Math.ceil(totalCount / pagesize);
+                //渲染列表页面
                 var html = template("productData", res);
                 $(".products").html(html);
+                //分页下拉框
                 var dropHtml = template("dropdownData", res);
                 $(".dropdown-menu").html(dropHtml);
 
@@ -58,15 +69,19 @@ $(function () {
 
         })
     };
+    //顶部、导航栏回到首页
     $(".logo,.toindex").on("tap", function () {
         location.href = "./index.html";
     })
+    //全部分类跳到分类页
     $(".allBrand").on("tap", function () {
         location.href = "./category.html";
     })
+    //跳到列表页
     $(".products").on("tap", ".product", function () {
         location.href = "./good.html?productid=" + $(this).data("productid") + "&categoryName=" + categoryName;
     })
+    //侧面导航下拉按钮
     $(".more").on("tap", function () {
         if ($(this).parent().siblings(".trademark").children().hasClass("hiden")) {
             $(this).parent().siblings(".trademark").children().removeClass("hiden");
@@ -85,6 +100,7 @@ $(function () {
         $(".dropdown-toggle .name").html($(this).html());
         $(".dropdown-menu").hide();
     })
+    //下拉框向下箭头
     $(".down").on("tap", function () {
         $(".dropdown-menu").show();
     })
